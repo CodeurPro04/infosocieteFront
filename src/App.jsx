@@ -16,10 +16,13 @@ import Admin from './pages/Admin.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Connexion from './pages/Connexion.jsx'
 import ConditionsFormula from './pages/ConditionsFormula.jsx'
+import Signup from './pages/Signup.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 function App() {
   return (
     <Layout>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
@@ -39,6 +42,7 @@ function App() {
         <Route path="/votre-releve-bancaire" element={<BankInfo />} />
         <Route path="/hpy-infoscte" element={<Hpy />} />
         <Route path="/connexion" element={<Connexion />} />
+        <Route path="/inscription" element={<Signup />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

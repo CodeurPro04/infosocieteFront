@@ -27,21 +27,21 @@ export default function Cancel() {
   }
 
   return (
-    <section className="container page">
-      <div className="page-header">
+    <section className="cancel-section">
+      <div className="cancel-card">
         <h1>{page?.title}</h1>
-        <p className="muted">{page?.body}</p>
+        <p>{page?.body}</p>
+        <form className="cancel-form" onSubmit={handleSubmit}>
+          <label>
+            {page?.field || 'Email'}
+            <input name="email" type="email" placeholder="Jean@mail.com" required />
+          </label>
+          <button className="button primary cancel-button" type="submit" disabled={loading}>
+            {loading ? 'Envoi...' : 'Résilier'}
+          </button>
+          {status && <p className="status-text">{status}</p>}
+        </form>
       </div>
-      <form className="form-card wide" onSubmit={handleSubmit}>
-        <label>
-          {page?.field || 'Email'}
-          <input name="email" type="email" required />
-        </label>
-        <button className="button primary" type="submit" disabled={loading}>
-          {loading ? 'Envoi...' : 'Confirmer la resiliation'}
-        </button>
-        {status && <p className="status-text">{status}</p>}
-      </form>
     </section>
   )
 }

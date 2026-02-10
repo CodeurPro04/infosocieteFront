@@ -87,7 +87,7 @@ export default function Home() {
               <div className="formula-card-title">Notre formule Infosociete Pro</div>
               <p className="formula-price">{home.formulaPrice}</p>
               <p>{home.formulaIntro}</p>
-              <NavLink className="button primary formula-button" to="/offre">
+              <NavLink className="button primary formula-button" to="/inscription">
                 S'inscrire
               </NavLink>
             </div>
@@ -220,7 +220,7 @@ export default function Home() {
               <NavLink className="services-link" to="/conditions-de-la-formule">
                 *voir condition formule premium
               </NavLink>
-              <NavLink className="button primary service-button" to="/offre">
+              <NavLink className="button primary service-button" to="/inscription">
                 S'inscrire
               </NavLink>
             </div>

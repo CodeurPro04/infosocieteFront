@@ -11,8 +11,8 @@ const defaultContent = {
     { label: 'Contact', path: '/contact' },
   ],
   home: {
-    heroTitle: 'Consultez et Telechargez les donnees de votre entreprise',
-    heroSubtitle: "Recherchez l'entreprise dont vous souhaitez obtenir les donnees.",
+    heroTitle: 'Consultez et Téléchargez les données de votre entreprise',
+    heroSubtitle: "Recherchez l'entreprise dont vous souhaitez obtenir les données.",
     cta: "Connexion",
     tags: ['#Marques', '#FicheEntreprise', '#Bilans', '#Actes', '#RCS', '#Sirene', '#SIRET/SIREN', '#Statuts'],
     benefits: [
@@ -23,28 +23,28 @@ const defaultContent = {
     ],
     usefulTitle: 'Informations utiles',
     usefulBody:
-      "Nous avons voulu moderniser et simplifier l'acces a l'information juridique, legale et financiere des entreprises, ainsi qu'accompagner les entrepreneurs au quotidien, grace a Infosociete. Pour relever ce defi, nous disposons d'une equipe operationnelle rigoureuse et professionnelle dans chaque domaine, appuyee par des partenaires et des consultants de premier plan, afin de garantir un haut niveau de service, la fraicheur de l'information et la facilite de consommation des donnees d'entreprise souvent indigestes et reservees aux institutions ou aux grands groupes.",
+      "Nous avons voulu moderniser et simplifier l'accès à l'information juridique, légale et financière des entreprises, ainsi qu'accompagner les entrepreneurs au quotidien, grâce à Infosociete. Pour relever ce défi, nous disposons d'une équipe opérationnelle rigoureuse et professionnelle dans chaque domaine, appuyée par des partenaires et des consultants de premier plan, afin de garantir un haut niveau de service, la fraîcheur de l'information et la facilité de consommation des données d'entreprise souvent indigestes et réservées aux institutions ou aux grands groupes.",
     learnMore:
-      "Infosociete est un portail internet sur l'information legale, juridique et financiere des entreprises francaises. Fiche identite, Statuts, Extrait Kbis, Bilan, Ape, Siret, Rcs, Tva intra, Duns number, Analyse financiere, Diagnostic, Publications, Annonces Bodacc, Rcs, Dirigeants. Acces en illimite des donnees des entreprises avec la formule Infosociete. Il suffit d'entrer le nom d'une entreprise et le tour est joue.",
+      "Infosociete est un portail internet sur l'information légale, juridique et financière des entreprises françaises. Fiche identité, Statuts, Extrait Kbis, Bilan, APE, SIRET, RCS, TVA intra, DUNS number, Analyse financière, Diagnostic, Publications, Annonces Bodacc, RCS, Dirigeants. Accès en illimité des données des entreprises avec la formule Infosociete. Il suffit d'entrer le nom d'une entreprise et le tour est joué.",
     usefulNote: '*voir condition formule premium',
     formulaPrice: 'Pour 1,49 EUR/72h puis 69,00 EUR/mois',
     formulaIntro: 'Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :',
     formulaBullets: [
-      "Le chiffre d'affaire d'une entreprise, le nom des dirigeants et les differents etablissements",
+      "Le chiffre d'affaires d'une entreprise, le nom des dirigeants et les différents établissements",
       '7 extraits de Kbis par mois',
       "Bilans, Brevets, et documents de votre societe a acces illimite",
-      'Une assistance personnalisee disponible par mail et par telephone',
-      'Support disponible du lundi au samedi de 8 h a 20 h',
-      'Acces limite a 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois',
+      'Une assistance personnalisée disponible par mail et par téléphone',
+      'Support disponible du lundi au samedi de 8 h à 20 h',
+      'Accès limité à 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois',
     ],
     serviceTitle: 'Un service pour les professionnels',
     serviceIntro: 'En apprendre plus sur notre service',
     serviceBody:
-      "Nous offrons notre service a tous les professionnels. Vous pouvez trouver vos documents d'entreprise en faisant une demande sur notre site. Meme les documents de vos concurrents sont disponibles, tous nos envois se font de facon securisee. Nous possedons un grand nombre de fichiers dans notre base de donnees alors n'hesitez pas a rejoindre Infosociete.",
+      "Nous offrons notre service à tous les professionnels. Vous pouvez trouver vos documents d'entreprise en faisant une demande sur notre site. Même les documents de vos concurrents sont disponibles, tous nos envois se font de façon sécurisée. Nous possédons un grand nombre de fichiers dans notre base de données alors n'hésitez pas à rejoindre Infosociete.",
     companiesTitle: 'Liste des entreprises',
     companiesIntro: 'Voici la liste des entreprises recherche par nos utilisateurs.',
     companiesNote:
-      "La liste est actualisee chaque seconde. Elle affichera les 5 recherches les plus recentes effectuees par nos utilisateurs. Vous n'aurez bien sur acces qu'a une petite partie des informations.",
+      "La liste est actualisée chaque seconde. Elle affichera les 5 recherches les plus récentes effectuées par nos utilisateurs. Vous n'aurez bien sûr accès qu'à une petite partie des informations.",
     companiesHeaders: ['Nom', 'SIREN', 'Adresse', 'Statut', 'Code APE', 'Creation'],
     companiesRows: [
       {
@@ -90,22 +90,22 @@ const defaultContent = {
     ],
     infoStrip: {
       title: "Plus d'informations",
-      heading: 'Accedez a tous les documents de votre societe',
-      body: "Vous pourrez acceder a tous les documents de votre entreprise : Bilan, Actes , Brevets,....",
+      heading: 'Accédez à tous les documents de votre société',
+      body: "Vous pourrez accéder à tous les documents de votre entreprise : Bilan, Actes , Brevets,....",
       primaryCta: 'En savoir plus',
       secondaryCta: 'Rechercher un document',
     },
     aboutTitle: 'A propos de nous',
     aboutBody:
-      "Nous avions l'intention de moderniser et de simplifier l'acces a l'information juridique, legale et financiere des entreprises, ainsi que d'accompagner les entrepreneurs au quotidien, grace a Infosociete. Verifiez, examinez et telechargez tous les documents et donnees relatifs a l'identite et aux procedures d'une entreprise en quelques clics seulement. Infosociete a rassemble pour vous les documents les plus importants, notamment les actes, les avis du BODACC, les extraits Kbis, les statuts, et bien plus encore...",
+      "Nous avions l'intention de moderniser et de simplifier l'accès à l'information juridique, légale et financière des entreprises, ainsi que d'accompagner les entrepreneurs au quotidien, grâce à Infosociete. Vérifiez, examinez et téléchargez tous les documents et données relatifs à l'identité et aux procédures d'une entreprise en quelques clics seulement. Infosociete a rassemblé pour vous les documents les plus importants, notamment les actes, les avis du BODACC, les extraits Kbis, les statuts, et bien plus encore...",
     serviceCards: [
       {
-        title: 'Accedez a toutes nos donnees et documents exclusifs sur les entreprises',
-        body: "Chez Infosociete, nous mettons a disposition tous les types de documents d'entreprises qu'ils soient juridiques, legaux ou financiers. N'attendez pas et demandez vos documents des maintenant.",
+        title: 'Accédez à toutes nos données et documents exclusifs sur les entreprises',
+        body: "Chez Infosociete, nous mettons à disposition tous les types de documents d'entreprises qu'ils soient juridiques, légaux ou financiers. N'attendez pas et demandez vos documents dès maintenant.",
       },
       {
-        title: 'Une equipe de services a la clientele toujours prete a repondre a tous vos besoins',
-        body: "En cas de probleme, vous pouvez joindre nos equipes du service clientele par telephone, par courriel ou via la page de contact de ce site web. Nous vous repondrons dans les plus bref delais.",
+        title: 'Une équipe de services à la clientèle toujours prête à répondre à tous vos besoins',
+        body: "En cas de problème, vous pouvez joindre nos équipes du service clientèle par téléphone, par courriel ou via la page de contact de ce site web. Nous vous répondrons dans les plus brefs délais.",
       },
     ],
     formulaCta: {
@@ -152,37 +152,37 @@ const defaultContent = {
       bullets: [
         "Le chiffre d'affaire d'une entreprise, le nom des dirigeants et les differents etablissements",
         '7 extraits de Kbis par mois',
-        "Bilans, Brevets, et documents de votre societe a acces illimite",
-        'Une assistance personnalisee disponible par mail et par telephone',
-        'Support disponible du lundi au samedi de 8 h a 20 h',
-        'Acces limite a 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois',
+        "Bilans, Bretets, et documents de votre société à accès illimité",
+        'Une assistance personnalisée disponible par mail et par téléphone',
+        'Support disponible du lundi au samedi de 8 h à 20 h',
+        'Accès limité à 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois',
       ],
       advantagesTitle: 'Nos avantages',
       advantages: [
         {
           title: 'Extrait de Kbis',
           body:
-            "Profitez de notre service afin de trouver n'importe quel extrait de Kbis. Vous avez en plus la possibilite de demander 7 extraits de Kbis par mois.",
+            "Profitez de notre service afin de trouver n'importe quel extrait de Kbis. Vous avez en plus la possibilité de demander 7 extraits de Kbis par mois.",
         },
         {
           title: 'Actes, Brevets et Bilans',
           body:
-            "Il peut etre utile d'acceder aux informations contenues dans les documents des entreprises. Infosociete vous permet d'acceder a ces informations.",
+            "Il peut être utile d'accéder aux informations contenues dans les documents des entreprises. Infosociete vous permet d'accéder à ces informations.",
         },
         {
           title: 'Diagnostics financier',
           body:
-            "Le diagnostic financier NOTA-PME et/ou AFDCC est un des principaux documents qui permettent d'analyser la comptabilite d'une entreprise, avec Infosociete beneficiez de 30 diagnostics par mois.",
+            "Le diagnostic financier NOTA-PME et/ou AFDCC est un des principaux documents qui permettent d'analyser la comptabilité d'une entreprise, avec Infosociete bénéficiez de 30 diagnostics par mois.",
         },
         {
           title: 'Recherche de TVA',
           body:
-            "Besoin de savoir si votre numero de TVA a ete enregistre et valide ? Infosociete vous permet de retrouver si le numero de TVA de n'importe quelle entreprise est valide.",
+            "Besoin de savoir si votre numéro de TVA a été enregistré et validé ? Infosociete vous permet de retrouver si le numéro de TVA de n'importe quelle entreprise est valide.",
         },
         {
           title: 'Service clientele personnalise',
           body:
-            "Notre service vous permet aussi de contacter notre service clientele en cas de probleme ou de demande particuliere. Notre equipe vous repondra aussi rapidement que possible.",
+            "Notre service vous permet aussi de contacter notre service clientèle en cas de problème ou de demande particulière. Notre équipe vous répondra aussi rapidement que possible.",
         },
         {
           title: 'Formule',
@@ -191,45 +191,45 @@ const defaultContent = {
       ],
     },
     resiliation: {
-      title: 'Resiliation',
+      title: 'Résiliation',
       body:
-        "Vous voulez resilier votre formule Infosociete Pro ? Vous pouvez le faire via ce formulaire en ligne en renseignant votre adresse e-mail. Votre demande sera prise en compte immediatement.",
+        "Vous voulez résilier votre formule Infosociete Pro ? Vous pouvez le faire via ce formulaire en ligne en renseignant votre adresse e-mail. Votre demande sera prise en compte immédiatement.",
       field: 'Email',
     },
     contact: {
       title: 'Nous contacter',
-      subtitle: "N'hesitez pas a nous contacter pour une question specifique ou en cas de probleme.",
+      subtitle: "N'hésitez pas à nous contacter pour une question spécifique ou en cas de problème.",
       body:
-        "Vous avez besoin de plus d'informations ? Une question en particuliere ? Vous pouvez nous contacter via ce formulaire en ligne ou par telephone. Un de nos agents se chargera de vous repondre le plus rapidement possible.",
+        "Vous avez besoin de plus d'informations ? Une question en particulière ? Vous pouvez nous contacter via ce formulaire en ligne ou par téléphone. Un de nos agents se chargera de vous répondre le plus rapidement possible.",
     },
     reclamation: {
-      title: 'Reclamation',
+      title: 'Réclamation',
       subtitle:
-        'Envoyez nous toutes vos reclamations ici, notre equipe se chargera de vous repondre le plus rapidement possible.',
+        'Envoyez nous toutes vos réclamations ici, notre équipe se chargera de vous répondre le plus rapidement possible.',
       body:
-        "Vous avez besoin de faire une reclamation ? Une question en particuliere ? Vous pouvez nous contacter via ce formulaire en ligne ou par telephone. Un de nos agents se chargera de vous repondre le plus rapidement possible.",
+        "Vous avez besoin de faire une réclamation ? Une question en particulière ? Vous pouvez nous contacter via ce formulaire en ligne ou par téléphone. Un de nos agents se chargera de vous répondre le plus rapidement possible.",
     },
     connexion: {
       title: 'Mon Espace Personnel',
-      forgot: 'Mot de passe oublie ?',
+      forgot: 'Mot de passe oublié ?',
     },
     entreprises: {
       title: "Recherche d'entreprise",
       subtitle:
-        "Utilisez notre outil de recherche pour trouver des informations juridiques et financieres sur l'entreprise que vous recherchez en ce moment.",
+        "Utilisez notre outil de recherche pour trouver des informations juridiques et financières sur l'entreprise que vous recherchez en ce moment.",
       placeholder: 'Recherche',
     },
     faq: {
       title: 'FAQ',
-      intro: 'Retrouver toutes les questions les plus frequemment posees dans notre FAQ dediee a notre service',
+      intro: 'Retrouver toutes les questions les plus fréquemment posées dans notre FAQ dédiée à notre service',
       items: [
         {
           q: "Qu'est-ce qu'Infosociete ?",
-          a: "Le Kbis est un document officiel regroupant certaines informations concernant l'entreprise. Il a une duree de validite illimitee. Cependant, la plupart des demarches demandent un extrait de moins de 3 mois afin de garantir la fiabilite des informations.",
+          a: "Le Kbis est un document officiel regroupant certaines informations concernant l'entreprise. Il a une durée de validité illimitée. Cependant, la plupart des démarches demandent un extrait de moins de 3 mois afin de garantir la fiabilité des informations.",
         },
         {
           q: "Est-il possible de renouveler un extrait de Kbis ?",
-          a: "Oui. Les entreprises doivent mettre a jour leurs informations majeures (directeur, nom, statuts juridiques, capital). Les representants peuvent demander un extrait de Kbis actualise. L'ancien extrait peut etre conserve pour retracer l'historique.",
+          a: "Oui. Les entreprises doivent mettre à jour leurs informations majeures (directeur, nom, statuts juridiques, capital). Les représentants peuvent demander un extrait de Kbis actualisé. L'ancien extrait peut être conservé pour retracer l'historique.",
         },
         {
           q: "Quelle est la difference entre un extrait de Kbis et un extrait K ?",
@@ -244,78 +244,78 @@ const defaultContent = {
     'information-kbis': {
       title: 'Information KBIS',
       intro:
-        "A quoi sert l'extrait Kbis ? Les entrepreneurs utilisent l'extrait legal Kbis a des fins diverses : debuter une activite, ouvrir un compte bancaire professionnel, demander un financement, repondre a un appel d'offres ou acheter du materiel professionnel.",
+        "A quoi sert l'extrait Kbis ? Les entrepreneurs utilisent l'extrait légal Kbis à des fins diverses : débuter une activité, ouvrir un compte bancaire professionnel, demander un financement, répondre à un appel d'offres ou acheter du matériel professionnel.",
       sections: [
         {
-          title: "Certifier la capacite d'une entreprise a fonctionner legalement",
+          title: "Certifier la capacité d'une entreprise à fonctionner légalement",
           body:
-            "Le greffe du tribunal de commerce delivre le Kbis, document officiel utilise pour attester du statut juridique d'une entreprise. Il beneficie a l'entreprise et a ses partenaires.",
+            "Le greffe du tribunal de commerce délivre le Kbis, document officiel utilisé pour attester du statut juridique d'une entreprise. Il bénéficie à l'entreprise et à ses partenaires.",
         },
         {
           title: 'Aide publique',
           body:
-            'Les entrepreneurs eligibles peuvent demander une aide publique, notamment monetaire (subvention, pret), technique (soutien) ou monetaire/societale (deductions, exemptions).',
+            'Les entrepreneurs éligibles peuvent demander une aide publique, notamment monétaire (subvention, prêt), technique (soutien) ou monétaire/sociétale (déductions, exemptions).',
         },
         {
-          title: "Participer a un appel d'offres",
+          title: "Participer à un appel d'offres",
           body:
-            "L'extrait est generalement requis lors des reponses a des appels d'offres pour confirmer l'existence legale des entites et verifier l'absence de procedure collective.",
+            "L'extrait est généralement requis lors des réponses à des appels d'offres pour confirmer l'existence légale des entités et vérifier l'absence de procédure collective.",
         },
         {
           title: "Obtenir l'extrait Kbis d'une autre entreprise",
           body:
-            "Le Kbis est un document public disponible pour tous. Il peut etre demande via un service en ligne ou aupres du tribunal de commerce du siege de l'entreprise.",
+            "Le Kbis est un document public disponible pour tous. Il peut être demandé via un service en ligne ou auprès du tribunal de commerce du siège de l'entreprise.",
         },
       ],
     },
     'conditions-generales-de-vente': {
-      title: 'Conditions Generales de Vente (CGV)',
+      title: 'Conditions Générales de Vente (CGV)',
       version: 'Version 1.1',
       sections: [
         {
-          title: 'Editeur',
+          title: 'Éditeur',
           body:
-            'Le site est detenu et opere par ODYSSEUS MEDIA LIMITED, societe de droit irlandais, numero 714131, siege social 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland.',
+            'Le site est détenu et opéré par ODYSSEUS MEDIA LIMITED, société de droit irlandais, numéro 714131, siège social 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland.',
         },
         {
-          title: "Conditions d'acces",
-          body: "Vous devez avoir au moins 18 ans et disposer du pouvoir d'engager la societe que vous representez pour acceder aux services.",
+          title: "Conditions d'accès",
+          body: "Vous devez avoir au moins 18 ans et disposer du pouvoir d'engager la société que vous représentez pour accéder aux services.",
         },
         {
-          title: 'Regles de conduite',
-          body: "L'utilisation du site est soumise a des regles de conduite et au respect des CGV.",
+          title: 'Règles de conduite',
+          body: "L'utilisation du site est soumise à des règles de conduite et au respect des CGV.",
         },
         {
-          title: 'Limitation de responsabilite',
-          body: "Infosociete ne peut etre tenue pour responsable de l'absence de resultat attendu ou des dommages indirects. En cas de responsabilite engagee, l'indemnisation est limitee a 5 000 euros.",
+          title: 'Limitation de responsabilité',
+          body: "Infosociete ne peut être tenue pour responsable de l'absence de résultat attendu ou des dommages indirects. En cas de responsabilité engagée, l'indemnis ation est limitée à 5 000 euros.",
         },
         {
-          title: 'Droit de retractation',
-          body: "Conformement a l'article L.221-3 du Code de la consommation, le membre ne dispose pas du droit de retractation dans le cadre de la formule.",
+          title: 'Droit de rétractation',
+          body: "Conformément à l'article L.221-3 du Code de la consommation, le membre ne dispose pas du droit de rétractation dans le cadre de la formule.",
         },
         {
           title: 'Droit applicable et litiges',
           body:
-            "Les CGV sont regies par la loi francaise. Les parties tenteront un reglement amiable avant toute action. A defaut, les tribunaux competents sont ceux du ressort de la Cour d'appel de Paris.",
+            "Les CGV sont régies par la loi française. Les parties tenteront un règlement amiable avant toute action. A défaut, les tribunaux compétents sont ceux du ressort de la Cour d'appel de Paris.",
         },
       ],
     },
     'mentions-legales': {
-      title: 'Mentions Legales',
+      title: 'Mentions Légales',
       sections: [
         {
-          title: 'Editeur',
+          title: 'Éditeur',
           body:
-            'ODYSSEUS MEDIA, societe a responsabilite limitee de droit irlandais, numero 714131, siege social 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland. TVA : IE 3985411WH.',
+            'ODYSSEUS MEDIA, société à responsabilité limitée de droit irlandais, numéro 714131, siège social 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland. TVA : IE 3985411WH.',
         },
         {
           title: 'Responsable',
           body: 'Noreen K.',
         },
         {
-          title: 'Hebergeur',
+          title: 'Hébergeur',
           body:
-            'Le site infosociete.pro est heberge par GoDaddy. Adresse : 14455 N. Hayden Rd., Ste. 226, Scottsdale, AZ 85260 USA. Telephone : +44 20 7084 1810.',
+            'Le site infosociete.pro est hébergé par GoDaddy. Adresse : 14455 N. Hayden Rd., Ste. 226, Scottsdale, AZ 85260 USA. Téléphone : +44 20 7084 1810.',
         },
         {
           title: 'Contact',
@@ -324,31 +324,31 @@ const defaultContent = {
       ],
     },
     'politique-de-confidentialite': {
-      title: 'Politique de confidentialite',
-      effective: 'En vigueur a partir du 18 Avril 2022',
+      title: 'Politique de confidentialité',
+      effective: 'En vigueur à partir du 18 Avril 2022',
       sections: [
         {
-          title: 'Disposition generale',
-          body: "Cette politique regit la collecte, l'utilisation et le stockage des informations obtenues lors de l'utilisation de la plateforme.",
+          title: 'Disposition générale',
+          body: "Cette politique régit la collecte, l'utilisation et le stockage des informations obtenues lors de l'utilisation de la plateforme.",
         },
         {
           title: "Collecte d'informations personnelles",
           body:
-            'Les informations collectees peuvent inclure nom, email, telephone, adresse IP, journaux serveur, informations de paiement et autres informations fournies volontairement.',
+            'Les informations collectées peuvent inclure nom, email, téléphone, adresse IP, journaux serveur, informations de paiement et autres informations fournies volontairement.',
         },
         {
-          title: 'Donnees non personnelles',
+          title: 'Données non personnelles',
           body:
-            "Les plateformes d'analyse collectent des donnees generales (types et versions de logiciels, systeme d'exploitation, date/heure d'acces, FAI) pour la securite et l'optimisation.",
+            "Les plateformes d'analyse collectent des données générales (types et versions de logiciels, système d'exploitation, date/heure d'accès, FAI) pour la sécurité et l'optimisation.",
         },
         {
-          title: 'Stockage et duree',
+          title: 'Stockage et durée',
           body:
-            "Les informations sont stockees le temps necessaire a la fourniture des services et au maintien de l'integrite des bases, avec registres de traitement RGPD.",
+            "Les informations sont stockées le temps nécessaire à la fourniture des services et au maintien de l'intégrité des bases, avec registres de traitement RGPD.",
         },
         {
           title: 'Droits',
-          body: 'Vous pouvez demander confirmation, acces, copie, correction, suppression, ou opposition au traitement de vos informations personnelles.',
+          body: 'Vous pouvez demander confirmation, accès, copie, correction, suppression, ou opposition au traitement de vos informations personnelles.',
         },
       ],
     },
@@ -356,16 +356,16 @@ const defaultContent = {
       title: 'Politique de cookies',
       sections: [
         {
-          title: 'Informations generales',
-          body: 'Un cookie est un fichier texte qui stocke des informations sur le navigateur pour optimiser la navigation (devise, parametres, etc.).',
+          title: 'Informations générales',
+          body: 'Un cookie est un fichier texte qui stocke des informations sur le navigateur pour optimiser la navigation (devise, paramétres, etc.).',
         },
         {
           title: 'Google Analytics',
           body: "Le site utilise Google Analytics a des fins statistiques sans collecter l'adresse IP ni des informations permettant de vous identifier.",
         },
         {
-          title: 'Gestion des preferences',
-          body: 'Vous pouvez gerer vos preferences dans les parametres de votre navigateur ou appareil pour autoriser, bloquer ou supprimer les cookies.',
+          title: 'Gestion des préférences',
+          body: 'Vous pouvez gérer vos préférences dans les paramétres de votre navigateur ou appareil pour autoriser, bloquer ou supprimer les cookies.',
         },
       ],
     },
@@ -373,51 +373,51 @@ const defaultContent = {
       title: 'Conditions formule premium',
       sections: [
         {
-          title: 'Privileges inclus',
+          title: 'Privilèges inclus',
           body:
-            '7 extraits de Kbis par mois, hotline service clientele, derniers comptes annuels, derniers actes, derniers brevets, 30 diagnostics financiers NOTA-PME/AFDCC, fiche entreprise en PDF, recherche de numero de TVA valide.',
+            '7 extraits de Kbis par mois, hotline service clientèle, derniers comptes annuels, derniers actes, derniers brevets, 30 diagnostics financiers NOTA-PME/AFDCC, fiche entreprise en PDF, recherche de numéro de TVA valide.',
         },
         {
           title: 'Prix',
           body:
-            '1,49 EUR pour 72 heures puis 69,00 EUR par mois si non resilie dans les 72h. Facturation a la date anniversaire, prelevement bancaire. Libelle Infosociete/infosociete.pro.',
+            '1,49 EUR pour 72 heures puis 69,00 EUR par mois si non résilié dans les 72h. Facturation à la date anniversaire, prélèvement bancaire. Libellé Infosociete/infosociete.pro.',
         },
         {
-          title: 'Resiliation',
+          title: 'Résiliation',
           body:
-            "La formule est resilable a tout moment et gratuitement via la page Resiliation. Vous devez renseigner l'email utilise lors de l'achat.",
+            "La formule est résilable à tout moment et gratuitement via la page Résiliation. Vous devez renseigner l'email utilisé lors de l'achat.",
         },
         {
-          title: 'Modalites',
-          body: "La formule est mensuelle et se renouvelle automatiquement a l'echeance.",
+          title: 'Modalités',
+          body: "La formule est mensuelle et se renouvelle automatiquement à l'échéance.",
         },
         {
           title: 'Communications',
           body:
-            "Les communications se font via l'espace personnel ou par email. Contact par telephone au 0 805 086 583 ou par email a contact@infosociete.pro.",
+            "Les communications se font via l'espace personnel ou par email. Contact par téléphone au 0 805 086 583 ou par email à contact@infosociete.pro.",
         },
         {
-          title: "Delai de reception d'un extrait de Kbis",
-          body: "L'extrait est disponible sous 48h en jour ouvre. En cas d'indisponibilite, Infosociete peut decliner la demande et celle-ci ne sera pas comptee.",
+          title: "Délai de réception d'un extrait de Kbis",
+          body: "L'extrait est disponible sous 48h en jour ouvré. En cas d'indisponibilité, Infosociete peut décliner la demande et celle-ci ne sera pas comptée.",
         },
         {
           title: 'Stockage et transfert',
           body:
-            'Les informations sont stockees sur des serveurs securises. Des transferts UE/tiers peuvent avoir lieu avec garanties adequates. Des tiers peuvent traiter certaines donnees selon leurs politiques.',
+            'Les informations sont stockées sur des serveurs sécurisés. Des transferts UE/tiers peuvent avoir lieu avec garanties adéquates. Des tiers peuvent traiter certaines données selon leurs politiques.',
         },
       ],
     },
     'votre-releve-bancaire': {
       title: 'Service de HPY*INFOSCTE et Hp*infosociete',
       body:
-        "Si vous avez remarque HPY*INFOSCTE ou Hp*infosociete sur votre releve bancaire, cela correspond a un paiement lie au service Infosociete. Nous sommes la pour vous aider a mieux comprendre vos finances et l'origine du prelevement.",
+        "Si vous avez remarqué HPY*INFOSCTE ou Hp*infosociete sur votre relevé bancaire, cela correspond à un paiement lié au service Infosociete. Nous sommes là pour vous aider à mieux comprendre vos finances et l'origine du prélèvement.",
     },
     'hpy-infoscte': {
       title: 'Annulez Facilement Votre Abonnement avec Infosociete - HPY*INFOSOCIETE a HPY*11 INFOSCTE',
       sections: [
         {
           title: 'HPY*10 INFOSCTE',
-          body: 'Utilisez notre formulaire en ligne pour soumettre votre demande de resiliation en quelques clics.',
+          body: 'Utilisez notre formulaire en ligne pour soumettre votre demande de résiliation en quelques clics.',
         },
         {
           title: 'HPY*11 INFOSCTE',
@@ -476,21 +476,21 @@ const defaultContent = {
   },
   footer: {
     description:
-      "Infosociete vous propose des Informations sur les entreprises francaises inscrites au registre du commerce et des societes, y compris les informations juridiques et financieres. Consultez de maniere simple les fiches financieres, les donnees de gestion et les donnees publiques des organisations.",
+      "Infosociete vous propose des Informations sur les entreprises françaises inscrites au registre du commerce et des sociétés, y compris les informations juridiques et financières. Consultez de manière simple les fiches financières, les données de gestion et les données publiques des organisations.",
     links: [
       { label: 'A propos', path: '/a-propos' },
       { label: 'Formule Infosociete Pro', path: '/offre' },
       { label: 'FAQ', path: '/faq' },
       { label: 'Rechercher une entreprise', path: '/entreprises' },
       { label: 'Information KBIS', path: '/information-kbis' },
-      { label: 'Conditions Generales de Vente', path: '/conditions-generales-de-vente' },
-      { label: 'Mentions Legales', path: '/mentions-legales' },
-      { label: 'Politique de confidentialite', path: '/politique-de-confidentialite' },
+      { label: 'Conditions Générales de Vente', path: '/conditions-generales-de-vente' },
+      { label: 'Mentions Légales', path: '/mentions-legales' },
+      { label: 'Politique de confidentialité', path: '/politique-de-confidentialite' },
       { label: 'Politique de cookies', path: '/cookies' },
       { label: 'Conditions formule premium', path: '/conditions-de-la-formule' },
       { label: 'Contact', path: '/contact' },
       { label: 'Reclamation', path: '/reclamation' },
-      { label: 'Informations releve bancaire', path: '/votre-releve-bancaire' },
+      { label: 'Informations relevé bancaire', path: '/votre-releve-bancaire' },
       { label: 'HpyInfoscte', path: '/hpy-infoscte' },
     ],
   },
