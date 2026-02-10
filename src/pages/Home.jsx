@@ -1,12 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
 import heroArt from '../assets/illustrations/hero.png'
-import infoArt from '../assets/illustrations/2.png'
+import infoArt from '../assets/illustrations/service1.png'
 import formulaArt from '../assets/illustrations/3.png'
 import aboutArt from '../assets/illustrations/4.png'
-import servicesArt from '../assets/illustrations/5.png'
+import servicesArt from '../assets/illustrations/service2.png'
 import contactArt from '../assets/illustrations/6.png'
 import kbisArt from '../assets/illustrations/7.png'
+import documentArt from '../assets/illustrations/document.png'
+import kbisVideo from '../assets/illustrations/kbis-video.mp4'
 
 export default function Home() {
   const { content } = useContent()
@@ -15,229 +17,239 @@ export default function Home() {
   return (
     <div>
       <section className="hero">
-        <div className="container hero-grid">
+        <div className="container hero-grid hero-grid-infosociete">
           <div className="hero-text">
-            <div className="eyebrow">Infosociete</div>
-            <h1>{home.heroTitle}</h1>
-            <p>{home.heroSubtitle}</p>
-            <div className="hero-actions">
-              <NavLink className="button primary" to="/offre">
-                {home.cta}
-              </NavLink>
-            </div>
+            <h1 className="hero-title">
+              <span className="hero-title-accent">Consultez et Téléchargez</span>
+              <span className="hero-title-rest">les données de votre entreprise</span>
+            </h1>
+            <p className="hero-subtitle">{home.heroSubtitle}</p>
             <div className="hero-search">
-              <input placeholder="Recherche" aria-label="Recherche" />
-              <NavLink className="button primary" to="/entreprises">
-                Rechercher
+              <span className="hero-search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+                  <path
+                    d="M4 20.25h16a.75.75 0 0 0 0-1.5h-1.25V5.5A1.5 1.5 0 0 0 17.25 4h-4.5V3a1.5 1.5 0 0 0-1.5-1.5H6.75A1.5 1.5 0 0 0 5.25 3v15.75H4a.75.75 0 0 0 0 1.5Zm2.75-1.5V3h4.5v15.75h-4.5Zm6 0V5.5h4.5v13.25h-4.5Zm-4-9.25h1.5V8h-1.5v1.5Zm0 3h1.5v-1.5h-1.5V12.5Zm0 3h1.5V14h-1.5v1.5Zm6-6h1.5V8h-1.5v1.5Zm0 3h1.5v-1.5h-1.5V12.5Zm0 3h1.5V14h-1.5v1.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <input placeholder="Nom de la société, SIRET ou SIREN" aria-label="Recherche" />
+              <NavLink className="button primary search-button" to="/entreprises">
+                Recherche
               </NavLink>
             </div>
-            <div className="hero-highlight">
+            <div className="hero-tags">
               {home.tags?.map((tag) => (
                 <span key={tag} className="tag-chip">
                   {tag}
                 </span>
               ))}
             </div>
-          </div>
-          <div className="hero-visual">
-            <div className="hero-media">
-              <img src={heroArt} alt="Illustration de recherche d'entreprise" />
-              <div className="hero-media-pill">Infosociete Pro</div>
+            <div className="hero-note">
+              {home.benefits?.map((item, index) => (
+                <p key={item} className={`hero-note-line hero-note-line-${index + 1}`}>
+                  {item}
+                </p>
+              ))}
             </div>
-            <div className="hero-card">
-              <div className="hero-card-header">Infosociete Pro</div>
-              <div className="hero-card-score">{home.formulaPrice}</div>
-              <div className="hero-card-list">
-                {home.benefits?.map((item) => (
-                  <div key={item} className="hero-card-item">
-                    {item}
+          </div>
+          <div className="hero-visual hero-visual-infosociete">
+            <div className="hero-figure">
+              <img src={heroArt} alt="Dossiers d'entreprise" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section info-section">
+        <div className="container">
+          <div className="info-section-header">
+            <h2>{home.usefulTitle}</h2>
+            <hr className="blue-rule" />
+          </div>
+          <div className="info-columns">
+            <div>
+              <div className="info-column-title">{home.usefulTitle}</div>
+              <p>{home.usefulBody}</p>
+            </div>
+            <div>
+              <div className="info-column-title">En savoir plus</div>
+              <p>{home.learnMore}</p>
+              {home.usefulNote && (
+                <NavLink className="info-note-link" to="/conditions-de-la-formule">
+                  {home.usefulNote}
+                </NavLink>
+              )}
+            </div>
+          </div>
+          <div className="formula-panel">
+            <div className="formula-card">
+              <div className="formula-card-title">Notre formule Infosociete Pro</div>
+              <p className="formula-price">{home.formulaPrice}</p>
+              <p>{home.formulaIntro}</p>
+              <NavLink className="button primary formula-button" to="/offre">
+                S'inscrire
+              </NavLink>
+            </div>
+            <ul className="formula-list">
+              {home.formulaBullets?.map((item) => (
+                <li key={item}>
+                  <span className="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+                      <path
+                        d="M9.5 16.2 5.8 12.5a.9.9 0 0 1 1.27-1.27l2.43 2.43 6.46-6.46a.9.9 0 0 1 1.27 1.27l-7.73 7.73a.9.9 0 0 1-1.27 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section learn-section">
+        <div className="container">
+          <div className="info-section-header">
+            <h2>En apprendre plus sur notre service</h2>
+            <hr className="blue-rule" />
+          </div>
+          <div className="learn-grid">
+            <div className="learn-left">
+              <div className="learn-media">
+                <video src={kbisVideo} controls preload="metadata" />
+              </div>
+              <h3>{home.serviceTitle}</h3>
+              <p>{home.serviceBody}</p>
+            </div>
+            <div className="learn-card">
+              <div className="learn-card-eyebrow">Plus d'informations</div>
+              <h3>{home.infoStrip?.heading}</h3>
+              <p>{home.infoStrip?.body}</p>
+              <NavLink className="button primary learn-button" to="/offre">
+                En savoir plus
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section companies-section">
+        <div className="container">
+          <div className="info-section-header">
+            <h2>{home.companiesTitle}</h2>
+            <hr className="blue-rule" />
+          </div>
+          <div className="companies-grid">
+            <div>
+              <p className="companies-intro">{home.companiesIntro}</p>
+              <p className="companies-note">{home.companiesNote}</p>
+              <ul className="companies-bullets">
+                <li>Elle affichera les 5 recherches les plus récentes effectuées par nos utilisateurs</li>
+                <li>Vous n’aurez bien sur accès qu’à une petite partie des informations</li>
+              </ul>
+              <div className="table companies-table">
+                <div className="table-head">
+                  {home.companiesHeaders?.map((header) => (
+                    <span key={header}>{header}</span>
+                  ))}
+                </div>
+                {home.companiesRows?.map((row) => (
+                  <div key={row.name} className="table-row">
+                    <span className="table-title">{row.name}</span>
+                    <span>{row.siren}</span>
+                    <span>{row.address}</span>
+                    <span className="status-pill">{row.status}</span>
+                    <span>{row.ape}</span>
+                    <span>{row.created}</span>
                   </div>
                 ))}
               </div>
-              <NavLink className="button light" to="/offre">
-                Decouvrir la formule
+            </div>
+            <div className="companies-aside">
+              <div className="companies-image">
+                <img src={documentArt} alt="Documents d'entreprise" />
+              </div>
+              <NavLink className="button primary companies-button" to="/entreprises">
+                Rechercher un document
               </NavLink>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="container section split-section split-reverse">
-        <div className="split-media">
-          <img src={infoArt} alt="Illustration information entreprise" />
-        </div>
-        <div className="split-content">
-          <div className="section-header">
-            <h2>{home.usefulTitle}</h2>
-          </div>
-          <div className="page-card">
-            <p className="muted">{home.usefulBody}</p>
-            <p className="muted">{home.learnMore}</p>
-            {home.usefulNote && (
-              <NavLink className="link" to="/conditions-de-la-formule">
-                {home.usefulNote}
-              </NavLink>
-            )}
-          </div>
-        </div>
-      </section>
-
-      <section className="accent-section">
-        <div className="container accent-grid">
-          <div className="accent-content">
-            <div className="eyebrow">Formule Infosociete Pro</div>
-            <h2>{home.formulaPrice}</h2>
-            <p className="muted">{home.formulaIntro}</p>
-            <ul className="offer-list">
-              {home.formulaBullets?.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <NavLink className="button light" to="/offre">
-              Je m'inscris
-            </NavLink>
-          </div>
-          <div className="accent-visual">
-            <img src={formulaArt} alt="Illustration formule premium" />
-            <div className="process-card">
-              <div className="eyebrow">{home.serviceIntro}</div>
-              <div className="process-title">{home.serviceTitle}</div>
-              <p className="muted">{home.serviceBody}</p>
-              <NavLink className="button primary" to="/offre">
-                Decouvrir la formule
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="container section">
-        <div className="section-header">
-          <h2>{home.companiesTitle}</h2>
-        </div>
-        <p className="muted">{home.companiesIntro}</p>
-        <p className="muted">{home.companiesNote}</p>
-        <div className="table">
-          <div className="table-head">
-            {home.companiesHeaders?.map((header) => (
-              <span key={header}>{header}</span>
-            ))}
-          </div>
-          {home.companiesRows?.map((row) => (
-            <div key={row.name} className="table-row">
-              <span className="table-title">{row.name}</span>
-              <span>{row.siren}</span>
-              <span>{row.address}</span>
-              <span>{row.status}</span>
-              <span>{row.ape}</span>
-              <span>{row.created}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="container section">
-        <div className="info-strip">
-          <div className="eyebrow">{home.infoStrip?.title}</div>
-          <h2>{home.infoStrip?.heading}</h2>
-          <p className="muted">{home.infoStrip?.body}</p>
-          <div className="hero-actions">
-            <NavLink className="button primary" to="/offre">
-              {home.infoStrip?.primaryCta}
-            </NavLink>
-            <NavLink className="button ghost" to="/entreprises">
-              {home.infoStrip?.secondaryCta}
-            </NavLink>
-          </div>
-        </div>
-      </section>
-
-      <section className="container section split-section">
-        <div className="split-content">
-          <div className="section-header">
+      <section className="section about-section">
+        <div className="container">
+          <div className="info-section-header">
             <h2>{home.aboutTitle}</h2>
+            <hr className="blue-rule" />
           </div>
-          <div className="page-card">
-            <p className="muted">{home.aboutBody}</p>
+          <div className="about-body">
+            <div className="about-subtitle">A propos de nous</div>
+            <p>{home.aboutBody}</p>
           </div>
-        </div>
-        <div className="split-media">
-          <img src={aboutArt} alt="Illustration a propos" />
         </div>
       </section>
 
-      <section className="container section">
-        <div className="section-header">
-          <h2>Les services</h2>
-        </div>
-        <div className="services-layout">
-          <div className="services-media">
-            <img src={servicesArt} alt="Illustration services" />
+      <section className="section services-section">
+        <div className="container">
+          <div className="info-section-header">
+            <h2>Les services chez infosociete.pro</h2>
+            <hr className="blue-rule" />
           </div>
-          <div className="feature-grid">
-            {home.serviceCards?.map((card) => (
-              <div key={card.title} className="feature-card">
+          <div className="services-top-grid">
+            {home.serviceCards?.slice(0, 2).map((card, index) => (
+              <div key={card.title} className="service-media-card">
+                <div className="service-media">
+                  <img src={index === 0 ? infoArt : servicesArt} alt={card.title} />
+                </div>
                 <h3>{card.title}</h3>
-                <p className="muted">{card.body}</p>
+                <p>{card.body}</p>
+                <NavLink className="button primary service-button" to={index === 0 ? '/offre' : '/contact'}>
+                  {index === 0 ? 'Notre formule' : 'Notre Service clientèle'}
+                </NavLink>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="container section">
-        <div className="formula-cta">
-          <div>
-            <div className="eyebrow">{home.formulaCta?.title}</div>
-            <h2>{home.formulaCta?.body}</h2>
-            <p className="muted">{home.formulaCta?.note}</p>
-          </div>
-          <NavLink className="button primary" to="/offre">
-            Decouvrir
-          </NavLink>
-        </div>
-      </section>
-
-      <section className="container section split-section split-reverse">
-        <div className="split-media">
-          <img src={contactArt} alt="Illustration contact" />
-        </div>
-        <div className="split-content">
-          <div className="section-header">
-            <h2>{home.contactBlock?.title}</h2>
-          </div>
-          <div className="page-card">
-            <p className="muted">{home.contactBlock?.body}</p>
-            <div className="footer-contact">
-              <span>{home.contactBlock?.email}</span>
-              <span>{home.contactBlock?.phone}</span>
-              <span>{home.contactBlock?.hours}</span>
+          <div className="services-cards-grid">
+            <div className="services-info-card">
+              <div className="services-card-eyebrow">Notre formule Infosociete Pro</div>
+              <p>Profitez d'un accès aux extraits de Kbis pour 1,49 € pendant 72h*</p>
+              <NavLink className="services-link" to="/conditions-de-la-formule">
+                *voir condition formule premium
+              </NavLink>
+              <NavLink className="button primary service-button" to="/offre">
+                S'inscrire
+              </NavLink>
             </div>
-            <NavLink className="button primary" to="/contact">
-              Nous contacter
-            </NavLink>
-          </div>
-        </div>
-      </section>
-
-      <section className="container section">
-        <div className="section-header">
-          <h2>Extrait KBIS</h2>
-        </div>
-        <p className="muted">{home.kbisIntro}</p>
-        <div className="kbis-layout">
-          <div className="feature-grid">
-            {home.kbisHighlights?.map((item) => (
-              <div key={item} className="feature-card">
-                {item}
+            <div className="services-info-card">
+              <div className="services-card-eyebrow">Nous contacter</div>
+              <p>Prenez contact avec nous maintenant</p>
+              <div className="services-contact">
+                <span>@</span>
+                <span>{home.contactBlock?.email}</span>
               </div>
-            ))}
-          </div>
-          <div className="kbis-media">
-            <img src={kbisArt} alt="Illustration extrait kbis" />
+              <div className="services-contact">
+                <span>✉</span>
+                <NavLink to="/contact">Via la page de contact</NavLink>
+              </div>
+            </div>
+            <div className="services-info-card">
+              <div className="services-card-eyebrow">Service client</div>
+              <p>Du lundi au samedi, par téléphone au</p>
+              <div className="services-contact">
+                <span>☎</span>
+                <span>{content.site?.phone}</span>
+              </div>
+              <div className="services-contact">
+                <span>🕒</span>
+                <span>{content.site?.hours}</span>
+              </div>
+            </div>
           </div>
         </div>
-        <p className="muted">{home.disclaimer}</p>
       </section>
     </div>
   )

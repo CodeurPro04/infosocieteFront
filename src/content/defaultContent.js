@@ -1,13 +1,13 @@
 const defaultContent = {
   site: {
-    name: 'Infosociete',
+    name: 'Infosociete Pro',
     phone: '0 805 086 583',
     email: 'contact@infosociete.pro',
     hours: 'Du lundi au samedi, de 8h a 20h',
   },
   navigation: [
     { label: 'Formule Infosociete Pro', path: '/offre' },
-    { label: 'Resiliation', path: '/resiliation' },
+    { label: 'Résiliation', path: '/resiliation' },
     { label: 'Contact', path: '/contact' },
   ],
   home: {
@@ -16,10 +16,10 @@ const defaultContent = {
     cta: "Connexion",
     tags: ['#Marques', '#FicheEntreprise', '#Bilans', '#Actes', '#RCS', '#Sirene', '#SIRET/SIREN', '#Statuts'],
     benefits: [
-      'Consultez et telechargez toutes vos informations legales, juridiques et financieres',
-      "Accedez a tous vos documents professionnels avec l'abonnement Infosociete pour 1,49 EUR /72h puis 69,00 EUR /mois",
-      "Infosociete est un service prive et independant des administrations publiques. Nos donnees sont mises a jour quotidiennement et sont fournies par le G.I.E. INFOGREFFE.",
-      'Toutes les informations fournies sont authentiques et certifiees',
+      'Consultez et téléchargez toutes vos informations légales, juridiques et financières',
+      "Accédez à tous vos documents professionnels avec l'abonnement Infosociete pour 1,49 € /72h puis 69,00 € /mois",
+      "Infosociete est un service privé et indépendant des administrations publiques. Nos données sont mises à jour quotidiennement et sont fournies par le Groupement d’intérêt économique des greffiers des Tribunaux de commerce (G.I.E. INFOGREFFE).",
+      'Toutes les informations fournies sont authentiques et certifiées',
     ],
     usefulTitle: 'Informations utiles',
     usefulBody:
