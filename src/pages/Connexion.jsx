@@ -1,29 +1,35 @@
+import { Link } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
+import kbisCard from '../assets/illustrations/document-kbis.webp'
+import kbisList from '../assets/illustrations/document.png'
 
 export default function Connexion() {
   const { content } = useContent()
   const page = content.pages?.connexion
+  const kbis = page?.kbis
 
   return (
-    <section className="container page">
-      <div className="page-header">
-        <h1>{page?.title}</h1>
-        <p className="muted">Accedez a votre espace pour consulter vos documents.</p>
+    <section className="connexion-page section">
+      <div className="container connexion">
+        <form className="form-card connexion-form">
+          <h1>{page?.title}</h1>
+          <label>
+            Email
+            <input type="email" required />
+          </label>
+          <label>
+            Mot de passe
+            <input type="password" required />
+          </label>
+          <Link className="connexion-forgot" to="/connexion">
+            {page?.forgot}
+          </Link>
+          <button className="button primary connexion-submit" type="submit">
+            Se Connecter
+          </button>
+        </form>
+       
       </div>
-      <form className="form-card wide">
-        <label>
-          Email
-          <input type="email" required />
-        </label>
-        <label>
-          Mot de passe
-          <input type="password" required />
-        </label>
-        <button className="button primary" type="submit">
-          Se connecter
-        </button>
-        <p className="muted">{page?.forgot}</p>
-      </form>
     </section>
   )
 }

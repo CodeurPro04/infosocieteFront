@@ -5,6 +5,8 @@ import About from './pages/About.jsx'
 import Formula from './pages/Formula.jsx'
 import Kbis from './pages/Kbis.jsx'
 import Search from './pages/Search.jsx'
+import CompanyDetail from './pages/CompanyDetail.jsx'
+import Payment from './pages/Payment.jsx'
 import Faq from './pages/Faq.jsx'
 import Contact from './pages/Contact.jsx'
 import Cancel from './pages/Cancel.jsx'
@@ -25,10 +27,12 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/a-propos" element={<About />} />
+        <Route path="/apropos" element={<About />} />
         <Route path="/offre" element={<Formula />} />
         <Route path="/information-kbis" element={<Kbis />} />
         <Route path="/entreprises" element={<Search />} />
+        <Route path="/recherche-entreprise/:id" element={<CompanyDetail />} />
+        <Route path="/paiement" element={<Payment />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resiliation" element={<Cancel />} />

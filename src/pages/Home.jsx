@@ -1,5 +1,6 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
+import { useEffect, useState } from 'react'
 import heroArt from '../assets/illustrations/hero.png'
 import infoArt from '../assets/illustrations/service1.png'
 import formulaArt from '../assets/illustrations/3.png'
@@ -9,10 +10,54 @@ import contactArt from '../assets/illustrations/6.png'
 import kbisArt from '../assets/illustrations/7.png'
 import documentArt from '../assets/illustrations/document.png'
 import kbisVideo from '../assets/illustrations/kbis-video.mp4'
+import kbisCard from '../assets/illustrations/kbisflou.png'
+import badge from '../assets/illustrations/badge.svg'
 
 export default function Home() {
   const { content } = useContent()
   const home = content.home || {}
+  const [query, setQuery] = useState('')
+  const [showModal, setShowModal] = useState(false)
+  const [step, setStep] = useState(0)
+  const navigate = useNavigate()
+
+  const handleSearch = (event) => {
+    event.preventDefault()
+    if (!query.trim()) {
+      return
+    }
+    setShowModal(true)
+    setStep(0)
+  }
+
+  useEffect(() => {
+    if (!showModal) {
+      return undefined
+    }
+
+    const timer = window.setInterval(() => {
+      setStep((prev) => {
+        if (prev >= 4) {
+          window.clearInterval(timer)
+          return prev
+        }
+        return prev + 1
+      })
+    }, 650)
+
+    return () => window.clearInterval(timer)
+  }, [showModal])
+
+  useEffect(() => {
+    if (step >= 4 && showModal) {
+      const delay = window.setTimeout(() => {
+        setShowModal(false)
+        navigate(`/recherche-entreprise/${encodeURIComponent(query.trim())}`)
+      }, 900)
+      return () => window.clearTimeout(delay)
+    }
+    return undefined
+  }, [step, showModal, query, navigate])
 
   return (
     <div>
@@ -24,7 +69,7 @@ export default function Home() {
               <span className="hero-title-rest">les données de votre entreprise</span>
             </h1>
             <p className="hero-subtitle">{home.heroSubtitle}</p>
-            <div className="hero-search">
+            <form className="hero-search" onSubmit={handleSearch}>
               <span className="hero-search-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
                   <path
@@ -33,11 +78,16 @@ export default function Home() {
                   />
                 </svg>
               </span>
-              <input placeholder="Nom de la société, SIRET ou SIREN" aria-label="Recherche" />
-              <NavLink className="button primary search-button" to="/entreprises">
+              <input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={'Nom de la soci\u00e9t\u00e9, SIRET ou SIREN'}
+                aria-label="Recherche"
+              />
+              <button className="button primary search-button" type="submit">
                 Recherche
-              </NavLink>
-            </div>
+              </button>
+            </form>
             <div className="hero-tags">
               {home.tags?.map((tag) => (
                 <span key={tag} className="tag-chip">
@@ -251,6 +301,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {showModal ? (
+        <div className="search-modal-overlay" role="presentation">
+          <div className="search-modal" role="dialog" aria-modal="true">
+            <div className="search-modal-card">
+              <div className="search-modal-left">
+                <img src={kbisCard} alt="Extrait KBIS" />
+                <div className="search-modal-title">Extrait KBIS</div>
+                <div className="search-modal-subtitle">Recevez votre Kbis</div>
+              </div>
+              <div className="search-modal-right">
+                <div className={`search-modal-check ${step >= 1 ? 'active' : ''}`}>
+                  <span className="search-modal-check-icon">{'\u2713'}</span>
+                  <span>{'Soci\u00e9t\u00e9e Identifi\u00e9e'}</span>
+                </div>
+                <div className={`search-modal-check ${step >= 2 ? 'active' : ''}`}>
+                  <span className="search-modal-check-icon">{'\u2713'}</span>
+                  <span>{'Dirigeant Identifi\u00e9'}</span>
+                </div>
+                <div className={`search-modal-check ${step >= 3 ? 'active' : ''}`}>
+                  <span className="search-modal-check-icon">{'\u2713'}</span>
+                  <span>{'Code APE Identifi\u00e9'}</span>
+                </div>
+                <div className={`search-modal-check ${step >= 4 ? 'active' : ''}`}>
+                  <span className="search-modal-check-icon">{'\u2713'}</span>
+                  <span>Identification Greffe</span>
+                </div>
+              </div>
+              {step >= 4 ? (
+                <img className="search-modal-verified" src={badge} alt="V?rifi?" />
+              ) : null}
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   )
 }

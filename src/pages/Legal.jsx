@@ -183,6 +183,128 @@ export default function Legal({ slug }) {
     )
   }
 
+  if (slug === 'conditions-generales-de-vente') {
+    return (
+      <section className="cgv-page">
+        <div className="container">
+          <div className="page-header cgv-header">
+            <h1>{page.title}</h1>
+            {page.version && <p className="muted">{page.version}</p>}
+          </div>
+          {page.intro && <p className="cgv-intro">{page.intro}</p>}
+          <div className="cgv-body">
+            {page.blocks?.map((block, index) => {
+              if (block.type === 'heading') {
+                return (
+                  <h2 key={`${block.type}-${index}`} className="cgv-heading">
+                    {block.text}
+                  </h2>
+                )
+              }
+              if (block.type === 'subheading') {
+                return (
+                  <h3 key={`${block.type}-${index}`} className="cgv-subheading">
+                    {block.text}
+                  </h3>
+                )
+              }
+              if (block.type === 'definition') {
+                return (
+                  <p key={`${block.type}-${index}`} className="cgv-definition">
+                    <strong>{block.term}</strong> {block.text}
+                  </p>
+                )
+              }
+              if (block.type === 'list') {
+                return (
+                  <ul key={`${block.type}-${index}`} className="cgv-list">
+                    {block.items?.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )
+              }
+              if (block.type === 'emphasis') {
+                return (
+                  <p key={`${block.type}-${index}`} className="cgv-emphasis">
+                    {block.text}
+                  </p>
+                )
+              }
+              return (
+                <p key={`${block.type}-${index}`} className="cgv-paragraph">
+                  {block.text}
+                </p>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  if (slug === 'mentions-legales') {
+    return (
+      <section className="mentions-page">
+        <div className="container">
+          <div className="page-header mentions-header">
+            <h1>{page.title}</h1>
+          </div>
+          <div className="mentions-body">
+            {page.lines?.map((line, index) =>
+              line === '' ? (
+                <div key={`mentions-space-${index}`} className="mentions-spacer" />
+              ) : (
+                <p key={`mentions-line-${index}`}>{line}</p>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  if (slug === 'cookies') {
+    return (
+      <section className="cookies-page">
+        <div className="container">
+          <div className="cookies-body">
+            {page.blocks?.map((block, index) => {
+              if (block.type === 'heading') {
+                return (
+                  <h2 key={`${block.type}-${index}`} className="cookies-heading">
+                    {block.text}
+                  </h2>
+                )
+              }
+              if (block.type === 'table') {
+                return (
+                  <div key={`${block.type}-${index}`} className="cookies-table">
+                    <div className="cookies-table-head">
+                      <span>{block.headers?.[0]}</span>
+                      <span>{block.headers?.[1]}</span>
+                    </div>
+                    {block.rows?.map((row) => (
+                      <div key={row.label} className="cookies-table-row">
+                        <strong>{row.label}</strong>
+                        <span>{row.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                )
+              }
+              return (
+                <p key={`${block.type}-${index}`} className="cookies-paragraph">
+                  {block.text}
+                </p>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <section className="container page">
       <div className="page-header">

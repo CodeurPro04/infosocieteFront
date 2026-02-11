@@ -36,9 +36,6 @@ export default function Layout({ children }) {
               </span>
               <span>{content.site?.phone}</span>
             </a>
-            <NavLink className="button light header-login" to="/connexion">
-              {content.home?.cta || 'Connexion'}
-            </NavLink>
           </div>
         </div>
       </header>
@@ -72,7 +69,7 @@ export default function Layout({ children }) {
             ))}
           </div>
           <div className="footer-links-group">
-            {content.footer?.links?.slice(10, 14).map((link) => (
+            {content.footer?.links?.slice(10, 15).map((link) => (
               <NavLink key={link.path} to={link.path}>
                 {link.label}
               </NavLink>
