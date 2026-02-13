@@ -16,14 +16,18 @@ import badge from '../assets/illustrations/badge.svg'
 export default function Home() {
   const { content } = useContent()
   const home = content.home || {}
-  const [query, setQuery] = useState('')
+  const [searchForm, setSearchForm] = useState({
+    identifier: '',
+    denomination: '',
+    address: '',
+  })
   const [showModal, setShowModal] = useState(false)
   const [step, setStep] = useState(0)
   const navigate = useNavigate()
 
   const handleSearch = (event) => {
     event.preventDefault()
-    if (!query.trim()) {
+    if (!searchForm.identifier.trim() || !searchForm.denomination.trim() || !searchForm.address.trim()) {
       return
     }
     setShowModal(true)
@@ -50,14 +54,24 @@ export default function Home() {
 
   useEffect(() => {
     if (step >= 4 && showModal) {
+      const target =
+        searchForm.identifier.trim() || searchForm.denomination.trim() || searchForm.address.trim()
       const delay = window.setTimeout(() => {
         setShowModal(false)
-        navigate(`/recherche-entreprise/${encodeURIComponent(query.trim())}`)
+        navigate(`/recherche-entreprise/${encodeURIComponent(target)}`, {
+          state: {
+            prefill: {
+              identifier: searchForm.identifier.trim(),
+              denomination: searchForm.denomination.trim(),
+              address: searchForm.address.trim(),
+            },
+          },
+        })
       }, 900)
       return () => window.clearTimeout(delay)
     }
     return undefined
-  }, [step, showModal, query, navigate])
+  }, [step, showModal, searchForm, navigate])
 
   return (
     <div>
@@ -70,22 +84,44 @@ export default function Home() {
             </h1>
             <p className="hero-subtitle">{home.heroSubtitle}</p>
             <form className="hero-search" onSubmit={handleSearch}>
-              <span className="hero-search-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
-                  <path
-                    d="M4 20.25h16a.75.75 0 0 0 0-1.5h-1.25V5.5A1.5 1.5 0 0 0 17.25 4h-4.5V3a1.5 1.5 0 0 0-1.5-1.5H6.75A1.5 1.5 0 0 0 5.25 3v15.75H4a.75.75 0 0 0 0 1.5Zm2.75-1.5V3h4.5v15.75h-4.5Zm6 0V5.5h4.5v13.25h-4.5Zm-4-9.25h1.5V8h-1.5v1.5Zm0 3h1.5v-1.5h-1.5V12.5Zm0 3h1.5V14h-1.5v1.5Zm6-6h1.5V8h-1.5v1.5Zm0 3h1.5v-1.5h-1.5V12.5Zm0 3h1.5V14h-1.5v1.5Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-              <input
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder={'Nom de la soci\u00e9t\u00e9, SIRET ou SIREN'}
-                aria-label="Recherche"
-              />
+              <label className="hero-search-field">
+                <span>Numéro de SIRET ou SIREN</span>
+                <input
+                  value={searchForm.identifier}
+                  onChange={(event) =>
+                    setSearchForm((prev) => ({ ...prev, identifier: event.target.value }))
+                  }
+                  placeholder="Numéro de SIRET ou SIREN"
+                  aria-label="Numéro de SIRET ou SIREN"
+                  required
+                />
+              </label>
+              <label className="hero-search-field">
+                <span>Dénomination</span>
+                <input
+                  value={searchForm.denomination}
+                  onChange={(event) =>
+                    setSearchForm((prev) => ({ ...prev, denomination: event.target.value }))
+                  }
+                  placeholder="Dénomination"
+                  aria-label="Dénomination"
+                  required
+                />
+              </label>
+              <label className="hero-search-field">
+                <span>Adresse du siège</span>
+                <input
+                  value={searchForm.address}
+                  onChange={(event) =>
+                    setSearchForm((prev) => ({ ...prev, address: event.target.value }))
+                  }
+                  placeholder="Adresse du siège"
+                  aria-label="Adresse du siège"
+                  required
+                />
+              </label>
               <button className="button primary search-button" type="submit">
-                Recherche
+                RECHERCHE
               </button>
             </form>
             <div className="hero-tags">

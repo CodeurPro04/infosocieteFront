@@ -1,13 +1,18 @@
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000'
 
 async function request(path, options = {}) {
-  const response = await fetch(`${API_BASE}${path}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      ...(options.headers || {}),
-    },
-    ...options,
-  })
+  let response
+  try {
+    response = await fetch(`${API_BASE}${path}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...(options.headers || {}),
+      },
+      ...options,
+    })
+  } catch (error) {
+    throw new Error(`Impossible de joindre le serveur API (${API_BASE}). Vérifiez que le backend est démarré.`)
+  }
 
   const data = await response.json().catch(() => ({}))
 
@@ -51,6 +56,27 @@ export function submitClaim(payload) {
   })
 }
 
+export function submitSignup(payload) {
+  return request('/api/forms/signup', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  })
+}
+
+export function submitKbisRequest(payload) {
+  return request('/api/forms/kbis-request', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  })
+}
+
+export function submitPaymentRecord(payload) {
+  return request('/api/forms/payment', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  })
+}
+
 export function loginAdmin(payload) {
   return request('/api/admin/login', {
     method: 'POST',
@@ -73,5 +99,12 @@ export function fetchSubmissions(token) {
     headers: {
       Authorization: `Bearer ${token}`,
     },
+  })
+}
+
+export function createPaymentIntent(payload) {
+  return request('/api/payments/intent', {
+    method: 'POST',
+    body: JSON.stringify(payload),
   })
 }

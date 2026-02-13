@@ -1,9 +1,61 @@
-import { NavLink, useParams } from 'react-router-dom'
-import mapsite from '../assets/illustrations/mapsite.png'
-import kbisSample from '../assets/illustrations/kbisflou.png'
+import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
+import mapsite from "../assets/illustrations/mapsite.png";
+import kbisSample from "../assets/illustrations/kbisflou.png";
+import { useState } from "react";
+import { submitKbisRequest } from "../api.js";
 
 export default function CompanyDetail() {
-  const { id } = useParams()
+  const { id } = useParams();
+  const { state } = useLocation();
+  const navigate = useNavigate();
+  const prefill = state?.prefill || {};
+  const [requestForm, setRequestForm] = useState({
+    profile: "entreprise",
+    identifier: prefill.identifier || id || "",
+    denomination: prefill.denomination || "",
+    address: prefill.address || "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const updateField = (field) => (event) => {
+    setRequestForm((prev) => ({ ...prev, [field]: event.target.value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const payload = {
+      siret_or_siren: requestForm.identifier,
+      profile: requestForm.profile,
+      company_name: requestForm.denomination,
+      address: requestForm.address,
+      first_name: requestForm.firstName,
+      last_name: requestForm.lastName,
+      email: requestForm.email,
+      phone: requestForm.phone,
+      consent: true,
+      source_path: `/recherche-entreprise/${id || requestForm.identifier}`,
+    };
+
+    setLoading(true);
+    setStatus("");
+    submitKbisRequest(payload)
+      .then(() => {
+        navigate("/paiement", {
+          state: {
+            request: requestForm,
+          },
+        });
+      })
+      .catch((error) => {
+        setStatus(error.message);
+      })
+      .finally(() => setLoading(false));
+  };
 
   return (
     <section className="detail-page section">
@@ -12,12 +64,13 @@ export default function CompanyDetail() {
           <div className="detail-hero-inner">
             <h1>L'extrait de Kbis de l'entreprise</h1>
             <p>
-              Accès illimité : formule d'essai Infosociete Pro de 1,49 € pour 72h, puis 69,00 € par mois sans
-              obligation de reconduction
+              Accès illimité : profitez de notre formule d'essai à seulement
+              1,49 € pour une durée de 72h.
             </p>
             <p>
-              L'extrait de Kbis est la carte d'identité de votre société, faites la demande en seulement quelques
-              clics !
+              L'extrait Kbis est la véritable carte d'identité de votre société
+              ; réalisez votre demande d'assistance en seulement quelques clics
+              !
             </p>
           </div>
         </div>
@@ -25,14 +78,28 @@ export default function CompanyDetail() {
         <div className="detail-grid">
           <div className="detail-form-card">
             <div className="detail-form-header">Identité du Demandeur</div>
-            <div className="detail-form-body">
+            <form className="detail-form-body" onSubmit={handleSubmit}>
               <div className="detail-radio">
                 <label>
-                  <input type="radio" name="profil" defaultChecked />
+                  <input
+                    type="radio"
+                    name="profil"
+                    value="entreprise"
+                    checked={requestForm.profile === "entreprise"}
+                    onChange={updateField("profile")}
+                    required
+                  />
                   Je suis une entreprise
                 </label>
                 <label>
-                  <input type="radio" name="profil" />
+                  <input
+                    type="radio"
+                    name="profil"
+                    value="auto-entrepreneur"
+                    checked={requestForm.profile === "auto-entrepreneur"}
+                    onChange={updateField("profile")}
+                    required
+                  />
                   Je suis un auto-entrepreneur
                 </label>
                 <label>
@@ -43,52 +110,115 @@ export default function CompanyDetail() {
 
               <label className="detail-label">
                 * Nom de votre entreprise, SIRET ou SIREN
-                <input defaultValue={id || ''} />
+                <input value={requestForm.identifier} onChange={updateField("identifier")} required />
+              </label>
+
+              <label className="detail-label">
+                Dénomination
+                <input value={requestForm.denomination} onChange={updateField("denomination")} required />
+              </label>
+
+              <label className="detail-label">
+                Adresse du siège
+                <input value={requestForm.address} onChange={updateField("address")} required />
               </label>
 
               <div className="detail-row">
                 <label className="detail-label">
                   * Prénom
-                  <div className="detail-input"><input placeholder="Jean" /><span className="detail-input-check">{'\u2713'}</span></div>
+                  <div className="detail-input">
+                    <input
+                      value={requestForm.firstName}
+                      onChange={updateField("firstName")}
+                      placeholder="Jean"
+                      required
+                    />
+                    <span className="detail-input-check">{"\u2713"}</span>
+                  </div>
                 </label>
                 <label className="detail-label">
                   * Nom
-                  <div className="detail-input"><input placeholder="Jean" /><span className="detail-input-check">{'\u2713'}</span></div>
+                  <div className="detail-input">
+                    <input
+                      value={requestForm.lastName}
+                      onChange={updateField("lastName")}
+                      placeholder="Durand"
+                      required
+                    />
+                    <span className="detail-input-check">{"\u2713"}</span>
+                  </div>
                 </label>
               </div>
 
               <div className="detail-row">
                 <label className="detail-label">
                   * Email
-                  <div className="detail-input"><input placeholder="Jean@mail.com" /><span className="detail-input-check">{'\u2713'}</span></div>
+                  <div className="detail-input">
+                    <input
+                      type="email"
+                      value={requestForm.email}
+                      onChange={updateField("email")}
+                      placeholder="Jean@mail.com"
+                      required
+                    />
+                    <span className="detail-input-check">{"\u2713"}</span>
+                  </div>
                 </label>
                 <label className="detail-label">
                   * Numéro de téléphone
-                  <div className="detail-input"><input placeholder="01 23 45 67 89" /><span className="detail-input-check">{'\u2713'}</span></div>
+                  <div className="detail-input">
+                    <input
+                      type="tel"
+                      value={requestForm.phone}
+                      onChange={updateField("phone")}
+                      placeholder="01 23 45 67 89"
+                      required
+                    />
+                    <span className="detail-input-check">{"\u2713"}</span>
+                  </div>
                 </label>
               </div>
 
               <p className="detail-note">
-                En cliquant sur "Continuer" ci-dessous, vous acceptez d'être facturé 1,49 € immédiatement et
-                d'accepter nos Conditions Générales de Vente ainsi que notre Politique de confidentialité. Un
-                prélèvement automatique mensuel de 69,00 € sera effectué après 72 heures, puis chaque mois à la même
-                date, avec la possibilité d'annuler à tout moment.
+                En cliquant sur le bouton "Continuer" ci-dessous, vous confirmez
+                votre commande et acceptez le règlement immédiat de la somme de
+                1,49 €. Ce montant de 1,49 € correspond à vos frais d'accès
+                initiaux et à la période d'évaluation de nos services
+                d'assistance administrative de 72 heures de période d'essai . En
+                validant cette transaction de 1,49 €, vous reconnaissez avoir
+                pris connaissance et accepté sans réserve l'intégralité de nos
+                Conditions Générales de Vente ainsi que notre Politique de
+                Confidentialité. À l'issue de cette période d'essai de 72
+                heures, et sans action de résiliation de votre part, un
+                abonnement Premium sera automatiquement activé. Cet abonnement
+                donne lieu à un prélèvement automatique mensuel de 49,99 €,
+                reconduit tacitement chaque mois à la date anniversaire de votre
+                inscription. Nous vous rappelons que cette offre est sans
+                engagement de durée : vous conservez la liberté d'annuler votre
+                abonnement à tout moment et sans frais supplémentaires via notre
+                support client à l'adresse contact@docsflow.fr.
               </p>
 
-              <NavLink className="detail-submit" to="/paiement">
-                Continuer
-              </NavLink>
-            </div>
+              <button className="detail-submit" type="submit" disabled={loading}>
+                {loading ? "Validation..." : "Continuer"}
+              </button>
+              {status ? <p className="status-text">{status}</p> : null}
+            </form>
           </div>
 
           <div className="detail-sample-card">
-            <div className="detail-sample-title">Exemple d'un extrait de Kbis</div>
+            <div className="detail-sample-title">
+              Exemple d'un extrait de Kbis
+            </div>
             <div className="detail-sample-media">
               <img src={kbisSample} alt="Extrait Kbis" />
             </div>
             <div className="detail-sample-foot">
               <strong>Satisfait ou Remboursé</strong>
-              <span>Profitez de notre offre Satisfait ou Remboursé pour chaque Kbis commandé !</span>
+              <span>
+                Profitez de notre offre Satisfait ou Remboursé pour chaque Kbis
+                commandé !
+              </span>
             </div>
           </div>
         </div>
@@ -97,9 +227,12 @@ export default function CompanyDetail() {
           <div className="detail-offer-panel">
             <div className="detail-offer-card">
               <h3>Notre formule Infosociete Pro</h3>
-              <p className="detail-offer-price">Pour 1,49 €/72h puis 69,00 €/mois</p>
+              <p className="detail-offer-price">
+                Pour 1,49 €/72h puis 49,99 €/mois
+              </p>
               <p className="detail-offer-text">
-                Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :
+                Inscrivez vous pour profiter de nombreux avantages chez
+                Infosociete qui vous permettront de voir :
               </p>
               <button className="detail-offer-button" type="button">
                 S'inscrire
@@ -110,37 +243,43 @@ export default function CompanyDetail() {
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Le chiffre d'affaire d'une entreprise, le nom des dirigeants et les différents établissements
+                Jusqu'à 7 extraits Kbis par mois.
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                7 extraits de Kbis par mois
+                Jusqu'à 7 avis de situation SIRENE (Insee).
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Bilans, Brevets, et documents de votre société à accès illimité
+                Jusqu'à 7 attestations d'immatriculation au RNE (Inpi).
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Une assistance personnalisée disponible par mail et par téléphone
+                Accès aux informations clés des entreprises : Chiffre d'affaires, identité des dirigeants et liste des établissements.
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Support disponible du lundi au samedi de 8 h à 20 h
+                Jusqu'à 30 diagnostics financiers NOTA-PME et/ou AFDCC par mois pour surveiller vos partenaires et clients.
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Accès limité à 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois
+                Assistance personnalisée disponible par mail pour toutes vos questions métier.
+              </li>
+              <li>
+                <span className="detail-check" aria-hidden="true">
+                  ✓
+                </span>
+                Disponibilité étendue : Support client joignable du lundi au samedi, de 8 h à 20 h.
               </li>
             </ul>
           </div>
@@ -174,7 +313,10 @@ export default function CompanyDetail() {
                   />
                 </svg>
               </div>
-              <p>Téléchargement instantané et envoi par mail de vos documents d'entreprise*</p>
+              <p>
+                Téléchargement instantané et envoi par mail de vos documents
+                d'entreprise*
+              </p>
             </div>
             <div className="detail-benefit-card">
               <div className="detail-benefit-icon" aria-hidden="true">
@@ -204,163 +346,17 @@ export default function CompanyDetail() {
                   />
                 </svg>
               </div>
-              <p>Paiement sécurisé grâce au protocole SSL et certificat HTTPS</p>
+              <p>
+                Paiement sécurisé grâce au protocole SSL et certificat HTTPS
+              </p>
             </div>
           </div>
           <p className="detail-benefit-note">
-            *Pour les documents de type extrait Kbis, la génération et l'envoi du document peuvent prendre
-            jusqu'à 48 heures.
+            *Pour les documents de type extrait Kbis, la génération et l'envoi
+            du document peuvent prendre jusqu'à 48 heures.
           </p>
         </div>
-
-        <div className="detail-company">
-          <div className="detail-company-header">
-            <h2>Totalenergies se (totalenergie se)</h2>
-          </div>
-          <div className="detail-company-body">
-            <div className="detail-company-info">
-              <div className="detail-company-row">
-                <span className="detail-company-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M9 4 7.5 20M16.5 4 15 20M4 9.5h16M3.5 14.5h16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span className="detail-company-label">SIREN</span>
-                <span className="detail-company-value">542051180</span>
-              </div>
-              <div className="detail-company-row">
-                <span className="detail-company-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12 7.5h.01M11.25 10.5h1.5v6h-1.5z"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
-                  </svg>
-                </span>
-                <span className="detail-company-label">Legal Status</span>
-                <span className="detail-company-value">Actif</span>
-              </div>
-              <div className="detail-company-row">
-                <span className="detail-company-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12 6.5v5l3.5 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span className="detail-company-label">Fondée</span>
-                <span className="detail-company-value">01/01/1954</span>
-              </div>
-              <div className="detail-company-row">
-                <span className="detail-company-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12 21s6-4.2 6-10a6 6 0 1 0-12 0c0 5.8 6 10 6 10Z"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="12" cy="11" r="2.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
-                  </svg>
-                </span>
-                <span className="detail-company-label">Adress</span>
-                <span className="detail-company-value">LA DEFENSE 6 2 PLACE JEAN MILLIER 92400 COURBEVOIE</span>
-              </div>
-            </div>
-            <div className="detail-company-map">
-              <img src={mapsite} alt="Carte" />
-            </div>
-          </div>
-        </div>
-
-
-        <div className="detail-key">
-          <div className="info-section-header">
-            <h2>Chiffres clés</h2>
-            <hr className="blue-rule" />
-          </div>
-          <div className="detail-key-placeholder"><span className="detail-key-blur">Aucune donnnée n'est disponible</span></div>
-        </div>
-
-
-        
-        <div className="detail-legal">
-          <div className="info-section-header">
-            <h2>Informations légales</h2>
-          </div>
-          <div className="detail-legal-card">
-            <div className="detail-legal-row detail-legal-top">
-              <span className="detail-legal-label">Dénomination</span>
-              <span className="detail-legal-value">TOTALENERGIES SE (TOTALENERGIE SE)</span>
-            </div>
-            <div className="detail-legal-grid">
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">SIREN</span>
-                <span className="detail-legal-value">542051180</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">SIRET du siège</span>
-                <span className="detail-legal-value">54205118000066</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Adresse du siège</span>
-                <span className="detail-legal-value">LA DEFENSE 6 2 PLACE JEAN MILLIER 92400 COURBEVOIE</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Statut juridique</span>
-                <span className="detail-legal-value">5800</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Date de création</span>
-                <span className="detail-legal-value">01/01/1954</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Etablissements ouverts</span>
-                <span className="detail-legal-value">5</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Type d'entreprise</span>
-                <span className="detail-legal-value">Société</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Etat administratif</span>
-                <span className="detail-legal-value">Actif</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Activité principale</span>
-                <span className="detail-legal-value">70.10Z</span>
-              </div>
-              <div className="detail-legal-item">
-                <span className="detail-legal-label">Tranche d'effectifs</span>
-                <span className="detail-legal-value">51</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
       </div>
-
-        
     </section>
-  )
+  );
 }

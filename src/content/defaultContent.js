@@ -17,7 +17,7 @@ const defaultContent = {
     tags: ['#Marques', '#FicheEntreprise', '#Bilans', '#Actes', '#RCS', '#Sirene', '#SIRET/SIREN', '#Statuts'],
     benefits: [
       'Consultez et téléchargez toutes vos informations légales, juridiques et financières',
-      "Accédez à tous vos documents professionnels avec l'abonnement Infosociete pour 1,49 €/72h puis 69,00 €/mois",
+      "Accédez à tous vos documents professionnels avec l'abonnement Infosociete pour 1,49 €/72h puis 49,99 €/mois",
       "Infosociete est un service privé et indépendant des administrations publiques. Nos données sont mises à jour quotidiennement et sont fournies par le Groupement d’intérêt économique des greffiers des Tribunaux de commerce (G.I.E. INFOGREFFE).",
       'Toutes les informations fournies sont authentiques et certifiées',
     ],
@@ -27,15 +27,16 @@ const defaultContent = {
     learnMore:
       "Infosociete est un portail internet sur l'information légale, juridique et financière des entreprises françaises. Fiche identité, Statuts, Extrait Kbis, Bilan, APE, SIRET, RCS, TVA intra, DUNS number, Analyse financière, Diagnostic, Publications, Annonces Bodacc, RCS, Dirigeants. Accès en illimité des données des entreprises avec la formule Infosociete. Il suffit d'entrer le nom d'une entreprise et le tour est joué.",
     usefulNote: '*voir condition formule premium',
-    formulaPrice: 'Pour 1,49 €/72h puis 69,00 €/mois',
+    formulaPrice: 'Pour 1,49 €/72h puis 49,99 €/mois',
     formulaIntro: 'Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :',
     formulaBullets: [
-      "Le chiffre d'affaires d'une entreprise, le nom des dirigeants et les différents établissements",
-      '7 extraits de Kbis par mois',
-      "Bilans, Brevets, et documents de votre société à accès illimité",
-      'Une assistance personnalisée disponible par mail et par téléphone',
-      'Support disponible du lundi au samedi de 8 h à 20 h',
-      'Accès limité à 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois',
+      "Jusqu'à 7 extraits Kbis par mois.",
+      "Jusqu'à 7 avis de situation SIRENE (Insee).",
+      "Jusqu'à 7 attestations d'immatriculation au RNE (Inpi).",
+      "Accès aux informations clés des entreprises : Chiffre d'affaires, identité des dirigeants et liste des établissements.",
+      "Jusqu'à 30 diagnostics financiers NOTA-PME et/ou AFDCC par mois pour surveiller vos partenaires et clients.",
+      "Assistance personnalisée disponible par mail pour toutes vos questions métier.",
+      "Disponibilité étendue : Support client joignable du lundi au samedi, de 8 h à 20 h.",
     ],
     serviceTitle: 'Un service pour les professionnels',
     serviceIntro: 'En apprendre plus sur notre service',
@@ -123,7 +124,7 @@ const defaultContent = {
       kbisHighlights: ['Société Identifiée', 'Dirigeant Identifié', 'Code APE Identifié', 'Identification Greffe', 'ID Greffe'],
     kbisIntro: 'Recevez votre Kbis',
     disclaimer:
-      "Formule basique de 1,49 € pour 72h, puis 69,00 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via la page Résiliation, par email et par téléphone à tout moment.",
+      "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via la page Résiliation, par email et par téléphone à tout moment.",
   },
   pages: {
     'a-propos': {
@@ -148,14 +149,15 @@ const defaultContent = {
       toolBody:
         "Nous avons voulu actualiser et rendre plus accessible l'information juridique, légale et financière aux entreprises, ainsi qu'accompagner les entrepreneurs de manière régulière. Sur infosociete.pro nous vous proposons un outil permettant de retrouver n'importe quelle entreprise et d'obtenir des informations de celle ci.",
       formulaTitle: 'Notre formule Infosociete Pro',
-      price: 'Pour 1,49 €/72h puis 69,00 €/mois',
+      price: 'Pour 1,49 €/72h puis 49,99 €/mois',
       bullets: [
-        "Le chiffre d'affaires d'une entreprise, le nom des dirigeants et les différents établissements",
-        '7 extraits de Kbis par mois',
-        "Bilans, Brevets, et documents de votre société à accès illimité",
-        'Une assistance personnalisée disponible par mail et par téléphone',
-        'Support disponible du lundi au samedi de 8 h à 20 h',
-        'Accès limité à 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois',
+        "Jusqu'à 7 extraits Kbis par mois.",
+        "Jusqu'à 7 avis de situation SIRENE (Insee).",
+        "Jusqu'à 7 attestations d'immatriculation au RNE (Inpi).",
+        'Accès aux informations clés des entreprises : Chiffre d\'affaires, identité des dirigeants et liste des établissements.',
+        'Jusqu\'à 30 diagnostics financiers NOTA-PME et/ou AFDCC par mois pour surveiller vos partenaires et clients.',
+        'Assistance personnalisée disponible par mail pour toutes vos questions métier.',
+        'Disponibilité étendue : Support client joignable du lundi au samedi, de 8 h à 20 h.',
       ],
       advantagesTitle: 'Nos avantages',
       advantages: [
@@ -186,7 +188,7 @@ const defaultContent = {
         },
         {
           title: 'Formule',
-          body: 'Profitez pleinement de notre formule premium en illimité pour 1,49 € pendant 72 h puis 69,00 € par mois.',
+          body: 'Profitez pleinement de notre formule premium en illimité pour 1,49 € pendant 72 h puis 49,99 € par mois.',
         },
       ],
     },
@@ -217,7 +219,7 @@ const defaultContent = {
         title: 'Recevez votre Kbis',
         highlights: ['Sociétée Identifiée', 'Dirigeant Identifié', 'Code APE Identifié', 'Identification Greffe', 'ID Greffe'],
         disclaimerPrefix:
-          "Formule basique de 1,49 € pour 72h, puis 69,00 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
+          "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: 'ce lien',
         disclaimerEmail: 'contact@infosociete.pro',
         disclaimerPhone: '0 805 086 583',
@@ -547,7 +549,7 @@ const defaultContent = {
           type: 'list',
           items: [
             'Une offre d’essai d’une durée déterminée de soixante-douze (72) heures au prix de 1,49 à euros TTC;',
-            'Un abonnement mensuel renouvelable par tacite reconduction au prix de 69,00 à euros TTC.',
+            'Un abonnement mensuel renouvelable par tacite reconduction au prix de 49,99 à euros TTC.',
           ],
         },
         {
@@ -882,7 +884,7 @@ const defaultContent = {
         {
           title: 'Prix',
           body:
-            '1,49 € pour 72 heures puis 69,00 € par mois si non résilié dans les 72h. Facturation à la date anniversaire, prélèvement bancaire. Libellé Infosociete/infosociete.pro.',
+            '1,49 € pour 72 heures puis 49,99 € par mois si non résilié dans les 72h. Facturation à la date anniversaire, prélèvement bancaire. Libellé Infosociete/infosociete.pro.',
         },
         {
           title: 'Résiliation',
@@ -942,7 +944,7 @@ const defaultContent = {
         title: 'Recevez votre Kbis',
         highlights: ['Sociétée Identifiée', 'Dirigeant Identifié', 'Code APE Identifié', 'Identification Greffe', 'ID Greffe'],
         disclaimerPrefix:
-          "Formule basique de 1,49 € pour 72h, puis 69,00 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
+          "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: 'ce lien',
         disclaimerEmail: 'contact@infosociete.pro',
         disclaimerPhone: '0 805 086 583',
@@ -1022,7 +1024,7 @@ const defaultContent = {
         title: 'Recevez votre Kbis',
         highlights: ['Sociétée Identifiée', 'Dirigeant Identifié', 'Code APE Identifié', 'Identification Greffe', 'ID Greffe'],
         disclaimerPrefix:
-          "Formule basique de 1,49 € pour 72h, puis 69,00 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
+          "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: 'ce lien',
         disclaimerEmail: 'contact@infosociete.pro',
         disclaimerPhone: '0 805 086 583',

@@ -1,7 +1,58 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { submitSignup } from '../api.js'
 
 export default function Signup() {
   const [type, setType] = useState('entreprise')
+  const [form, setForm] = useState({
+    identifier: '',
+    denomination: '',
+    address: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+  })
+  const navigate = useNavigate()
+  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState('')
+
+  const handleChange = (field) => (event) => {
+    setForm((prev) => ({ ...prev, [field]: event.target.value }))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const payload = {
+      profile: type,
+      siret_or_siren: form.identifier,
+      company_name: form.denomination,
+      address: form.address,
+      first_name: form.firstName,
+      last_name: form.lastName,
+      email: form.email,
+      phone: form.phone,
+      source_path: '/inscription',
+    }
+
+    setLoading(true)
+    setStatus('')
+    submitSignup(payload)
+      .then(() => {
+        navigate('/paiement', {
+          state: {
+            signup: {
+              type,
+              ...form,
+            },
+          },
+        })
+      })
+      .catch((error) => {
+        setStatus(error.message)
+      })
+      .finally(() => setLoading(false))
+  }
 
   return (
     <section className="signup-section">
@@ -9,7 +60,7 @@ export default function Signup() {
         <div className="signup-grid">
           <div className="signup-card">
             <div className="signup-header">Inscription accès personnel</div>
-            <div className="signup-body">
+            <form className="signup-body" onSubmit={handleSubmit}>
               <div className="signup-radio">
                 <label>
                   <input
@@ -34,32 +85,78 @@ export default function Signup() {
               </div>
               <label className="signup-label">
                 * Nom de votre entreprise, SIRET ou SIREN
-                <input placeholder="Nom de votre entreprise, SIRET ou SIREN" />
+                <input
+                  placeholder="Nom de votre entreprise, SIRET ou SIREN"
+                  value={form.identifier}
+                  onChange={handleChange('identifier')}
+                  required
+                />
+              </label>
+              <label className="signup-label">
+                Dénomination
+                <input
+                  placeholder="Dénomination"
+                  value={form.denomination}
+                  onChange={handleChange('denomination')}
+                  required
+                />
+              </label>
+              <label className="signup-label">
+                Adresse du siège
+                <input
+                  placeholder="Adresse du siège"
+                  value={form.address}
+                  onChange={handleChange('address')}
+                  required
+                />
               </label>
               <div className="signup-row">
                 <label className="signup-label">
                   * Prénom
-                  <input placeholder="Jean" />
+                  <input
+                    placeholder="Jean"
+                    value={form.firstName}
+                    onChange={handleChange('firstName')}
+                    required
+                  />
                 </label>
                 <label className="signup-label">
                   * Nom
-                  <input placeholder="Durand" />
+                  <input
+                    placeholder="Durand"
+                    value={form.lastName}
+                    onChange={handleChange('lastName')}
+                    required
+                  />
                 </label>
               </div>
               <div className="signup-row">
                 <label className="signup-label">
                   * Email
-                  <input placeholder="Jean@mail.com" />
+                  <input
+                    placeholder="Jean@mail.com"
+                    type="email"
+                    value={form.email}
+                    onChange={handleChange('email')}
+                    required
+                  />
                 </label>
                 <label className="signup-label">
                   * Numéro de téléphone
-                  <input placeholder="01 23 45 67 89" />
+                  <input
+                    placeholder="01 23 45 67 89"
+                    type="tel"
+                    value={form.phone}
+                    onChange={handleChange('phone')}
+                    required
+                  />
                 </label>
               </div>
-              <button className="button primary signup-button" type="button">
-                Continuer
+              <button className="button primary signup-button" type="submit" disabled={loading}>
+                {loading ? 'Validation...' : 'Continuer'}
               </button>
-            </div>
+              {status ? <p className="status-text">{status}</p> : null}
+            </form>
           </div>
           <div className="signup-info">
             <div className="signup-info-title">Accès illimité pour 1,49 €</div>
@@ -126,7 +223,7 @@ export default function Signup() {
             </div>
             <div className="signup-info-note">
               Suite à ces 72H et sans une résiliation de votre part, votre formule basique se transformera en une
-              formule premium sans engagement à durée illimitée au prix de 69,00 € par mois
+              formule premium sans engagement à durée illimitée au prix de 49,99 € par mois
             </div>
           </div>
         </div>
@@ -135,7 +232,7 @@ export default function Signup() {
         <div className="signup-formula-panel">
           <div className="signup-formula-card">
             <div className="signup-formula-title">Notre formule Infosociete Pro</div>
-            <p className="signup-formula-price">Pour 1,49 €/72h puis 69,00 €/mois</p>
+            <p className="signup-formula-price">Pour 1,49 €/72h puis 49,99 €/mois</p>
             <p>Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :</p>
           </div>
           <ul className="signup-formula-list">
@@ -148,7 +245,7 @@ export default function Signup() {
                   />
                 </svg>
               </span>
-              Le chiffre d'affaires d'une entreprise, le nom des dirigeants et les différents établissements
+              Jusqu'à 7 extraits Kbis par mois.
             </li>
             <li>
               <span className="check-icon" aria-hidden="true">
@@ -159,7 +256,7 @@ export default function Signup() {
                   />
                 </svg>
               </span>
-              7 extraits de Kbis par mois
+              Jusqu'à 7 avis de situation SIRENE (Insee).
             </li>
             <li>
               <span className="check-icon" aria-hidden="true">
@@ -170,7 +267,7 @@ export default function Signup() {
                   />
                 </svg>
               </span>
-              Bilans, Brevets, et documents de votre société à accès illimité
+              Jusqu'à 7 attestations d'immatriculation au RNE (Inpi).
             </li>
             <li>
               <span className="check-icon" aria-hidden="true">
@@ -181,7 +278,7 @@ export default function Signup() {
                   />
                 </svg>
               </span>
-              Une assistance personnalisée disponible par mail et par téléphone
+              Accès aux informations clés des entreprises : Chiffre d'affaires, identité des dirigeants et liste des établissements.
             </li>
             <li>
               <span className="check-icon" aria-hidden="true">
@@ -192,7 +289,7 @@ export default function Signup() {
                   />
                 </svg>
               </span>
-              Support disponible du lundi au samedi de 8 h à 20 h
+              Jusqu'à 30 diagnostics financiers NOTA-PME et/ou AFDCC par mois pour surveiller vos partenaires et clients.
             </li>
             <li>
               <span className="check-icon" aria-hidden="true">
@@ -203,7 +300,18 @@ export default function Signup() {
                   />
                 </svg>
               </span>
-              Accès limité à 30 diagnostics Financier NOTA-PME et/ou AFDCC par mois
+              Assistance personnalisée disponible par mail pour toutes vos questions métier.
+            </li>
+            <li>
+              <span className="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+                  <path
+                    d="M9.5 16.2 5.8 12.5a.9.9 0 0 1 1.27-1.27l2.43 2.43 6.46-6.46a.9.9 0 0 1 1.27 1.27l-7.73 7.73a.9.9 0 0 1-1.27 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              Disponibilité étendue : Support client joignable du lundi au samedi, de 8 h à 20 h.
             </li>
           </ul>
         </div>
@@ -352,3 +460,5 @@ export default function Signup() {
     </section>
   )
 }
+
+

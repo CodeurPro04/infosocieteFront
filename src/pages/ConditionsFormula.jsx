@@ -36,7 +36,7 @@ export default function ConditionsFormula() {
           <p>{priceSection?.body}</p>
           <p>
             Lors de l'achat d'un extrait de Kbis sur Infosociete, vous bénéficierez de la formule basique pour 72
-            heures, puis passez en formule premium à 69,00 € par mois sans une résiliation du compte dans les 72H
+            heures, puis passez en formule premium à 49,99 € par mois sans une résiliation du compte dans les 72H
             suivant l'achat de la formule.
           </p>
           <p>

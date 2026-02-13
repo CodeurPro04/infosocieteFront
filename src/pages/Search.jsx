@@ -14,13 +14,24 @@ export default function Search() {
   const [error, setError] = useState('')
   const [showModal, setShowModal] = useState(false)
   const [step, setStep] = useState(0)
+  const [prefill, setPrefill] = useState({
+    identifier: '',
+    denomination: '',
+    address: '',
+  })
   const navigate = useNavigate()
 
-  const handleExtract = (value) => {
+  const handleExtract = (value, item = null) => {
     if (!value) {
       return
     }
-    setQuery(String(value))
+    const identifier = String(value)
+    setQuery(identifier)
+    setPrefill({
+      identifier,
+      denomination: item?.name || '',
+      address: item?.address || '',
+    })
     setShowModal(true)
     setStep(0)
   }
@@ -31,6 +42,11 @@ export default function Search() {
       setError('Veuillez saisir un SIRET ou SIREN.')
       return
     }
+    setPrefill({
+      identifier: query.trim(),
+      denomination: '',
+      address: '',
+    })
     setShowModal(true)
     setStep(0)
     setLoading(true)
@@ -75,12 +91,16 @@ export default function Search() {
     if (step >= 4 && showModal) {
       const delay = window.setTimeout(() => {
         setShowModal(false)
-        navigate(`/recherche-entreprise/${encodeURIComponent(query.trim())}`)
+        navigate(`/recherche-entreprise/${encodeURIComponent(query.trim())}`, {
+          state: {
+            prefill,
+          },
+        })
       }, 900)
       return () => window.clearTimeout(delay)
     }
     return undefined
-  }, [step, showModal, query, navigate])
+  }, [step, showModal, query, navigate, prefill])
 
   return (
     <section className="search-page">
@@ -95,6 +115,7 @@ export default function Search() {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder={'Nom de la soci\u00e9t\u00e9, SIRET ou SIREN'}
+            required
           />
           <button className="button primary" type="submit" disabled={loading}>
             {loading ? 'Recherche...' : 'Recherche'}
@@ -109,8 +130,6 @@ export default function Search() {
             <span>Statut</span>
             <span>Code APE</span>
             <span>Année de création</span>
-            <span></span>
-            <span></span>
           </div>
           {results.map((item) => (
             <div key={`${item.name}-${item.ape}`} className="search-table-row">
@@ -119,16 +138,17 @@ export default function Search() {
               <span>{item.status}</span>
               <span>{item.ape}</span>
               <span>{item.created}</span>
+              {/*
               <NavLink className="search-link" to="/entreprises">
                 Détails
-              </NavLink>
+              </NavLink> 
               <button
                 className="button primary search-kbis"
                 type="button"
-                onClick={() => handleExtract(item.siren || item.siret || item.name)}
+                onClick={() => handleExtract(item.siren || item.siret || item.name, item)}
               >
                 Extrait Kbis
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

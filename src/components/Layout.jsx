@@ -5,6 +5,9 @@ import cards from '../assets/illustrations/cards.png'
 
 export default function Layout({ children }) {
   const { content } = useContent()
+  const hiddenNavLabels = new Set(['accueil', 'connexion', 'back office'])
+  const visibleNavigation =
+    content.navigation?.filter((item) => !hiddenNavLabels.has((item.label || '').toLowerCase().trim())) || []
 
   return (
     <div className="app-shell">
@@ -14,7 +17,7 @@ export default function Layout({ children }) {
             <img className="brand-logo" src={logo} alt={content.site?.name || 'Infosociete'} />
           </NavLink>
           <nav className="nav">
-            {content.navigation?.map((item) => (
+            {visibleNavigation.map((item) => (
               <NavLink key={item.path} to={item.path} className="nav-link">
                 {item.label}
               </NavLink>

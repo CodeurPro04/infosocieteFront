@@ -94,7 +94,7 @@ export default function Claim() {
           <form className="form-card contact-form" onSubmit={handleSubmit}>
             <h2>Nous contacter</h2>
             <label>
-              Pr\u00e9nom et nom de famille
+              Prénom et nom de famille
               <input name="name" placeholder="Jean Dupont" required />
             </label>
             <label>
@@ -108,7 +108,7 @@ export default function Claim() {
             <label className="contact-consent">
               <input type="checkbox" required />
               <span>
-                En soumettant ce formulaire, j'accepte que les informations saisies soient utilis\u00e9es pour me
+                En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées pour me
                 recontacter.
               </span>
             </label>

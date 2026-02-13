@@ -59,7 +59,7 @@ export default function Hpy() {
               </label>
               <label>
                 Sujet
-                <input name="subject" placeholder="Sujet" />
+                <input name="subject" placeholder="Sujet" required />
               </label>
               <label>
                 Message

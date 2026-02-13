@@ -103,7 +103,7 @@ export default function Contact() {
             </label>
             <label>
               Sujet
-              <input name="subject" placeholder="Sujet" />
+              <input name="subject" placeholder="Sujet" required />
             </label>
             <label>
               Message
