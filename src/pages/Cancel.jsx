@@ -11,14 +11,17 @@ export default function Cancel() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     const formData = new FormData(event.target)
-    const payload = Object.fromEntries(formData.entries())
+    const payload = {
+      ...Object.fromEntries(formData.entries()),
+      source_path: '/resiliation',
+    }
 
     setLoading(true)
     setStatus('')
     try {
       await submitCancel(payload)
       event.target.reset()
-      setStatus('Votre demande a ete recue. Nous revenons vers vous rapidement.')
+      setStatus('Votre demande a été reçue. Nous revenons vers vous rapidement.')
     } catch (error) {
       setStatus(error.message)
     } finally {

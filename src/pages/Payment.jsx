@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
@@ -52,6 +52,8 @@ function StripeCheckoutForm({ customerName = "", paymentContext = {}, onCloseSuc
       return;
     }
 
+    const confirmedIntentId = result.paymentIntent?.id || paymentContext.intentId || null;
+
     try {
       await submitPaymentRecord({
         siret_or_siren: paymentContext.identifier || "UNKNOWN",
@@ -66,7 +68,7 @@ function StripeCheckoutForm({ customerName = "", paymentContext = {}, onCloseSuc
         email: paymentContext.email || null,
         consent: true,
         source_path: "/paiement",
-        stripe_intent_id: paymentContext.intentId || null,
+        stripe_intent_id: confirmedIntentId,
       });
     } catch (recordError) {
       setError(recordError.message || "Paiement validé mais enregistrement impossible.");
@@ -183,11 +185,18 @@ export default function Payment() {
   const [intentId, setIntentId] = useState("");
   const [loadingIntent, setLoadingIntent] = useState(true);
   const [intentError, setIntentError] = useState("");
+  const lastIntentKeyRef = useRef("");
 
   const customerName = `${payload.firstName || ""} ${payload.lastName || ""}`.trim();
   const identifier = payload.identifier || "";
 
   useEffect(() => {
+    const intentKey = `${identifier || "UNKNOWN"}::${payload.email || ""}`;
+    if (lastIntentKeyRef.current === intentKey) {
+      return;
+    }
+    lastIntentKeyRef.current = intentKey;
+
     const initIntent = async () => {
       if (!stripePublicKey) {
         setIntentError("Clé publique Stripe manquante. Ajoutez VITE_STRIPE_PUBLISHABLE_KEY.");
