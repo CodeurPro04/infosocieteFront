@@ -1,13 +1,31 @@
-import { NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
 import logo from '../assets/illustrations/logokbis.jpeg'
 import cards from '../assets/illustrations/cards.png'
 
 export default function Layout({ children }) {
   const { content } = useContent()
+  const location = useLocation()
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const hiddenNavLabels = new Set(['accueil', 'connexion', 'back office'])
   const visibleNavigation =
     content.navigation?.filter((item) => !hiddenNavLabels.has((item.label || '').toLowerCase().trim())) || []
+
+  useEffect(() => {
+    setIsMobileNavOpen(false)
+  }, [location.pathname])
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 960) {
+        setIsMobileNavOpen(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <div className="app-shell">
@@ -16,29 +34,47 @@ export default function Layout({ children }) {
           <NavLink className="brand" to="/">
             <img className="brand-logo" src={logo} alt={content.site?.name || 'Infosociete'} />
           </NavLink>
-          <nav className="nav">
-            {visibleNavigation.map((item) => (
-              <NavLink key={item.path} to={item.path} className="nav-link">
-                {item.label}
-              </NavLink>
-            ))}
-          </nav>
-          <div className="header-cta">
-            <a className="phone-link" href={`tel:${content.site?.phone?.replace(/\s/g, '')}`}>
-              <span className="phone-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
-                  <path
-                    d="M7.2 3.75c.42 0 .82.2 1.06.55l1.52 2.2c.28.4.3.93.05 1.35l-1.02 1.7a.9.9 0 0 0 .1 1.06 11.9 11.9 0 0 0 4.05 3.53.9.9 0 0 0 1.1-.2l1.43-1.43c.38-.38.95-.5 1.44-.3l2.38.95c.58.23.92.83.83 1.45l-.32 2.22a1.5 1.5 0 0 1-1.48 1.29c-7.45 0-13.5-6.05-13.5-13.5A1.5 1.5 0 0 1 6.6 3.75h.6Z"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <span>{content.site?.phone}</span>
-            </a>
+          <button
+            type="button"
+            className={`mobile-nav-toggle${isMobileNavOpen ? ' is-open' : ''}`}
+            aria-label="Ouvrir le menu"
+            aria-expanded={isMobileNavOpen}
+            aria-controls="site-mobile-navigation"
+            onClick={() => setIsMobileNavOpen((prev) => !prev)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+          <div className={`header-panel${isMobileNavOpen ? ' is-open' : ''}`} id="site-mobile-navigation">
+            <nav className="nav">
+              {visibleNavigation.map((item) => (
+                <NavLink key={item.path} to={item.path} className="nav-link" onClick={() => setIsMobileNavOpen(false)}>
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
+            <div className="header-cta">
+              <a
+                className="phone-link"
+                href={`tel:${content.site?.phone?.replace(/\s/g, '')}`}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                <span className="phone-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+                    <path
+                      d="M7.2 3.75c.42 0 .82.2 1.06.55l1.52 2.2c.28.4.3.93.05 1.35l-1.02 1.7a.9.9 0 0 0 .1 1.06 11.9 11.9 0 0 0 4.05 3.53.9.9 0 0 0 1.1-.2l1.43-1.43c.38-.38.95-.5 1.44-.3l2.38.95c.58.23.92.83.83 1.45l-.32 2.22a1.5 1.5 0 0 1-1.48 1.29c-7.45 0-13.5-6.05-13.5-13.5A1.5 1.5 0 0 1 6.6 3.75h.6Z"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span>{content.site?.phone}</span>
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -48,7 +84,7 @@ export default function Layout({ children }) {
           <p className="footer-disclaimer">{content.home?.disclaimer}</p>
         </div>
         <div className="container footer-brand">
-          <img className="footer-logo" src={logo} alt={content.site?.name || 'Infosociete'} />
+          <img className="footer-logo" src={logo} alt={content.site?.name || 'Infogref.goentrypro'} />
         </div>
         <div className="container">
           <hr className="footer-rule" />
@@ -87,7 +123,7 @@ export default function Layout({ children }) {
           </div>
         </div>
         <div className="footer-bottom">
-          © {content.site?.year || new Date().getFullYear()} Infosociete - 2022 - 2026 Tous droits réservés
+          © {content.site?.year || new Date().getFullYear()} Infogref.goentrypro - 2022 - 2026 Tous droits réservés
         </div>
         <div className="footer-bottom footer-meta">IE 3985411WH</div>
         <div className="footer-bottom footer-meta">

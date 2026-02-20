@@ -54,7 +54,7 @@ export default function Faq() {
         </div>
         <div className="faq-cards">
           <div className="faq-card">
-            <div className="faq-card-eyebrow">Notre formule Infosociete Pro</div>
+            <div className="faq-card-eyebrow">Notre formule Infogref.goentrypro</div>
             <h3>Profitez d'un accès aux extraits de Kbis pour 1,49 € pendant 72h*</h3>
             <NavLink className="faq-card-link" to="/conditions-de-la-formule">
               *voir condition formule premium

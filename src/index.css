@@ -179,6 +179,10 @@ button {
   padding: 0.85rem 0;
 }
 
+.header-panel {
+  display: contents;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -190,6 +194,42 @@ button {
   width: auto;
   display: block;
   object-fit: contain;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(11, 19, 36, 0.12);
+  border-radius: 10px;
+  background: #fff;
+  color: #1c2b45;
+  align-items: center;
+  justify-content: center;
+  gap: 0.26rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .nav {
@@ -1049,10 +1089,15 @@ button {
   margin-bottom: 2.5rem;
 }
 
+.offer-tool > * {
+  min-width: 0;
+}
+
 .offer-tool-text {
   color: #374151;
   font-size: 0.95rem;
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .offer-tool-text p {
@@ -1078,6 +1123,10 @@ button {
   box-shadow: none;
   border: 1px solid #e5e7eb;
   grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 1.1fr);
+}
+
+.offer-panel.offer-panel-light > * {
+  min-width: 0;
 }
 
 .offer-card {
@@ -1128,6 +1177,41 @@ button {
   grid-template-columns: auto 1fr;
   gap: 0.7rem;
   align-items: start;
+  min-width: 0;
+}
+
+.offer-checklist li span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.offer-main-panel {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.offer-main-panel > * {
+  min-width: 0;
+}
+
+.offer-main-checklist {
+  min-width: 0;
+}
+
+.offer-main-checklist li {
+  grid-template-columns: 20px minmax(0, 1fr);
+}
+
+.offer-main-checklist li .check-icon {
+  margin-top: 0.15rem;
+}
+
+.offer-main-checklist li > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  line-height: 1.55;
 }
 
 .advantages-section {
@@ -1194,10 +1278,15 @@ button {
   align-items: start;
 }
 
+.offer-support-grid > * {
+  min-width: 0;
+}
+
 .offer-support-text {
   color: #374151;
   font-size: 0.95rem;
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .offer-support-text p {
@@ -2124,7 +2213,7 @@ button {
 }
 
 .payment-card {
-  width: 620px;
+  width: min(620px, 100%);
   border: 1px solid #c7ced8;
   border-radius: 4px;
   overflow: hidden;
@@ -2362,7 +2451,7 @@ button {
 }
 
 .payment-sample {
-  width: 360px;
+  width: min(360px, 100%);
   background: #fff;
   border-radius: 4px;
   border: 1px solid #d9dee5;
@@ -3973,8 +4062,26 @@ button {
 
 @media (max-width: 960px) {
   .header-inner {
-    grid-template-columns: 1fr;
-    align-items: flex-start;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+
+  .header-panel {
+    grid-column: 1 / -1;
+    display: none;
+    margin-top: 0.3rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(11, 19, 36, 0.08);
+  }
+
+  .header-panel.is-open {
+    display: grid;
+    gap: 1rem;
   }
 
   .payment-grid {
@@ -3988,13 +4095,53 @@ button {
 
   .header-cta {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
   .nav {
     width: 100%;
     justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    width: fit-content;
+  }
+
+  .phone-link {
+    white-space: normal;
+  }
+
+  .info-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .info-section-header h2 {
+    white-space: normal;
+  }
+
+  .search-hero {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding: 0.65rem;
+    border-radius: 12px;
+  }
+
+  .search-hero input {
+    border: 1px solid #d8dde6;
+    border-radius: 8px;
+    padding: 0.8rem 0.85rem;
+  }
+
+  .search-hero button {
+    border-radius: 8px;
+    padding: 0.78rem 1rem;
+    width: 100%;
   }
 
   .hero-figure {
@@ -4046,6 +4193,19 @@ button {
 
   .offer-panel-light {
     grid-template-columns: 1fr;
+  }
+
+  .offer-main-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .offer-main-panel .offer-card,
+  .offer-main-panel .offer-main-checklist {
+    width: 100%;
+    max-width: 100%;
   }
 
   .advantages-grid {
@@ -4175,6 +4335,113 @@ button {
 }
 
 @media (max-width: 720px) {
+  .container {
+    width: min(1180px, calc(100vw - 1.25rem));
+  }
+
+  .hero,
+  .section,
+  .page,
+  .offer-page,
+  .mentions-page,
+  .cookies-page,
+  .bankinfo-page,
+  .hpy-page,
+  .connexion-page {
+    padding-top: 2.2rem;
+    padding-bottom: 2.6rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .hero-search {
+    padding: 0.75rem;
+  }
+
+  .search-button {
+    width: 100%;
+    min-width: 0;
+    justify-self: stretch;
+  }
+
+  .offer-tool,
+  .offer-support-grid {
+    gap: 1.2rem;
+  }
+
+  .offer-panel.offer-panel-light {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .offer-main-panel {
+    padding: 0.9rem;
+    gap: 0.9rem;
+  }
+
+  .offer-card {
+    padding: 1rem;
+  }
+
+  .offer-main-checklist {
+    font-size: 0.9rem;
+    gap: 0.75rem;
+  }
+
+  .offer-main-checklist li {
+    gap: 0.55rem;
+  }
+
+  .advantage-card {
+    padding: 1.1rem;
+    min-height: auto;
+  }
+
+  .search-modal-card {
+    grid-template-columns: 1fr;
+    padding: 1.1rem;
+    gap: 1.1rem;
+    text-align: center;
+  }
+
+  .search-modal-verified {
+    width: 56px;
+    height: 56px;
+    top: -12px;
+    right: -10px;
+  }
+
+  .detail-hero {
+    padding: 1.1rem 1rem;
+  }
+
+  .detail-hero::before,
+  .detail-hero::after {
+    width: 74px;
+  }
+
+  .cookies-table-head,
+  .cookies-table-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .payment-sample {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .detail-submit {
+    width: 100%;
+  }
+
+  .site-footer {
+    padding: 2.1rem 0 1.9rem;
+  }
+
   .table-head,
   .table-row {
     grid-template-columns: 1fr;

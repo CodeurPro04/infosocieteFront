@@ -24,7 +24,7 @@ export default function Formula() {
             <img src={offerArt} alt="Outil de recherche" />
           </div>
         </div>
-        <div className="offer-panel offer-panel-light">
+        <div className="offer-panel offer-panel-light offer-main-panel">
             <div className="offer-card">
               <div className="offer-card-title">{page?.formulaTitle}</div>
               <p className="offer-card-price">{page?.price}</p>
@@ -33,7 +33,7 @@ export default function Formula() {
               S'inscrire
             </NavLink>
             </div>
-          <ul className="offer-checklist">
+          <ul className="offer-checklist offer-main-checklist">
             {page?.bullets?.map((item) => (
               <li key={item}>
                 <span className="check-icon" aria-hidden="true">

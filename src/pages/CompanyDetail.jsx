@@ -226,7 +226,7 @@ export default function CompanyDetail() {
         <div className="detail-offer">
           <div className="detail-offer-panel">
             <div className="detail-offer-card">
-              <h3>Notre formule Infosociete Pro</h3>
+              <h3>Notre formule Infogref.goentrypro</h3>
               <p className="detail-offer-price">
                 Pour 1,49 €/72h puis 49,99 €/mois
               </p>

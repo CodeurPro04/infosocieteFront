@@ -1,12 +1,12 @@
 const defaultContent = {
   site: {
-    name: 'Infosociete Pro',
+    name: 'Infogref.goentrypro',
     phone: '0 805 086 583',
-    email: 'contact@infosociete.pro',
+    email: 'contact@Infogref.goentrypro.pro',
     hours: 'Du lundi au samedi, de 8h a 20h',
   },
   navigation: [
-    { label: 'Formule Infosociete Pro', path: '/offre' },
+    { label: 'Formule Infogref.goentrypro', path: '/offre' },
     { label: 'Résiliation', path: '/resiliation' },
     { label: 'Contact', path: '/contact' },
   ],
@@ -17,18 +17,18 @@ const defaultContent = {
     tags: ['#Marques', '#FicheEntreprise', '#Bilans', '#Actes', '#RCS', '#Sirene', '#SIRET/SIREN', '#Statuts'],
     benefits: [
       'Consultez et téléchargez toutes vos informations légales, juridiques et financières',
-      "Accédez à tous vos documents professionnels avec l'abonnement Infosociete pour 1,49 €/72h puis 49,99 €/mois",
-      "Infosociete est un service privé et indépendant des administrations publiques. Nos données sont mises à jour quotidiennement et sont fournies par le Groupement d’intérêt économique des greffiers des Tribunaux de commerce (G.I.E. INFOGREFFE).",
+      "Accédez à tous vos documents professionnels avec l'abonnement Infogref.goentrypro pour 1,49 €/72h puis 49,99 €/mois",
+      "Infogref.goentrypro est un service privé et indépendant des administrations publiques. Nos données sont mises à jour quotidiennement et sont fournies par le Groupement d’intérêt économique des greffiers des Tribunaux de commerce (G.I.E. INFOGREFFE).",
       'Toutes les informations fournies sont authentiques et certifiées',
     ],
     usefulTitle: 'Informations utiles',
     usefulBody:
-      "Nous avons voulu moderniser et simplifier l'accès à l'information juridique, légale et financière des entreprises, ainsi qu'accompagner les entrepreneurs au quotidien, grâce à Infosociete. Pour relever ce défi, nous disposons d'une équipe opérationnelle rigoureuse et professionnelle dans chaque domaine, appuyée par des partenaires et des consultants de premier plan, afin de garantir un haut niveau de service, la fraîcheur de l'information et la facilité de consommation des données d'entreprise souvent indigestes et réservées aux institutions ou aux grands groupes.",
+      "Nous avons voulu moderniser et simplifier l'accès à l'information juridique, légale et financière des entreprises, ainsi qu'accompagner les entrepreneurs au quotidien, grâce à Infogref.goentrypro. Pour relever ce défi, nous disposons d'une équipe opérationnelle rigoureuse et professionnelle dans chaque domaine, appuyée par des partenaires et des consultants de premier plan, afin de garantir un haut niveau de service, la fraîcheur de l'information et la facilité de consommation des données d'entreprise souvent indigestes et réservées aux institutions ou aux grands groupes.",
     learnMore:
-      "Infosociete est un portail internet sur l'information légale, juridique et financière des entreprises françaises. Fiche identité, Statuts, Extrait Kbis, Bilan, APE, SIRET, RCS, TVA intra, DUNS number, Analyse financière, Diagnostic, Publications, Annonces Bodacc, RCS, Dirigeants. Accès en illimité des données des entreprises avec la formule Infosociete. Il suffit d'entrer le nom d'une entreprise et le tour est joué.",
+      "Infogref.goentrypro est un portail internet sur l'information légale, juridique et financière des entreprises françaises. Fiche identité, Statuts, Extrait Kbis, Bilan, APE, SIRET, RCS, TVA intra, DUNS number, Analyse financière, Diagnostic, Publications, Annonces Bodacc, RCS, Dirigeants. Accès en illimité des données des entreprises avec la formule Infogref.goentrypro. Il suffit d'entrer le nom d'une entreprise et le tour est joué.",
     usefulNote: '*voir condition formule premium',
     formulaPrice: 'Pour 1,49 €/72h puis 49,99 €/mois',
-    formulaIntro: 'Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :',
+    formulaIntro: 'Inscrivez vous pour profiter de nombreux avantages chez Infogref.goentrypro qui vous permettront de voir :',
     formulaBullets: [
       "Jusqu'à 7 extraits Kbis par mois.",
       "Jusqu'à 7 avis de situation SIRENE (Insee).",
@@ -41,7 +41,7 @@ const defaultContent = {
     serviceTitle: 'Un service pour les professionnels',
     serviceIntro: 'En apprendre plus sur notre service',
     serviceBody:
-      "Nous offrons notre service à tous les professionnels. Vous pouvez trouver vos documents d'entreprise en faisant une demande sur notre site. Même les documents de vos concurrents sont disponibles, tous nos envois se font de façon sécurisée. Nous possédons un grand nombre de fichiers dans notre base de données alors n'hésitez pas à rejoindre Infosociete.",
+      "Nous offrons notre service à tous les professionnels. Vous pouvez trouver vos documents d'entreprise en faisant une demande sur notre site. Même les documents de vos concurrents sont disponibles, tous nos envois se font de façon sécurisée. Nous possédons un grand nombre de fichiers dans notre base de données alors n'hésitez pas à rejoindre Infogref.goentrypro.",
     companiesTitle: 'Liste des entreprises',
     companiesIntro: 'Voici la liste des entreprises recherche par nos utilisateurs.',
     companiesNote:
@@ -98,11 +98,11 @@ const defaultContent = {
     },
     aboutTitle: 'A propos de nous',
     aboutBody:
-      "Nous avions l'intention de moderniser et de simplifier l'accès à l'information juridique, légale et financière des entreprises, ainsi que d'accompagner les entrepreneurs au quotidien, grâce à Infosociete. Vérifiez, examinez et téléchargez tous les documents et données relatifs à l'identité et aux procédures d'une entreprise en quelques clics seulement. Infosociete a rassemblé pour vous les documents les plus importants, notamment les actes, les avis du BODACC, les extraits Kbis, les statuts, et bien plus encore...",
+      "Nous avions l'intention de moderniser et de simplifier l'accès à l'information juridique, légale et financière des entreprises, ainsi que d'accompagner les entrepreneurs au quotidien, grâce à Infogref.goentrypro. Vérifiez, examinez et téléchargez tous les documents et données relatifs à l'identité et aux procédures d'une entreprise en quelques clics seulement. Infogref.goentrypro a rassemblé pour vous les documents les plus importants, notamment les actes, les avis du BODACC, les extraits Kbis, les statuts, et bien plus encore...",
     serviceCards: [
       {
         title: 'Accédez à toutes nos données et documents exclusifs sur les entreprises',
-        body: "Chez Infosociete, nous mettons à disposition tous les types de documents d'entreprises qu'ils soient juridiques, légaux ou financiers. N'attendez pas et demandez vos documents dès maintenant.",
+        body: "Chez Infogref.goentrypro, nous mettons à disposition tous les types de documents d'entreprises qu'ils soient juridiques, légaux ou financiers. N'attendez pas et demandez vos documents dès maintenant.",
       },
       {
         title: 'Une équipe de services à la clientèle toujours prête à répondre à tous vos besoins',
@@ -110,14 +110,14 @@ const defaultContent = {
       },
     ],
     formulaCta: {
-      title: 'Notre formule Infosociete Pro',
+      title: 'Notre formule Infogref.goentrypro',
       body: "Profitez d'un accès aux extraits de Kbis pour 1,49 € pendant 72h*",
       note: '*voir condition formule premium',
     },
     contactBlock: {
       title: 'Nous contacter',
       body: 'Prenez contact avec nous maintenant.',
-      email: 'contact@infosociete.pro',
+      email: 'contact@Infogref.goentrypro.pro',
       phone: '0 805 086 583',
       hours: 'Du lundi au samedi, de 8h à 20h',
     },
@@ -134,21 +134,21 @@ const defaultContent = {
         {
           title: 'Historique',
           body:
-            "Depuis plus de 50 ans, Infosociete fournit des services d'information sur les entreprises françaises. Nous proposons une gamme de produits adaptés afin d'obtenir des informations fiables sur les entreprises.",
+            "Depuis plus de 50 ans, Infogref.goentrypro fournit des services d'information sur les entreprises françaises. Nous proposons une gamme de produits adaptés afin d'obtenir des informations fiables sur les entreprises.",
         },
         {
           title: 'Une experience de plus de 50 ans',
           body:
-            "Infosociete regroupe aujourd'hui un large éventail de données juridiques, légales et financières pour accompagner les professionnels et entrepreneurs.",
+            "Infogref.goentrypro regroupe aujourd'hui un large éventail de données juridiques, légales et financières pour accompagner les professionnels et entrepreneurs.",
         },
       ],
     },
     offre: {
-      title: 'Formule Infosociete Pro',
+      title: 'Formule Infogref.goentrypro',
       toolTitle: "Notre outil de recherche d'entreprise",
       toolBody:
-        "Nous avons voulu actualiser et rendre plus accessible l'information juridique, légale et financière aux entreprises, ainsi qu'accompagner les entrepreneurs de manière régulière. Sur infosociete.pro nous vous proposons un outil permettant de retrouver n'importe quelle entreprise et d'obtenir des informations de celle ci.",
-      formulaTitle: 'Notre formule Infosociete Pro',
+        "Nous avons voulu actualiser et rendre plus accessible l'information juridique, légale et financière aux entreprises, ainsi qu'accompagner les entrepreneurs de manière régulière. Sur Infogref.goentrypro.pro nous vous proposons un outil permettant de retrouver n'importe quelle entreprise et d'obtenir des informations de celle ci.",
+      formulaTitle: 'Notre formule Infogref.goentrypro',
       price: 'Pour 1,49 €/72h puis 49,99 €/mois',
       bullets: [
         "Jusqu'à 7 extraits Kbis par mois.",
@@ -169,17 +169,17 @@ const defaultContent = {
         {
           title: 'Actes, Brevets et Bilans',
           body:
-            "Il peut être utile d'accéder aux informations contenues dans les documents des entreprises. Infosociete vous permet d'accéder à ces informations.",
+            "Il peut être utile d'accéder aux informations contenues dans les documents des entreprises. Infogref.goentrypro vous permet d'accéder à ces informations.",
         },
         {
           title: 'Diagnostics financier',
           body:
-            "Le diagnostic financier NOTA-PME et/ou AFDCC est un des principaux documents qui permettent d'analyser la comptabilité d'une entreprise, avec Infosociete bénéficiez de 30 diagnostics par mois.",
+            "Le diagnostic financier NOTA-PME et/ou AFDCC est un des principaux documents qui permettent d'analyser la comptabilité d'une entreprise, avec Infogref.goentrypro bénéficiez de 30 diagnostics par mois.",
         },
         {
           title: 'Recherche de TVA',
           body:
-            "Besoin de savoir si votre numéro de TVA a été enregistré et validé  Infosociete vous permet de retrouver si le numéro de TVA de n'importe quelle entreprise est valide.",
+            "Besoin de savoir si votre numéro de TVA a été enregistré et validé  Infogref.goentrypro vous permet de retrouver si le numéro de TVA de n'importe quelle entreprise est valide.",
         },
         {
           title: 'Service clientele personnalise',
@@ -195,7 +195,7 @@ const defaultContent = {
     resiliation: {
       title: 'Résiliation',
       body:
-        "Vous voulez résilier votre formule Infosociete Pro  Vous pouvez le faire via ce formulaire en ligne en renseignant votre adresse e-mail. Votre demande sera prise en compte immédiatement.",
+        "Vous voulez résilier votre formule Infogref.goentrypro  Vous pouvez le faire via ce formulaire en ligne en renseignant votre adresse e-mail. Votre demande sera prise en compte immédiatement.",
       field: 'Email',
     },
     contact: {
@@ -221,7 +221,7 @@ const defaultContent = {
         disclaimerPrefix:
           "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: 'ce lien',
-        disclaimerEmail: 'contact@infosociete.pro',
+        disclaimerEmail: 'contact@Infogref.goentrypro.pro',
         disclaimerPhone: '0 805 086 583',
         disclaimerSuffix: 'à tout moment.',
       },
@@ -237,7 +237,7 @@ const defaultContent = {
       intro: 'Retrouver toutes les questions les plus fréquemment posées dans notre FAQ dédiée à notre service',
       items: [
         {
-          q: "Qu'est-ce quʼInfosociete ",
+          q: "Qu'est-ce quʼInfogref.goentrypro ",
           blocks: [
             {
               type: 'p',
@@ -266,7 +266,7 @@ const defaultContent = {
             {
               type: 'p',
               text:
-                "Il est possible pour tous les représentants d’entreprise d’obtenir le renouvellement de son extrait de Kbis auprès de tous les organismes et sites web proposant ce service. Il est par exemple possible sur Infosociete d’obtenir un extrait de Kbis actualisé car nous disposons des dernières informations à jour. L’ancien extrait de Kbis peut quand même être conservé car il peut permettre de retracer l’historique de la société en question.",
+                "Il est possible pour tous les représentants d’entreprise d’obtenir le renouvellement de son extrait de Kbis auprès de tous les organismes et sites web proposant ce service. Il est par exemple possible sur Infogref.goentrypro d’obtenir un extrait de Kbis actualisé car nous disposons des dernières informations à jour. L’ancien extrait de Kbis peut quand même être conservé car il peut permettre de retracer l’historique de la société en question.",
             },
           ],
         },
@@ -292,7 +292,7 @@ const defaultContent = {
             {
               type: 'p',
               text:
-                "Toutes les informations présentes dans l’extrait de Kbis sont publiques, ainsi toutes les personnes physiques ou morales sont en droit de demander un extrait de Kbis d’une société tierce enregistré au RCS. Vous pouvez effectuer ce service directement sur le site Infosociete.",
+                "Toutes les informations présentes dans l’extrait de Kbis sont publiques, ainsi toutes les personnes physiques ou morales sont en droit de demander un extrait de Kbis d’une société tierce enregistré au RCS. Vous pouvez effectuer ce service directement sur le site Infogref.goentrypro.",
             },
           ],
         },
@@ -370,7 +370,7 @@ const defaultContent = {
           {
             subtitle: "Obtenir l'extrait Kbis de sa propre entreprise",
             paragraphs: [
-              "Une entreprise peut obtenir son propre extrait Kbis. Le dirigeant ou le représentant légal de l'entreprise doit se rendre sur le site de infosociete pour effectuer cette démarche. Il devra s'inscrire pour créer un compte. L'extrait Kbis de son entreprise sera alors disponible en téléchargement pour lui.",
+              "Une entreprise peut obtenir son propre extrait Kbis. Le dirigeant ou le représentant légal de l'entreprise doit se rendre sur le site de Infogref.goentrypro pour effectuer cette démarche. Il devra s'inscrire pour créer un compte. L'extrait Kbis de son entreprise sera alors disponible en téléchargement pour lui.",
               "Suite à l'immatriculation de l'entreprise au RCS, le greffier du tribunal de commerce remet en main propre le premier extrait Kbis de l'entreprise. Dans un délai de 10 à 15 jours, il vous est envoy? par courrier.",
             ],
           },
@@ -378,15 +378,15 @@ const defaultContent = {
             subtitle: "Obtenez l'extrait Kbis d'une autre entreprise.",
             paragraphs: [
               "Le Kbis est un document public qui est à la disposition de tous. L'extrait Kbis d'une entreprise tierce peut donc être obtenu de différentes maniéres :",
-              "faire une demande auprès d'infosociete. La localisation du siège de l'entreprise doit être demandée au tribunal de commerce. Ensuite, l'intéress? peut s'envoyer par courrier une copie du Kbis de l'entreprise ;",
-              "consulter les sites Internet consacrés aux données commerciales comme infosociete.pro. La partie intéressée peut obtenir directement le Kbis d'une entreprise tierce à partir de ces plateformes.",
+              "faire une demande auprès d'Infogref.goentrypro. La localisation du siège de l'entreprise doit être demandée au tribunal de commerce. Ensuite, l'intéress? peut s'envoyer par courrier une copie du Kbis de l'entreprise ;",
+              "consulter les sites Internet consacrés aux données commerciales comme Infogref.goentrypro.pro. La partie intéressée peut obtenir directement le Kbis d'une entreprise tierce à partir de ces plateformes.",
             ],
           },
         ],
       },
       kbisCards: [
         {
-          eyebrow: 'Notre formule Infosociete Pro',
+          eyebrow: 'Notre formule Infogref.goentrypro',
           title: "Profitez d'un accès aux extraits de Kbis pour 1,49 à pendant 72h*",
           link: '*voir condition formule premium',
           button: "S'inscrire",
@@ -394,7 +394,7 @@ const defaultContent = {
         {
           eyebrow: 'Nous contacter',
           title: 'Prenez contact avec nous maintenant',
-          email: 'contact@infosociete.pro',
+          email: 'contact@Infogref.goentrypro.pro',
           contactLink: 'Via la page de contact',
         },
         {
@@ -406,16 +406,16 @@ const defaultContent = {
       ],
     },
 'conditions-generales-de-vente': {
-      title: 'CONDITIONS GENERALES DE VENTE (? CGV ?)',
+      title: 'CONDITIONS GENERALES DE VENTE (CGV)',
       version: 'Version 1.1',
       intro:
-        "Ce site est détenu et opéré par la société ODYSSEUS MEDIA LIMITED, Société Limited de droit irlandais au capital social de dix (10) euros, immatriculée auprès du Registre du commerce et des sociétés en Irlande sous le numéro 714131 , ayant son siège social à 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland (? Infosociete ?, ou « nous »).",
+        "Ce site est détenu et opéré par la société ODYSSEUS MEDIA LIMITED, Société Limited de droit irlandais au capital social de dix (10) euros, immatriculée auprès du Registre du commerce et des sociétés en Irlande sous le numéro 714131 , ayant son siège social à 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland ( Infogref.goentrypro , ou « nous »).",
       blocks: [
         { type: 'heading', text: '1. Objet' },
         {
           type: 'paragraph',
           text:
-            "Infosociete propose, dans le cadre de la souscription d’un abonnement mensuel, la fourniture des Services depuis la site Internet accessible à l’adresse URL suivante: infosociete.pro (? Site ?), uniquement à destination des professionnels (par opposition aux consommateurs)",
+            "Infogref.goentrypro propose, dans le cadre de la souscription d’un abonnement mensuel, la fourniture des Services depuis la site Internet accessible à l’adresse URL suivante: Infogref.goentrypro.pro ( Site ), uniquement à destination des professionnels (par opposition aux consommateurs)",
         },
         {
           type: 'paragraph',
@@ -424,7 +424,7 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Lors de l’ouverture d’un compte sur le Site, vous serez invit?(e) à cocher une case confirmant que vous avez lu et que vous acceptez les CGV, qui formeront alors un contrat valable entre vous et Infosociete.',
+            'Lors de l’ouverture d’un compte sur le Site, vous serez invite(e) à cocher une case confirmant que vous avez lu et que vous acceptez les CGV, qui formeront alors un contrat valable entre vous et Infogref.goentrypro.',
         },
         {
           type: 'paragraph',
@@ -453,13 +453,13 @@ const defaultContent = {
           type: 'definition',
           term: '?Membre? ou ?vous?',
           text:
-            "désigne toute personne physique ou morale souscrivant pour son compte aux Services proposés par Infosociete pour son activit? professionnelle et disposant d’un Compte sur le Site.",
+            "désigne toute personne physique ou morale souscrivant pour son compte aux Services proposés par Infogref.goentrypro pour son activit? professionnelle et disposant d’un Compte sur le Site.",
         },
         {
           type: 'definition',
           term: '?Services?',
           text:
-            'désignent les services payants fournis par la Société dans le cadre de la souscription à la formule Infosociete Pro et décrits à l’article 3 des CGV et qui vous sont proposées au travers du Site.',
+            'désignent les services payants fournis par la Société dans le cadre de la souscription à la formule Infogref.goentrypro et décrits à l’article 3 des CGV et qui vous sont proposées au travers du Site.',
         },
         { type: 'heading', text: '2. Ouvrir un Compte' },
         { type: 'subheading', text: 'A. Conditions' },
@@ -520,14 +520,14 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Vous pourrez ?galement communiquer et ?changer avec Infosociete, par courrier ?lectronique à l’adresse suivante contact@infosociete.pro et par chat depuis l’Espace Client.',
+            'Vous pourrez ?galement communiquer et ?changer avec Infogref.goentrypro, par courrier ?lectronique à l’adresse suivante contact@Infogref.goentrypro.pro et par chat depuis l’Espace Client.',
         },
         { type: 'heading', text: '4. Régles de conduite des Membres sur le Site' },
         { type: 'paragraph', text: 'L’utilisation du Site par les Membres est soumise à des règles. En utilisant le Site, vous acceptez:' },
         {
           type: 'list',
           items: [
-            'de ne pas enfreindre les droits et image de Infosociete, tels que notamment ses droits de propriété intellectuelle ;',
+            'de ne pas enfreindre les droits et image de Infogref.goentrypro, tels que notamment ses droits de propriété intellectuelle ;',
             'de ne pas ouvrir de Compte au nom d’une autre personne que vous même ;',
             "de ne pas utiliser d’appareil, de logiciel ou d’autre ?lément susceptible d’interférer avec le bon fonctionnement du Site, ou dont l’objet est de détruire, interférer avec, intercepter ou détourner tout systéme, donnée ou information personnelle; et",
             'plus généralement, de ne rien faire qui puisse être contraire aux Lois Applicables, et aux CGV.',
@@ -560,14 +560,14 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Afin de procéder au paiement de la Formule, vous autorisez Infosociete à effectuer des prélèvements sur votre compte bancaire et à aviser l’établissement domiciliataire. A cet effet, vous vous engagez à signer une autorisation de prélèvement et à maintenir en vigueur ladite autorisation pendant toute la durée d’exécution de la Formule.',
+            'Afin de procéder au paiement de la Formule, vous autorisez Infogref.goentrypro à effectuer des prélèvements sur votre compte bancaire et à aviser l’établissement domiciliataire. A cet effet, vous vous engagez à signer une autorisation de prélèvement et à maintenir en vigueur ladite autorisation pendant toute la durée d’exécution de la Formule.',
         },
         {
           type: 'paragraph',
           text:
-            'Tout retard ou défaut de paiement, même partiel, entraîne, de plein droit et sans qu’une mise en demeure ne soit nécessaire, la perception par Infosociete, pour chaque facture impayée en tout ou en partie, de l’indemnité forfaitaire pour frais de recouvrement visée aux articles L. 441-9, I, alinéa 5 et D. 441-5 du Code de commerce (ou tous textes législatifs et/ou règlementaires qui leur serait substitué) en vigueur à la date de facturation assortie d’intérêts de retard auxquels s’ajouteront les taxes, ainsi que les frais et honoraires de recouvrement mêmes non répétibles.',
+            'Tout retard ou défaut de paiement, même partiel, entraîne, de plein droit et sans qu’une mise en demeure ne soit nécessaire, la perception par Infogref.goentrypro, pour chaque facture impayée en tout ou en partie, de l’indemnité forfaitaire pour frais de recouvrement visée aux articles L. 441-9, I, alinéa 5 et D. 441-5 du Code de commerce (ou tous textes législatifs et/ou règlementaires qui leur serait substitué) en vigueur à la date de facturation assortie d’intérêts de retard auxquels s’ajouteront les taxes, ainsi que les frais et honoraires de recouvrement mêmes non répétibles.',
         },
-        { type: 'paragraph', text: 'Infosociete se réserve le droit de modifier le montant de la Formule.' },
+        { type: 'paragraph', text: 'Infogref.goentrypro se réserve le droit de modifier le montant de la Formule.' },
         {
           type: 'paragraph',
           text:
@@ -576,10 +576,10 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'La Formule est payable d’avance, par prélèvement sur le moyen de paiement renseigné sur le Site. En cas de défaut de paiement, Infosociete représentera le paiement et, en cas de nouveau défaut de paiement, pourra librement mettre fin aux Services, sans indemnité à sa charge, mais sans préjudice de la faculté qui lui est laissée de vous réclamer le paiement des sommes dues, et toutes réparations dont elle s’estime victime',
+            'La Formule est payable d’avance, par prélèvement sur le moyen de paiement renseigné sur le Site. En cas de défaut de paiement, Infogref.goentrypro représentera le paiement et, en cas de nouveau défaut de paiement, pourra librement mettre fin aux Services, sans indemnité à sa charge, mais sans préjudice de la faculté qui lui est laissée de vous réclamer le paiement des sommes dues, et toutes réparations dont elle s’estime victime',
         },
         { type: 'heading', text: '6. Propriét? Intellectuelle' },
-        { type: 'paragraph', text: 'Ce Site est opéré par Infosociete.' },
+        { type: 'paragraph', text: 'Ce Site est opéré par Infogref.goentrypro.' },
         {
           type: 'paragraph',
           text:
@@ -602,20 +602,20 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Toutes nouvelles versions, mises à jour ou modifications du Site, des Services ou contenu séy rapportant seront régis par les CGV. Infosociete se réserve la faculté de se prévaloir de tout droit non expressément vis? par les présentes CGV.',
+            'Toutes nouvelles versions, mises à jour ou modifications du Site, des Services ou contenu séy rapportant seront régis par les CGV. Infogref.goentrypro se réserve la faculté de se prévaloir de tout droit non expressément vis? par les présentes CGV.',
         },
-        { type: 'heading', text: '7. Réle de Infosociete / Limitation de Responsabilit?' },
+        { type: 'heading', text: '7. Réle de Infogref.goentrypro / Limitation de Responsabilit?' },
         { type: 'paragraph', text: 'Les Membres agissent sous leur pleine et entiére responsabilit?.' },
         {
           type: 'paragraph',
-          text: 'En particulier, Infosociete ne pourra pas être tenue pour responsable si un Contenu ne produit pas l’effet désir? par le Membre, notamment à cause de :',
+          text: 'En particulier, Infogref.goentrypro ne pourra pas être tenue pour responsable si un Contenu ne produit pas l’effet désir? par le Membre, notamment à cause de :',
         },
         {
           type: 'list',
           items: [
             'D’informations erronées communiquées par le Membre lors de l’achat de son Contenu.',
             'D’un changement des lois applicables, rendant en tout ou en partie inexact, trompeur ou illégal, le Contenu;',
-            "Une erreur quelconque de l??metteur à l’origine des Contenus qui sont fournis en l??tat, tel quéInfosociete les obtient, en particulier des greffes des Tribunaux de commerce",
+            "Une erreur quelconque de l??metteur à l’origine des Contenus qui sont fournis en l??tat, tel quéInfogref.goentrypro les obtient, en particulier des greffes des Tribunaux de commerce",
           ],
         },
         {
@@ -626,18 +626,18 @@ const defaultContent = {
         {
           type: 'emphasis',
           text:
-            'A TITRE DE CONDITION ESSENTIELLE ET DETERMINANTE DES PRESENTES CGV, SI LA RESPONSABILITE D’INFOSOCIETE ETAIT RETENUE, LE CLIENT NE POURRAIT PRETENDRE, A D’AUTRES INDEMNITES ET DOMMAGES ET INTERETS OU REGLEMET QUELCONQUE, TOUTES CAUSES CONFONDUES, QUéAU MONTANT DE 5.000 EUROS TOUT PREJUDICE CONFONDU.',
+            'A TITRE DE CONDITION ESSENTIELLE ET DETERMINANTE DES PRESENTES CGV, SI LA RESPONSABILITE D’Infogref.goentrypro ETAIT RETENUE, LE CLIENT NE POURRAIT PRETENDRE, A D’AUTRES INDEMNITES ET DOMMAGES ET INTERETS OU REGLEMET QUELCONQUE, TOUTES CAUSES CONFONDUES, QUéAU MONTANT DE 5.000 EUROS TOUT PREJUDICE CONFONDU.',
         },
         {
           type: 'paragraph',
           text:
-            'Vous acceptez de ne poursuivre Infosociete que pour les préjudices fondés sur des informations fournies par eux. Si vous intentez une action à l’encontre d’une autre personne morale ou physique que Infosociete vous renoncez expressément par les présentes à vous prévaloir de toute prêtention à l’encontre de Infosociete au titre de cette action.',
+            'Vous acceptez de ne poursuivre Infogref.goentrypro que pour les préjudices fondés sur des informations fournies par eux. Si vous intentez une action à l’encontre d’une autre personne morale ou physique que Infogref.goentrypro vous renoncez expressément par les présentes à vous prévaloir de toute prêtention à l’encontre de Infogref.goentrypro au titre de cette action.',
         },
         { type: 'heading', text: '8. Suspension du Compte, limitations d’accès et résiliation' },
         {
           type: 'paragraph',
           text:
-            'Vous pouvez à tout moment mettre fin à votre relation contractuelle avec Infosociete en fermant votre Compte dans votre Espace Client. La suppression prendra fin immédiatement et votre Formule sera automatiquement résiliée pour une date d’effet à la date anniversaire de la souscription de la Formule.',
+            'Vous pouvez à tout moment mettre fin à votre relation contractuelle avec Infogref.goentrypro en fermant votre Compte dans votre Espace Client. La suppression prendra fin immédiatement et votre Formule sera automatiquement résiliée pour une date d’effet à la date anniversaire de la souscription de la Formule.',
         },
         {
           type: 'paragraph',
@@ -647,7 +647,7 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'En cas de besoin, vous serez notifi?(e) d’une telle mesure afin de vous permettre déy répondre. Infosociete pourra décider à sa seule discrétion de mettre fin aux mesures mises en place.',
+            'En cas de besoin, vous serez notifi?(e) d’une telle mesure afin de vous permettre déy répondre. Infogref.goentrypro pourra décider à sa seule discrétion de mettre fin aux mesures mises en place.',
         },
         { type: 'heading', text: '9. Données Personnelles' },
         {
@@ -676,12 +676,12 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Ces CGV et les documents qui y sont expressément intégrés expriment l’intégralit? des accords entre vous et Infosociete concernant votre utilisation du Site et des Services.',
+            'Ces CGV et les documents qui y sont expressément intégrés expriment l’intégralit? des accords entre vous et Infogref.goentrypro concernant votre utilisation du Site et des Services.',
         },
         {
           type: 'paragraph',
           text:
-            'Infosociete pourra modifier ces CGV afin de les adapter à l’environnement technologique et commercial, et de les rendre conforme à l’environnement légal et règlementaire. Toute version modifiée des CGV sera mise en ligne sur le Site avec la mention de sa date d’effet, et Infosociete vous informera de ces changements avant quéils ne prennent effect.',
+            'Infogref.goentrypro pourra modifier ces CGV afin de les adapter à l’environnement technologique et commercial, et de les rendre conforme à l’environnement légal et règlementaire. Toute version modifiée des CGV sera mise en ligne sur le Site avec la mention de sa date d’effet, et Infogref.goentrypro vous informera de ces changements avant quéils ne prennent effect.',
         },
         { type: 'heading', text: '13. Droit de rétractation et politique de remboursement' },
         {
@@ -698,7 +698,7 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Pour toute contestation qui se léverait entre le Membre et Infosociete, relativement à la validite, l’interprêtation, l’exécution, la résiliation, les conséquences et/ou les suites des CGV, le Membre et Infosociete s’efforceront en premier lieu, et dans la mesure du possible, de régler leur différend par voie amiable dans un délai d’un (1) mois à compter de la date de la premiére présentation du courrier recommand? avec avis de réception notifiant la contestation en cause.',
+            'Pour toute contestation qui se léverait entre le Membre et Infogref.goentrypro, relativement à la validite, l’interprêtation, l’exécution, la résiliation, les conséquences et/ou les suites des CGV, le Membre et Infogref.goentrypro s’efforceront en premier lieu, et dans la mesure du possible, de régler leur différend par voie amiable dans un délai d’un (1) mois à compter de la date de la premiére présentation du courrier recommand? avec avis de réception notifiant la contestation en cause.',
         },
         {
           type: 'paragraph',
@@ -708,7 +708,7 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Infosociete se réservera ?galement le droit d’initier, en fonction de la nature du litige, des procédures dans votre principal pays de d’exploitation de votre activit? professionnelle et/ou commerciale.',
+            'Infogref.goentrypro se réservera ?galement le droit d’initier, en fonction de la nature du litige, des procédures dans votre principal pays de d’exploitation de votre activit? professionnelle et/ou commerciale.',
         },
         { type: 'heading', text: "15. Délais de livraison d'un Contenu" },
         { type: 'paragraph', text: "Délai de réception d'un Contenu" },
@@ -725,7 +725,7 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            "Ni Infosociete, ni notre service ne pourront être tenus pour responsable en cas de retard dans la réception d'un Contenu.",
+            "Ni Infogref.goentrypro, ni notre service ne pourront être tenus pour responsable en cas de retard dans la réception d'un Contenu.",
         },
         { type: 'heading', text: '16. Date de mise à jour' },
         { type: 'paragraph', text: '22/01/2026' },
@@ -744,12 +744,12 @@ const defaultContent = {
         'Noreen K.',
         '',
         'Le site Web est h\u00e9berg\u00e9 par',
-        'Le site infosociete.pro est h\u00e9berg\u00e9 par la soci\u00e9t\u00e9 GoDaddy',
+        'Le site Infogref.goentrypro.pro est h\u00e9berg\u00e9 par la soci\u00e9t\u00e9 GoDaddy',
         'Adresse : 14455 N. Hayden Rd., Ste. 226, Scottsdale, AZ 85260 USA',
         'T\u00e9l\u00e9phone : +44 20 7084 1810',
         '',
         'Vous pouvez nous contacter \u00e0 l\u2019adresse suivante',
-        'E-mail : contact@infosociete.pro',
+        'E-mail : contact@Infogref.goentrypro.pro',
         'T\u00e9l\u00e9phone : 0 805 086 583',
       ],
     },
@@ -860,16 +860,16 @@ const defaultContent = {
         {
           type: 'paragraph',
           text:
-            'Notez que certains des Services de Infosociete peuvent ne pas fonctionner comme prévu si vous choisissez de désactiver des cookies.',
+            'Notez que certains des Services de Infogref.goentrypro peuvent ne pas fonctionner comme prévu si vous choisissez de désactiver des cookies.',
         },
         { type: 'heading', text: '3. Coordonnées' },
         {
           type: 'paragraph',
           text:
-            '3.1 En cas de questions ou d’inquiétude à l’égard de notre politique sur les cookies et la manière dont les informations sont traitées, ou encore si vous souhaitez accéder à vos Informations, les récupérer, les modifier ou les mettre à jour, n’hésitez pas à nous contacter à l’adresse contact@infosociete.pro.',
+            '3.1 En cas de questions ou d’inquiétude à l’égard de notre politique sur les cookies et la manière dont les informations sont traitées, ou encore si vous souhaitez accéder à vos Informations, les récupérer, les modifier ou les mettre à jour, n’hésitez pas à nous contacter à l’adresse contact@Infogref.goentrypro.pro.',
         },
         { type: 'heading', text: 'Vous pouvez nous contacter à l’adresse suivante' },
-        { type: 'paragraph', text: 'E-mail : contact@infosociete.pro' },
+        { type: 'paragraph', text: 'E-mail : contact@Infogref.goentrypro.pro' },
         { type: 'paragraph', text: 'Téléphone : 0 805 086 583' },
       ],
     },
@@ -884,7 +884,7 @@ const defaultContent = {
         {
           title: 'Prix',
           body:
-            '1,49 € pour 72 heures puis 49,99 € par mois si non résilié dans les 72h. Facturation à la date anniversaire, prélèvement bancaire. Libellé Infosociete/infosociete.pro.',
+            '1,49 € pour 72 heures puis 49,99 € par mois si non résilié dans les 72h. Facturation à la date anniversaire, prélèvement bancaire. Libellé Infogref.goentrypro/Infogref.goentrypro.pro.',
         },
         {
           title: 'Résiliation',
@@ -898,11 +898,11 @@ const defaultContent = {
         {
           title: 'Communications',
           body:
-            "Les communications se font via l'espace personnel ou par email. Contact par téléphone au 0 805 086 583 ou par email à contact@infosociete.pro.",
+            "Les communications se font via l'espace personnel ou par email. Contact par téléphone au 0 805 086 583 ou par email à contact@Infogref.goentrypro.pro.",
         },
         {
           title: "Délai de réception d'un extrait de Kbis",
-          body: "L'extrait est disponible sous 48h en jour ouvré. En cas d'indisponibilité, Infosociete peut décliner la demande et celle-ci ne sera pas comptée.",
+          body: "L'extrait est disponible sous 48h en jour ouvré. En cas d'indisponibilité, Infogref.goentrypro peut décliner la demande et celle-ci ne sera pas comptée.",
         },
         {
           title: 'Stockage et transfert',
@@ -912,18 +912,18 @@ const defaultContent = {
       ],
     },
     'votre-releve-bancaire': {
-      title: 'Service de HPY*INFOSCTE et Hp*infosociete',
+      title: 'Service de HPY*INFOSCTE et Hp*Infogref.goentrypro',
       intro:
-        "Si vous avez récemment consulté votre relevé bancaire et remarqué l'apparition de HPY*INFOSCTE ou Hp*infosociete parmi vos transactions, vous vous demandez probablement ce que cela représente. Ne vous inquiétez pas, nous sommes là pour clarifier cette énigme et vous aider à mieux comprendre vos finances.",
-      questionTitle: "Qu'est-ce que HPY*INFOSCTE ou Hp*infosociete ?",
+        "Si vous avez récemment consulté votre relevé bancaire et remarqué l'apparition de HPY*INFOSCTE ou Hp*Infogref.goentrypro parmi vos transactions, vous vous demandez probablement ce que cela représente. Ne vous inquiétez pas, nous sommes là pour clarifier cette énigme et vous aider à mieux comprendre vos finances.",
+      questionTitle: "Qu'est-ce que HPY*INFOSCTE ou Hp*Infogref.goentrypro ?",
       questionBody:
-        "HPY*INFOSCTE ou Hp*infosociete est une mention qui peut sembler obscure au premier abord. Cependant, derrière ces caractères se cache une signification spécifique liée à vos activités financières.",
+        "HPY*INFOSCTE ou Hp*Infogref.goentrypro est une mention qui peut sembler obscure au premier abord. Cependant, derrière ces caractères se cache une signification spécifique liée à vos activités financières.",
       interpretationsTitle: 'Interprétations',
       interpretations: [
         {
           title: 'Transaction Commerciale',
           body:
-            "HPY*INFOSCTE ou Hp*infosociete pourrait correspondre à un achat ou un paiement effectué avec votre carte bancaire. Il peut s'agir d'une transaction liée à notre service acheté en ligne.",
+            "HPY*INFOSCTE ou Hp*Infogref.goentrypro pourrait correspondre à un achat ou un paiement effectué avec votre carte bancaire. Il peut s'agir d'une transaction liée à notre service acheté en ligne.",
         },
         {
           title: 'Abonnement',
@@ -933,12 +933,12 @@ const defaultContent = {
         {
           title: 'Traitement en Cours',
           body:
-            "Dans certains cas, HPY*INFOSCTE ou Hp*infosociete peut indiquer une transaction en cours de traitement ou d'autorisation. Les détails de la transaction peuvent ne pas encore être complets ou l'opération peut être en attente de confirmation.",
+            "Dans certains cas, HPY*INFOSCTE ou Hp*Infogref.goentrypro peut indiquer une transaction en cours de traitement ou d'autorisation. Les détails de la transaction peuvent ne pas encore être complets ou l'opération peut être en attente de confirmation.",
         },
       ],
       conclusionTitle: 'Conclusion',
       conclusionBody:
-        "En conclusion, HPY*INFOSCTE ou Hp*infosociete peut sembler énigmatique au premier abord, mais il est important de comprendre son contexte et sa signification sur votre relevé bancaire. En suivant les conseils ci-dessus, vous pouvez éviter toute confusion liée à cette inscription.",
+        "En conclusion, HPY*INFOSCTE ou Hp*Infogref.goentrypro peut sembler énigmatique au premier abord, mais il est important de comprendre son contexte et sa signification sur votre relevé bancaire. En suivant les conseils ci-dessus, vous pouvez éviter toute confusion liée à cette inscription.",
       kbis: {
         label: 'Extrait KBIS',
         title: 'Recevez votre Kbis',
@@ -946,73 +946,73 @@ const defaultContent = {
         disclaimerPrefix:
           "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: 'ce lien',
-        disclaimerEmail: 'contact@infosociete.pro',
+        disclaimerEmail: 'contact@Infogref.goentrypro.pro',
         disclaimerPhone: '0 805 086 583',
         disclaimerSuffix: 'à tout moment.',
       },
     },
     'hpy-infoscte': {
-      title: 'Annulez Facilement Votre Abonnement avec Infosociete - HPY*INFOSOCIETE à HPY*11 INFOSCTE',
+      title: 'Annulez Facilement Votre Abonnement avec Infogref.goentrypro - HPY*Infogref.goentrypro à HPY*11 INFOSCTE',
       sections: [
         {
-          title: 'Résiliez Votre Abonnement en Quelques Clics avec Infosociete pour \"HPY*INFOSOCIETE\"',
+          title: 'Résiliez Votre Abonnement en Quelques Clics avec Infogref.goentrypro pour \"HPY*Infogref.goentrypro\"',
           body:
-            'Vous souhaitez annuler votre abonnement marqué \"HPY*INFOSOCIETE\" sur votre relevé bancaire en quelques clics seulement ? Avec Infosociete, c’est désormais possible ! Utilisez notre formulaire en ligne convivial pour soumettre votre demande de résiliation facilement et rapidement. Simplifiez vos démarches dès aujourd’hui avec Infosociete.',
+            'Vous souhaitez annuler votre abonnement marqué \"HPY*Infogref.goentrypro\" sur votre relevé bancaire en quelques clics seulement ? Avec Infogref.goentrypro, c’est désormais possible ! Utilisez notre formulaire en ligne convivial pour soumettre votre demande de résiliation facilement et rapidement. Simplifiez vos démarches dès aujourd’hui avec Infogref.goentrypro.',
         },
         {
-          title: 'Comment Annuler Votre Abonnement en Ligne avec Infosociete pour \"HPY*1 INFOSCTE\"',
+          title: 'Comment Annuler Votre Abonnement en Ligne avec Infogref.goentrypro pour \"HPY*1 INFOSCTE\"',
           body:
-            "Besoin d’annuler votre abonnement marqué \"HPY*1 INFOSCTE\" sur votre relevé bancaire en toute simplicité ? Laissez Infosociete vous guider ! Notre formulaire en ligne intuitif vous permet de résilier votre abonnement en quelques étapes simples. Mettez fin à votre abonnement sans tracas avec Infosociete.",
+            "Besoin d’annuler votre abonnement marqué \"HPY*1 INFOSCTE\" sur votre relevé bancaire en toute simplicité ? Laissez Infogref.goentrypro vous guider ! Notre formulaire en ligne intuitif vous permet de résilier votre abonnement en quelques étapes simples. Mettez fin à votre abonnement sans tracas avec Infogref.goentrypro.",
         },
         {
-          title: 'Annulez Rapidement Votre Abonnement en Ligne avec Infosociete pour \"HPY*2 INFOSCTE\"',
+          title: 'Annulez Rapidement Votre Abonnement en Ligne avec Infogref.goentrypro pour \"HPY*2 INFOSCTE\"',
           body:
-            'Avec Infosociete, annuler votre abonnement marqué \"HPY*2 INFOSCTE\" sur votre relevé bancaire est un jeu d’enfant. Utilisez notre formulaire en ligne rapide et efficace pour soumettre votre demande de résiliation en quelques minutes seulement. Simplifiez vos démarches dès maintenant avec Infosociete.',
+            'Avec Infogref.goentrypro, annuler votre abonnement marqué \"HPY*2 INFOSCTE\" sur votre relevé bancaire est un jeu d’enfant. Utilisez notre formulaire en ligne rapide et efficace pour soumettre votre demande de résiliation en quelques minutes seulement. Simplifiez vos démarches dès maintenant avec Infogref.goentrypro.',
         },
         {
-          title: 'Résiliez Votre Abonnement Facilement avec Infosociete pour \"HPY*3 INFOSCTE\"',
+          title: 'Résiliez Votre Abonnement Facilement avec Infogref.goentrypro pour \"HPY*3 INFOSCTE\"',
           body:
-            'Vous recherchez un moyen facile et rapide d’annuler votre abonnement marqué \"HPY*3 INFOSCTE\" sur votre relevé bancaire ? Ne cherchez plus ! Utilisez notre formulaire en ligne convivial pour mettre fin à votre abonnement en quelques clics seulement. Simplifiez vos résiliations dès aujourd’hui avec Infosociete.',
+            'Vous recherchez un moyen facile et rapide d’annuler votre abonnement marqué \"HPY*3 INFOSCTE\" sur votre relevé bancaire ? Ne cherchez plus ! Utilisez notre formulaire en ligne convivial pour mettre fin à votre abonnement en quelques clics seulement. Simplifiez vos résiliations dès aujourd’hui avec Infogref.goentrypro.',
         },
         {
-          title: 'Mettez Fin à Votre Abonnement sans Stress avec Infosociete pour \"HPY*4 INFOSCTE\"',
+          title: 'Mettez Fin à Votre Abonnement sans Stress avec Infogref.goentrypro pour \"HPY*4 INFOSCTE\"',
           body:
-            'Besoin de résilier votre abonnement marqué \"HPY*4 INFOSCTE\" sur votre relevé bancaire sans stress ni tracas ? Laissez Infosociete vous accompagner ! Remplissez notre formulaire en ligne facile à utiliser pour annuler votre abonnement en toute simplicité. Simplifiez vos résiliations en ligne dès maintenant avec Infosociete.',
+            'Besoin de résilier votre abonnement marqué \"HPY*4 INFOSCTE\" sur votre relevé bancaire sans stress ni tracas ? Laissez Infogref.goentrypro vous accompagner ! Remplissez notre formulaire en ligne facile à utiliser pour annuler votre abonnement en toute simplicité. Simplifiez vos résiliations en ligne dès maintenant avec Infogref.goentrypro.',
         },
         {
-          title: 'Annulation Simplifiée en Ligne avec Infosociete pour \"HPY*5 INFOSCTE\"',
+          title: 'Annulation Simplifiée en Ligne avec Infogref.goentrypro pour \"HPY*5 INFOSCTE\"',
           body:
-            'Avec Infosociete, annuler votre abonnement marqué \"HPY*5 INFOSCTE\" sur votre relevé bancaire n’a jamais été aussi simple. Utilisez notre formulaire en ligne intuitif pour soumettre votre demande de résiliation en quelques clics seulement. Simplifiez vos démarches dès aujourd’hui avec Infosociete.',
+            'Avec Infogref.goentrypro, annuler votre abonnement marqué \"HPY*5 INFOSCTE\" sur votre relevé bancaire n’a jamais été aussi simple. Utilisez notre formulaire en ligne intuitif pour soumettre votre demande de résiliation en quelques clics seulement. Simplifiez vos démarches dès aujourd’hui avec Infogref.goentrypro.',
         },
         {
-          title: 'Découvrez Notre Formulaire de Résiliation en Ligne avec Infosociete pour \"HPY*6 INFOSCTE\"',
+          title: 'Découvrez Notre Formulaire de Résiliation en Ligne avec Infogref.goentrypro pour \"HPY*6 INFOSCTE\"',
           body:
-            'Envie d’annuler votre abonnement marqué \"HPY*6 INFOSCTE\" sur votre relevé bancaire en quelques clics seulement ? Laissez Infosociete vous faciliter la tâche ! Notre formulaire en ligne rapide et efficace vous permet de résilier votre abonnement en toute simplicité. Simplifiez vos démarches dès maintenant avec Infosociete.',
+            'Envie d’annuler votre abonnement marqué \"HPY*6 INFOSCTE\" sur votre relevé bancaire en quelques clics seulement ? Laissez Infogref.goentrypro vous faciliter la tâche ! Notre formulaire en ligne rapide et efficace vous permet de résilier votre abonnement en toute simplicité. Simplifiez vos démarches dès maintenant avec Infogref.goentrypro.',
         },
         {
-          title: 'Comment Résilier Facilement en Ligne avec Infosociete pour \"HPY*7 INFOSCTE\"',
+          title: 'Comment Résilier Facilement en Ligne avec Infogref.goentrypro pour \"HPY*7 INFOSCTE\"',
           body:
-            'Vous souhaitez résilier votre abonnement marqué \"HPY*7 INFOSCTE\" sur votre relevé bancaire sans souci ? Laissez Infosociete vous aider ! Utilisez notre formulaire en ligne convivial pour mettre fin à votre abonnement en quelques étapes simples. Simplifiez vos résiliations dès aujourd’hui avec Infosociete.',
+            'Vous souhaitez résilier votre abonnement marqué \"HPY*7 INFOSCTE\" sur votre relevé bancaire sans souci ? Laissez Infogref.goentrypro vous aider ! Utilisez notre formulaire en ligne convivial pour mettre fin à votre abonnement en quelques étapes simples. Simplifiez vos résiliations dès aujourd’hui avec Infogref.goentrypro.',
         },
         {
-          title: 'Annulez Votre Abonnement en Toute Tranquillité avec Infosociete pour \"HPY*8 INFOSCTE\"',
+          title: 'Annulez Votre Abonnement en Toute Tranquillité avec Infogref.goentrypro pour \"HPY*8 INFOSCTE\"',
           body:
-            'Mettez fin à votre abonnement marqué \"HPY*8 INFOSCTE\" sur votre relevé bancaire en toute tranquillité avec Infosociete. Notre formulaire en ligne simplifié vous permet de résilier votre abonnement sans stress ni tracas. Simplifiez vos démarches dès maintenant avec Infosociete.',
+            'Mettez fin à votre abonnement marqué \"HPY*8 INFOSCTE\" sur votre relevé bancaire en toute tranquillité avec Infogref.goentrypro. Notre formulaire en ligne simplifié vous permet de résilier votre abonnement sans stress ni tracas. Simplifiez vos démarches dès maintenant avec Infogref.goentrypro.',
         },
         {
-          title: 'Résiliez Votre Abonnement sans Tracas avec Infosociete pour \"HPY*9 INFOSCTE\"',
+          title: 'Résiliez Votre Abonnement sans Tracas avec Infogref.goentrypro pour \"HPY*9 INFOSCTE\"',
           body:
-            'Besoin d’annuler votre abonnement marqué \"HPY*9 INFOSCTE\" sur votre relevé bancaire en quelques clics seulement ? Ne cherchez plus ! Utilisez notre formulaire en ligne convivial pour soumettre votre demande de résiliation facilement et rapidement. Simplifiez vos résiliations dès aujourd’hui avec Infosociete.',
+            'Besoin d’annuler votre abonnement marqué \"HPY*9 INFOSCTE\" sur votre relevé bancaire en quelques clics seulement ? Ne cherchez plus ! Utilisez notre formulaire en ligne convivial pour soumettre votre demande de résiliation facilement et rapidement. Simplifiez vos résiliations dès aujourd’hui avec Infogref.goentrypro.',
         },
         {
-          title: 'Comment Annuler Votre Abonnement en Ligne avec Infosociete pour \"HPY*10 INFOSCTE\"',
+          title: 'Comment Annuler Votre Abonnement en Ligne avec Infogref.goentrypro pour \"HPY*10 INFOSCTE\"',
           body:
-            'Vous recherchez un moyen facile et rapide d’annuler votre abonnement marqué \"HPY*10 INFOSCTE\" sur votre relevé bancaire ? Ne cherchez plus ! Utilisez notre formulaire en ligne intuitif pour mettre fin à votre abonnement en quelques clics seulement. Simplifiez vos résiliations dès aujourd’hui avec Infosociete.',
+            'Vous recherchez un moyen facile et rapide d’annuler votre abonnement marqué \"HPY*10 INFOSCTE\" sur votre relevé bancaire ? Ne cherchez plus ! Utilisez notre formulaire en ligne intuitif pour mettre fin à votre abonnement en quelques clics seulement. Simplifiez vos résiliations dès aujourd’hui avec Infogref.goentrypro.',
         },
         {
-          title: 'Annulation Simplifiée en Ligne avec Infosociete pour \"HPY*11 INFOSCTE\"',
+          title: 'Annulation Simplifiée en Ligne avec Infogref.goentrypro pour \"HPY*11 INFOSCTE\"',
           body:
-            'Avec Infosociete, annuler votre abonnement marqué \"HPY*11 INFOSCTE\" sur votre relevé bancaire n’a jamais été aussi simple. Utilisez notre formulaire en ligne intuitif pour soumettre votre demande de résiliation en quelques clics seulement. Simplifiez vos démarches dès aujourd’hui avec Infosociete.',
+            'Avec Infogref.goentrypro, annuler votre abonnement marqué \"HPY*11 INFOSCTE\" sur votre relevé bancaire n’a jamais été aussi simple. Utilisez notre formulaire en ligne intuitif pour soumettre votre demande de résiliation en quelques clics seulement. Simplifiez vos démarches dès aujourd’hui avec Infogref.goentrypro.',
         },
       ],
       contactTitle: 'Nous contacter',
@@ -1026,7 +1026,7 @@ const defaultContent = {
         disclaimerPrefix:
           "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: 'ce lien',
-        disclaimerEmail: 'contact@infosociete.pro',
+        disclaimerEmail: 'contact@Infogref.goentrypro.pro',
         disclaimerPhone: '0 805 086 583',
         disclaimerSuffix: 'à tout moment.',
       },
@@ -1078,10 +1078,10 @@ const defaultContent = {
   },
   footer: {
     description:
-      "Infosociete vous propose des Informations sur les entreprises françaises inscrites au registre du commerce et des sociétés, y compris les informations juridiques et financières. Consultez de manière simple les fiches financières, les données de gestion et les données publiques des organisations.",
+      "Infogref.goentrypro vous propose des Informations sur les entreprises françaises inscrites au registre du commerce et des sociétés, y compris les informations juridiques et financières. Consultez de manière simple les fiches financières, les données de gestion et les données publiques des organisations.",
     links: [
       { label: 'A propos', path: '/a-propos' },
-      { label: 'Formule Infosociete Pro', path: '/offre' },
+      { label: 'Formule Infogref.goentrypro', path: '/offre' },
       { label: 'FAQ', path: '/faq' },
       { label: 'Rechercher une entreprise', path: '/entreprises' },
       { label: 'Résiliation', path: '/resiliation' },

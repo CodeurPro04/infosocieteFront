@@ -298,7 +298,7 @@ export default function Payment() {
               <img src={kbisSample} alt="Extrait Kbis" />
             </div>
             <p className="payment-sample-note">
-              *Notre formule premium Infosociete Pro est réservée aux entreprises et aux auto-entrepreneurs.
+              *Notre formule premium Infogref.goentrypro est réservée aux entreprises et aux auto-entrepreneurs.
               Si vous êtes un particulier merci de vous rendre sur le site
               <a className="payment-sample-link" href="https://www.infogreffe.fr/">
                 {" "}
@@ -379,7 +379,7 @@ export default function Payment() {
 
         <div className="detail-offer-panel payment-offer-panel">
           <div className="detail-offer-card">
-            <h3>Notre formule Infosociete Pro</h3>
+            <h3>Notre formule Infogref.goentrypro</h3>
             <p className="detail-offer-price">Pour 1,49 €/72h puis 49,99 €/mois</p>
             <p className="detail-offer-text">
               Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :

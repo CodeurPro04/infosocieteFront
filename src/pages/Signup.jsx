@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { submitSignup } from '../api.js'
 
@@ -231,7 +231,7 @@ export default function Signup() {
       <section className="signup-rest">
         <div className="signup-formula-panel">
           <div className="signup-formula-card">
-            <div className="signup-formula-title">Notre formule Infosociete Pro</div>
+            <div className="signup-formula-title">Notre formule Infogref.goentrypro</div>
             <p className="signup-formula-price">Pour 1,49 €/72h puis 49,99 €/mois</p>
             <p>Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :</p>
           </div>
