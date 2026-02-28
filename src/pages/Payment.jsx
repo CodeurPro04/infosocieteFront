@@ -13,7 +13,6 @@ function StripeCheckoutForm({ customerName = "", paymentContext = {}, onCloseSuc
   const stripe = useStripe();
   const elements = useElements();
   const [name, setName] = useState(customerName);
-  const [accepted, setAccepted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -22,10 +21,6 @@ function StripeCheckoutForm({ customerName = "", paymentContext = {}, onCloseSuc
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!stripe || !elements || submitting) {
-      return;
-    }
-    if (!accepted) {
-      setError("Veuillez accepter les conditions avant de continuer.");
       return;
     }
 
@@ -100,33 +95,7 @@ function StripeCheckoutForm({ customerName = "", paymentContext = {}, onCloseSuc
         </div>
       </label>
 
-      <label className="payment-consent">
-        <input
-          type="checkbox"
-          checked={accepted}
-          onChange={(event) => setAccepted(event.target.checked)}
-          required
-        />
-        <span>
-          Je déclare avoir lu et accepté les{" "}
-          <a className="payment-link" href="/conditions-generales-de-vente">
-            CGV
-          </a>
-          {" "}et la{" "}
-          <a className="payment-link" href="/politique-de-confidentialite">
-            Politique de confidentialité
-          </a>
-          . En validant, je confirme ma commande et j'accepte le règlement immédiat de 1,49 € pour
-          un accès illimité de 72h à vos services d'assistance.
-          <br />
-          <br />
-          Je reconnais qu'à l'issue de cet essai, et sans résiliation de ma part, un abonnement sera
-          activé automatiquement au tarif de 49,99 € par mois. Cette offre est sans engagement : je
-          peux annuler à tout moment et sans frais via contact@docsflow.fr.
-        </span>
-      </label>
-
-      <button className="payment-submit" type="submit" disabled={!stripe || submitting || !accepted}>
+      <button className="payment-submit" type="submit" disabled={!stripe || submitting}>
         <span className="payment-lock-inline" aria-hidden="true">
           <svg viewBox="0 0 24 24">
             <path
@@ -140,12 +109,12 @@ function StripeCheckoutForm({ customerName = "", paymentContext = {}, onCloseSuc
             <rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="currentColor" strokeWidth="1.6" />
           </svg>
         </span>
-        {submitting ? "Paiement en cours..." : "Payer avec Stripe"}
+        {submitting ? "Paiement en cours..." : "Obtenir mon Kbis"}
       </button>
 
       {error ? <p className="payment-error">{error}</p> : null}
       {success ? <p className="payment-success">{success}</p> : null}
-      <p className="payment-note">Votre transaction apparaîtra sous le libellé : Infosociete ou infosociete.pro</p>
+      <p className="payment-note">Votre transaction apparaîtra sous le libellé : INFO-DOCSFLOW ou INFO-DOCSFLOW.pro</p>
 
       {showSuccessModal ? (
         <div className="payment-success-overlay" role="presentation">
@@ -298,7 +267,7 @@ export default function Payment() {
               <img src={kbisSample} alt="Extrait Kbis" />
             </div>
             <p className="payment-sample-note">
-              *Notre formule premium Infogref.goentrypro est réservée aux entreprises et aux auto-entrepreneurs.
+              *Notre formule premium INFO-DOCSFLOW est réservée aux entreprises et aux auto-entrepreneurs.
               Si vous êtes un particulier merci de vous rendre sur le site
               <a className="payment-sample-link" href="https://www.infogreffe.fr/">
                 {" "}
@@ -379,10 +348,10 @@ export default function Payment() {
 
         <div className="detail-offer-panel payment-offer-panel">
           <div className="detail-offer-card">
-            <h3>Notre formule Infogref.goentrypro</h3>
+            <h3>Notre formule INFO-DOCSFLOW</h3>
             <p className="detail-offer-price">Pour 1,49 €/72h puis 49,99 €/mois</p>
             <p className="detail-offer-text">
-              Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :
+              Inscrivez vous pour profiter de nombreux avantages chez INFO-DOCSFLOW qui vous permettront de voir :
             </p>
             <button className="detail-offer-button" type="button">
               S'inscrire

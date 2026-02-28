@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <div>
       <section className="hero">
-        <div className="container hero-grid hero-grid-infosociete">
+        <div className="container hero-grid hero-grid-INFO-DOCSFLOW">
           <div className="hero-text">
             <h1 className="hero-title">
               <span className="hero-title-accent">Consultez et Téléchargez</span>
@@ -139,7 +139,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="hero-visual hero-visual-infosociete">
+          <div className="hero-visual hero-visual-INFO-DOCSFLOW">
             <div className="hero-figure">
               <img src={heroArt} alt="Dossiers d'entreprise" />
             </div>
@@ -170,7 +170,7 @@ export default function Home() {
           </div>
           <div className="formula-panel">
             <div className="formula-card">
-              <div className="formula-card-title">Notre formule Infogref.goentrypro</div>
+              <div className="formula-card-title">Notre formule INFO-DOCSFLOW</div>
               <p className="formula-price">{home.formulaPrice}</p>
               <p>{home.formulaIntro}</p>
               <NavLink className="button primary formula-button" to="/inscription">
@@ -282,7 +282,7 @@ export default function Home() {
       <section className="section services-section">
         <div className="container">
           <div className="info-section-header">
-            <h2>Les services chez Infogref.goentrypro</h2>
+            <h2>Les services chez INFO-DOCSFLOW</h2>
             <hr className="blue-rule" />
           </div>
           <div className="services-top-grid">
@@ -301,7 +301,7 @@ export default function Home() {
           </div>
           <div className="services-cards-grid">
             <div className="services-info-card">
-              <div className="services-card-eyebrow">Notre formule Infogref.goentrypro</div>
+              <div className="services-card-eyebrow">Notre formule INFO-DOCSFLOW</div>
               <p>Profitez d'un accès aux extraits de Kbis pour 1,49 € pendant 72h*</p>
               <NavLink className="services-link" to="/conditions-de-la-formule">
                 *voir condition formule premium

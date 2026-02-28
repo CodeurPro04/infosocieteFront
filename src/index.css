@@ -190,10 +190,11 @@ button {
 }
 
 .brand-logo {
-  height: 42px;
-  width: auto;
+  height: clamp(46px, 5vw, 60px);
+  width: clamp(46px, 5vw, 60px);
   display: block;
   object-fit: contain;
+  object-position: center;
 }
 
 .mobile-nav-toggle {
@@ -4061,6 +4062,11 @@ button {
 }
 
 @media (max-width: 960px) {
+  .brand-logo {
+    height: 46px;
+    width: 46px;
+  }
+
   .header-inner {
     grid-template-columns: 1fr auto;
     align-items: center;

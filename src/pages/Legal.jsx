@@ -40,7 +40,7 @@ export default function Legal({ slug }) {
               Upper, Dublin 4, D04 W7K5, Republic of Ireland, occupe un poste de "contrôleur" tel que défini dans la
               directive européenne RGPD et nous sommes responsables du respect des principes relatifs au traitement
               des données à caractère personnel et nous devons être en mesure d'en apporter la preuve. Vous pouvez
-              nous contacter en envoyant un e-mail à contact@infosociete.pro
+              nous contacter en envoyant un e-mail à contact@INFO-DOCSFLOW.pro
             </p>
             <p>
               1.4 Le Site utilise Google Analytics à des fins statistiques. L'application Google Analytics est
@@ -92,10 +92,10 @@ export default function Legal({ slug }) {
             </p>
           </div>
           <div className="privacy-section">
-            <h2>4. Infosociete en tant que sous-traitant - Collecte et utilisation d'informations personnelles identifiables</h2>
+            <h2>4. INFO-DOCSFLOW en tant que sous-traitant - Collecte et utilisation d'informations personnelles identifiables</h2>
             <p>
-              4.1 En ce qui concerne les informations que nous recueillons auprès des utilisateurs, Infosociete agit
-              en tant que sous-traitant pour répondre à la demande de services de l'utilisateur. Infosociete ne peut
+              4.1 En ce qui concerne les informations que nous recueillons auprès des utilisateurs, INFO-DOCSFLOW agit
+              en tant que sous-traitant pour répondre à la demande de services de l'utilisateur. INFO-DOCSFLOW ne peut
               pas utiliser les informations collectées pour son propre usage et ne collecte ces informations que
               pour le compte des Utilisateurs. En ce qui concerne ces informations, les utilisateurs ont le statut
               de responsable du traitement des données au sens de la directive EU GDPR
@@ -148,16 +148,16 @@ export default function Legal({ slug }) {
             <p>8.1 Vous pouvez demander à :</p>
             <ul>
               <li>Obtenir la confirmation que vos informations sont traitées, accéder aux informations vous concernant que nous avons stockées ainsi qu'à des informations complémentaires.</li>
-              <li>Recevoir une copie des Informations vous concernant qui sont détenues par Infosociete dans un format structuré, couramment utilisé et lisible par machine</li>
+              <li>Recevoir une copie des Informations vous concernant qui sont détenues par INFO-DOCSFLOW dans un format structuré, couramment utilisé et lisible par machine</li>
               <li>Corriger vos Informations</li>
               <li>Faire supprimer vos Informations personnelles</li>
-              <li>S'opposer au traitement des Informations par Infosociete</li>
-              <li>Restreindre le traitement de vos Informations par Infosociete</li>
+              <li>S'opposer au traitement des Informations par INFO-DOCSFLOW</li>
+              <li>Restreindre le traitement de vos Informations par INFO-DOCSFLOW</li>
               <li>Déposer une plainte auprès d'une autorité de contrôle</li>
             </ul>
             <p>
               8.2 Ces droits peuvent être limités s'ils sont soumis aux intérêts légitimes et aux exigences
-              réglementaires propres à Infosociete.
+              réglementaires propres à INFO-DOCSFLOW.
             </p>
           </div>
           <div className="privacy-section">
@@ -175,7 +175,7 @@ export default function Legal({ slug }) {
               Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité et la
               manière dont les informations sont traitées, ou si vous souhaitez accéder à vos informations, les
               récupérer, les modifier ou les mettre à jour, n'hésitez pas à nous contacter à l'adresse
-              contact@infosociete.pro.
+              contact@INFO-DOCSFLOW.pro.
             </p>
           </div>
         </div>

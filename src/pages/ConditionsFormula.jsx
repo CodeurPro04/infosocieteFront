@@ -17,10 +17,10 @@ export default function ConditionsFormula() {
   return (
     <section className="conditions-page">
       <div className="container">
-        <h1 className="conditions-title">Termes et Conditions de notre formule Infogref.goentrypro</h1>
+        <h1 className="conditions-title">Termes et Conditions de notre formule INFO-DOCSFLOW</h1>
         <div className="conditions-card">
           <h2 className="conditions-subtitle">Condition formule premium</h2>
-          <p>La formule Infogref.goentrypro vous permet d'accéder à plusieurs privilèges :</p>
+          <p>La formule INFO-DOCSFLOW vous permet d'accéder à plusieurs privilèges :</p>
           {privilegeItems.length > 0 && (
             <div className="conditions-list">
               <div>- {privilegeItems[0]}</div>
@@ -32,32 +32,32 @@ export default function ConditionsFormula() {
           )}
         </div>
         <div className="conditions-block">
-          <h2 className="conditions-subtitle">Prix de la formule à Infogref.goentrypro</h2>
+          <h2 className="conditions-subtitle">Prix de la formule à INFO-DOCSFLOW</h2>
           <p>{priceSection?.body}</p>
           <p>
-            Lors de l'achat d'un extrait de Kbis sur Infogref.goentrypro, vous bénéficierez de la formule basique pour 72
+            Lors de l'achat d'un extrait de Kbis sur INFO-DOCSFLOW, vous bénéficierez de la formule basique pour 72
             heures, puis passez en formule premium à 49,99 € par mois sans une résiliation du compte dans les 72H
             suivant l'achat de la formule.
           </p>
           <p>
-            La formule à Infogref.goentrypro peut être résilié à tout moment et sans conditions. De plus, la résiliation
-            de votre formule Infogref.goentrypro est totalement gratuite.
+            La formule à INFO-DOCSFLOW peut être résilié à tout moment et sans conditions. De plus, la résiliation
+            de votre formule INFO-DOCSFLOW est totalement gratuite.
           </p>
           <p>
             Si vous souhaitez résilier, il vous suffit de cliquer sur le lien de résiliation suivant:{' '}
-            <span className="conditions-link">https://Infogref.goentrypro.pro/resiliation</span>.
+            <span className="conditions-link">https://INFO-DOCSFLOW.pro/resiliation</span>.
           </p>
         </div>
         <div className="conditions-block">
-          <h2 className="conditions-subtitle">Modalité de la formule Infogref.goentrypro</h2>
+          <h2 className="conditions-subtitle">Modalité de la formule INFO-DOCSFLOW</h2>
           <p>{modalitySection?.body}</p>
           <p>
-            Votre formule Infogref.goentrypro est bien évidemment résiliable à tout moment et sans aucune condition. Rien
+            Votre formule INFO-DOCSFLOW est bien évidemment résiliable à tout moment et sans aucune condition. Rien
             ne vous sera facturé lors de la résiliation de votre formule car elle est entièrement gratuite !
           </p>
           <p>
             Pour résilier votre formule il vous suffit de vous rendre sur la page « Résiliation » et de renseigner
-            l'adresse mail avec laquelle vous avez acheté votre formule Infogref.goentrypro. Vous pouvez mettre fin à votre
+            l'adresse mail avec laquelle vous avez acheté votre formule INFO-DOCSFLOW. Vous pouvez mettre fin à votre
             formule <span className="conditions-link">ici</span>.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function ConditionsFormula() {
           <h2 className="conditions-subtitle">Délai de réception d'un extrait de Kbis</h2>
           <p>{delaySection?.body}</p>
           <p>
-            Si un problème survient ou si l'extrait de Kbis est indisponible, Infogref.goentrypro se réserve le droit de
+            Si un problème survient ou si l'extrait de Kbis est indisponible, INFO-DOCSFLOW se réserve le droit de
             décliner votre demande d'extrait de Kbis ainsi votre demande sera automatiquement déclinée et celle-ci
             ne seras pas comptabilisé. Il vous sera alors possibles de faire une autre demande d'un extrait de
             Kbis.

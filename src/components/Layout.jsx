@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
-import logo from '../assets/illustrations/logokbis.jpeg'
+import logo from '../assets/illustrations/logo5.png'
 import cards from '../assets/illustrations/cards.png'
 
 export default function Layout({ children }) {
@@ -32,7 +32,7 @@ export default function Layout({ children }) {
       <header className="site-header">
         <div className="container header-inner">
           <NavLink className="brand" to="/">
-            <img className="brand-logo" src={logo} alt={content.site?.name || 'Infosociete'} />
+            <img className="brand-logo" src={logo} alt={content.site?.name || 'INFO-DOCSFLOW'} />
           </NavLink>
           <button
             type="button"
@@ -84,7 +84,7 @@ export default function Layout({ children }) {
           <p className="footer-disclaimer">{content.home?.disclaimer}</p>
         </div>
         <div className="container footer-brand">
-          <img className="footer-logo" src={logo} alt={content.site?.name || 'Infogref.goentrypro'} />
+          <img className="footer-logo" src={logo} alt={content.site?.name || 'INFO-DOCSFLOW'} />
         </div>
         <div className="container">
           <hr className="footer-rule" />
@@ -123,7 +123,7 @@ export default function Layout({ children }) {
           </div>
         </div>
         <div className="footer-bottom">
-          © {content.site?.year || new Date().getFullYear()} Infogref.goentrypro - 2022 - 2026 Tous droits réservés
+          © {content.site?.year || new Date().getFullYear()} INFO-DOCSFLOW - 2022 - 2026 Tous droits réservés
         </div>
         <div className="footer-bottom footer-meta">IE 3985411WH</div>
         <div className="footer-bottom footer-meta">

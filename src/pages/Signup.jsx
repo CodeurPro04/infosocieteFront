@@ -1,9 +1,10 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { submitSignup } from '../api.js'
 
 export default function Signup() {
   const [type, setType] = useState('entreprise')
+  const [acceptedConsent, setAcceptedConsent] = useState(false)
   const [form, setForm] = useState({
     identifier: '',
     denomination: '',
@@ -23,6 +24,11 @@ export default function Signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    if (!acceptedConsent) {
+      setStatus('Veuillez accepter les conditions avant de continuer.')
+      return
+    }
+
     const payload = {
       profile: type,
       siret_or_siren: form.identifier,
@@ -84,9 +90,9 @@ export default function Signup() {
                 </label>
               </div>
               <label className="signup-label">
-                * Nom de votre entreprise, SIRET ou SIREN
+                * SIRET ou SIREN
                 <input
-                  placeholder="Nom de votre entreprise, SIRET ou SIREN"
+                  placeholder="SIRET ou SIREN"
                   value={form.identifier}
                   onChange={handleChange('identifier')}
                   required
@@ -152,8 +158,36 @@ export default function Signup() {
                   />
                 </label>
               </div>
+              <label className="payment-consent">
+                <input
+                  type="checkbox"
+                  checked={acceptedConsent}
+                  onChange={(event) => {
+                    setAcceptedConsent(event.target.checked)
+                    setStatus('')
+                  }}
+                  required
+                />
+                <span>
+                  Je déclare avoir lu et accepté les{' '}
+                  <a className="payment-link" href="/conditions-generales-de-vente">
+                    CGV
+                  </a>
+                  {' '}et la{' '}
+                  <a className="payment-link" href="/politique-de-confidentialite">
+                    Politique de confidentialité
+                  </a>
+                  . En validant, je confirme ma commande et j&apos;accepte le règlement immédiat de 1,49 € pour un accès
+                  illimité de 72h à vos services d&apos;assistance.
+                  <br />
+                  <br />
+                  Je reconnais qu&apos;à l&apos;issue de cet essai, et sans résiliation de ma part, un abonnement sera
+                  activé automatiquement au tarif de 49,99 € par mois. Cette offre est sans engagement : je peux
+                  annuler à tout moment et sans frais via contact@docsflow.fr.
+                </span>
+              </label>
               <button className="button primary signup-button" type="submit" disabled={loading}>
-                {loading ? 'Validation...' : 'Continuer'}
+                {loading ? 'Validation...' : 'Obtenir mon Kbis'}
               </button>
               {status ? <p className="status-text">{status}</p> : null}
             </form>
@@ -231,9 +265,9 @@ export default function Signup() {
       <section className="signup-rest">
         <div className="signup-formula-panel">
           <div className="signup-formula-card">
-            <div className="signup-formula-title">Notre formule Infogref.goentrypro</div>
+            <div className="signup-formula-title">Notre formule INFO-DOCSFLOW</div>
             <p className="signup-formula-price">Pour 1,49 €/72h puis 49,99 €/mois</p>
-            <p>Inscrivez vous pour profiter de nombreux avantages chez Infosociete qui vous permettront de voir :</p>
+            <p>Inscrivez vous pour profiter de nombreux avantages chez INFO-DOCSFLOW qui vous permettront de voir :</p>
           </div>
           <ul className="signup-formula-list">
             <li>
@@ -402,7 +436,7 @@ export default function Signup() {
                     />
                   </svg>
                 </span>
-                <span>contact@infosociete.pro</span>
+                <span>contact@INFO-DOCSFLOW.pro</span>
               </div>
               <div className="signup-info-row">
                 <span className="signup-info-mini-icon" aria-hidden="true">

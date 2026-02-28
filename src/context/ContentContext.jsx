@@ -8,8 +8,8 @@ const ContentContext = createContext({
   refresh: () => {},
 })
 
-const BRAND_SOURCE_REGEX = /Infosociete Pro/gi
-const BRAND_TARGET = 'Infogref.goentrypro'
+const BRAND_SOURCE_REGEX = /INFO-DOCSFLOW /gi
+const BRAND_TARGET = 'INFO-DOCSFLOW'
 
 function normalizeBrandLabel(value) {
   if (typeof value === 'string') {
