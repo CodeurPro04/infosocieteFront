@@ -174,7 +174,7 @@ export default function Home() {
               <p className="formula-price">{home.formulaPrice}</p>
               <p>{home.formulaIntro}</p>
               <NavLink className="button primary formula-button" to="/inscription">
-                S'inscrire
+                Commencer l’essai 72h
               </NavLink>
             </div>
             <ul className="formula-list">
@@ -203,63 +203,21 @@ export default function Home() {
             <hr className="blue-rule" />
           </div>
           <div className="learn-grid">
+            
             <div className="learn-left">
+              {/* video
               <div className="learn-media">
                 <video src={kbisVideo} controls preload="metadata" />
-              </div>
+              </div> */}
               <h3>{home.serviceTitle}</h3>
               <p>{home.serviceBody}</p>
-            </div>
+            </div> 
             <div className="learn-card">
               <div className="learn-card-eyebrow">Plus d'informations</div>
               <h3>{home.infoStrip?.heading}</h3>
               <p>{home.infoStrip?.body}</p>
               <NavLink className="button primary learn-button" to="/offre">
                 En savoir plus
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section companies-section">
-        <div className="container">
-          <div className="info-section-header">
-            <h2>{home.companiesTitle}</h2>
-            <hr className="blue-rule" />
-          </div>
-          <div className="companies-grid">
-            <div>
-              <p className="companies-intro">{home.companiesIntro}</p>
-              <p className="companies-note">{home.companiesNote}</p>
-              <ul className="companies-bullets">
-                <li>Elle affichera les 5 recherches les plus récentes effectuées par nos utilisateurs</li>
-                <li>Vous n’aurez bien sur accès qu’à une petite partie des informations</li>
-              </ul>
-              <div className="table companies-table">
-                <div className="table-head">
-                  {home.companiesHeaders?.map((header) => (
-                    <span key={header}>{header}</span>
-                  ))}
-                </div>
-                {home.companiesRows?.map((row) => (
-                  <div key={row.name} className="table-row">
-                    <span className="table-title">{row.name}</span>
-                    <span>{row.siren}</span>
-                    <span>{row.address}</span>
-                    <span className="status-pill">{row.status}</span>
-                    <span>{row.ape}</span>
-                    <span>{row.created}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="companies-aside">
-              <div className="companies-image">
-                <img src={documentArt} alt="Documents d'entreprise" />
-              </div>
-              <NavLink className="button primary companies-button" to="/entreprises">
-                Rechercher un document
               </NavLink>
             </div>
           </div>

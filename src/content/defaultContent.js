@@ -26,20 +26,20 @@ const defaultContent = {
       "#Statuts",
     ],
     benefits: [
-      "Consultez et téléchargez toutes vos informations légales, juridiques et financières",
-      "Accédez à tous vos documents professionnels avec l'abonnement INFO-DOCSFLOW pour 1,49 €/72h puis 49,99 €/mois",
-      "INFO-DOCSFLOW est un service privé et indépendant des administrations publiques. Nos données sont mises à jour quotidiennement et sont fournies par le Groupement d’intérêt économique des greffiers des Tribunaux de commerce (G.I.E. INFOGREFFE).",
-      "Toutes les informations fournies sont authentiques et certifiées",
+      "Consultez et téléchargez des informations légales, juridiques et financières sur les entreprises.",
+      "Accédez à la plateforme INFO-DOCSFLOW : essai 72h à 1,49 €, puis 49,99 € / mois (résiliable à tout moment).",
+      "INFO-DOCSFLOW est un service privé indépendant — non affilié à l’administration. Les informations présentées proviennent de sources publiques et/ou partenaires (selon disponibilité) et sont mises à jour régulièrement.",
+      "Les informations affichées proviennent de sources fiables et sont mises à jour régulièrement.",
     ],
     usefulTitle: "Informations utiles",
     usefulBody:
       "Nous avons voulu moderniser et simplifier l'accès à l'information juridique, légale et financière des entreprises, ainsi qu'accompagner les entrepreneurs au quotidien, grâce à INFO-DOCSFLOW. Pour relever ce défi, nous disposons d'une équipe opérationnelle rigoureuse et professionnelle dans chaque domaine, appuyée par des partenaires et des consultants de premier plan, afin de garantir un haut niveau de service, la fraîcheur de l'information et la facilité de consommation des données d'entreprise souvent indigestes et réservées aux institutions ou aux grands groupes.",
     learnMore:
-      "INFO-DOCSFLOW est un portail internet sur l'information légale, juridique et financière des entreprises françaises. Fiche identité, Statuts, Extrait Kbis, Bilan, APE, SIRET, RCS, TVA intra, DUNS number, Analyse financière, Diagnostic, Publications, Annonces Bodacc, RCS, Dirigeants. Accès en illimité des données des entreprises avec la formule INFO-DOCSFLOW. Il suffit d'entrer le nom d'une entreprise et le tour est joué.",
-    usefulNote: "*voir condition formule premium",
-    formulaPrice: "Pour 1,49 €/72h puis 49,99 €/mois",
+      "INFO-DOCSFLOW est un portail d’information sur les entreprises françaises. Selon les données disponibles, vous pouvez accéder à : fiche entreprise, dirigeants, statuts, extrait Kbis, bilans, actes, APE, SIREN/SIRET, RCS, publications et informations financières. L’accès à la plateforme est proposé via l’offre INFO-DOCSFLOW.",
+    usefulNote: "*Voir conditions de l’offre premium",
+    formulaPrice: "1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).",
     formulaIntro:
-      "Inscrivez vous pour profiter de nombreux avantages chez INFO-DOCSFLOW qui vous permettront de voir :",
+      "Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 kbi , 7 avis ect…",
     formulaBullets: [
       "Jusqu'à 7 extraits Kbis par mois.",
       "Jusqu'à 7 avis de situation SIRENE (Insee).",
@@ -49,10 +49,10 @@ const defaultContent = {
       "Assistance personnalisée disponible par mail pour toutes vos questions métier.",
       "Disponibilité étendue : Support client joignable du lundi au samedi, de 8 h à 20 h.",
     ],
-    serviceTitle: "Un service pour les professionnels",
+    serviceTitle: " Notre service d’assistance, comment ça fonctionne ?",
     serviceIntro: "En apprendre plus sur notre service",
     serviceBody:
-      "Nous offrons notre service à tous les professionnels. Vous pouvez trouver vos documents d'entreprise en faisant une demande sur notre site. Même les documents de vos concurrents sont disponibles, tous nos envois se font de façon sécurisée. Nous possédons un grand nombre de fichiers dans notre base de données alors n'hésitez pas à rejoindre INFO-DOCSFLOW.",
+      "INFO-DOCSFLOW est un service privé d’assistance — non affilié à l’administration. Vous pouvez saisir le SIREN/SIRET ou le nom de l’entreprise Après votre commande, notre équipe vérifie les informations, identifie l’entreprise exacte ou vous contacte si des précisions sont nécessaires afin de traiter votre demande et vous orienter vers le document adapté.",
     companiesTitle: "Liste des entreprises",
     companiesIntro:
       "Voici la liste des entreprises recherche par nos utilisateurs.",
@@ -174,7 +174,8 @@ const defaultContent = {
       toolBody:
         "Nous avons voulu actualiser et rendre plus accessible l'information juridique, légale et financière aux entreprises, ainsi qu'accompagner les entrepreneurs de manière régulière. Sur INFO-DOCSFLOW.pro nous vous proposons un outil permettant de retrouver n'importe quelle entreprise et d'obtenir des informations de celle ci.",
       formulaTitle: "Notre formule INFO-DOCSFLOW",
-      price: "Pour 1,49 €/72h puis 49,99 €/mois",
+      price: "1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).",
+      formulaIntro: "Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 kbi , 7 avis ect…",
       bullets: [
         "Jusqu'à 7 extraits Kbis par mois.",
         "Jusqu'à 7 avis de situation SIRENE (Insee).",
@@ -774,23 +775,13 @@ const defaultContent = {
     "mentions-legales": {
       title: "Mentions L\u00e9gales",
       lines: [
-        "Le pr\u00e9sent site Web est fourni par",
-        "ODYSSEUS MEDIA,",
-        "Soci\u00e9t\u00e9 \u00e0 responsabilit\u00e9 limit\u00e9e de droit irlandais immatricul\u00e9e au registre du commerce et des soci\u00e9t\u00e9s en Irlande sous le num\u00e9ro 714131 ,",
-        "dont le si\u00e8ge social est situ\u00e9 au 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland",
-        "Num\u00e9ro de TVA : IE 3985411WH",
-        "",
-        "Le pr\u00e9sent site Web est fourni par",
-        "Noreen K.",
-        "",
-        "Le site Web est h\u00e9berg\u00e9 par",
-        "Le site INFO-DOCSFLOW.pro est h\u00e9berg\u00e9 par la soci\u00e9t\u00e9 GoDaddy",
-        "Adresse : 14455 N. Hayden Rd., Ste. 226, Scottsdale, AZ 85260 USA",
-        "T\u00e9l\u00e9phone : +44 20 7084 1810",
-        "",
-        "Vous pouvez nous contacter \u00e0 l\u2019adresse suivante",
-        "E-mail : contact@INFO-DOCSFLOW.pro",
-        "T\u00e9l\u00e9phone : 0 805 086 583",
+        "DOCSFLOW – Service privé d’assistance administrative en ligne (entreprise individuelle)",
+        "Titulaire : Bai S.",
+        "Siège : 26841 Casalpusterlengo (LO), Italie",
+        "N° TVA (Italie) : IT 14615470961",
+        "N° REA : LO 2795477",
+        "PEC : saul.bai@timpec.it",
+        "E-mail: Contact@docsflow.fr",
       ],
     },
     "politique-de-confidentialite": {

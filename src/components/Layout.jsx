@@ -125,9 +125,9 @@ export default function Layout({ children }) {
         <div className="footer-bottom">
           © {content.site?.year || new Date().getFullYear()} INFO-DOCSFLOW - 2022 - 2026 Tous droits réservés
         </div>
-        <div className="footer-bottom footer-meta">IE 3985411WH</div>
+        <div className="footer-bottom footer-meta">N° Tva : IT 14615470961</div>
         <div className="footer-bottom footer-meta">
-          Odysseus Media - 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland
+          Via Cavour 42, 26841 Casalpusterlengo (LO), Italie
         </div>
       </footer>
     </div>

@@ -30,7 +30,7 @@ export default function Formula() {
               <p className="offer-card-price">{page?.price}</p>
               <p className="offer-card-intro">{page?.formulaIntro}</p>
             <NavLink className="button primary offer-card-button" to="/inscription">
-              S'inscrire
+              Commencer l’essai 72h
             </NavLink>
             </div>
           <ul className="offer-checklist offer-main-checklist">

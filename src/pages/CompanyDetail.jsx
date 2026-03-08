@@ -103,24 +103,43 @@ export default function CompanyDetail() {
                   Je suis un auto-entrepreneur
                 </label>
                 <label>
-                  <input type="radio" disabled name="profil" />
+                  <input
+                    type="radio"
+                    name="profil"
+                    value="particulier"
+                    checked={requestForm.profile === "particulier"}
+                    onChange={updateField("profile")}
+                    required
+                  />
                   Je suis un particulier
                 </label>
               </div>
 
               <label className="detail-label">
                 * Nom de votre entreprise, SIRET ou SIREN
-                <input value={requestForm.identifier} onChange={updateField("identifier")} required />
+                <input
+                  value={requestForm.identifier}
+                  onChange={updateField("identifier")}
+                  required
+                />
               </label>
 
               <label className="detail-label">
                 Dénomination
-                <input value={requestForm.denomination} onChange={updateField("denomination")} required />
+                <input
+                  value={requestForm.denomination}
+                  onChange={updateField("denomination")}
+                  required
+                />
               </label>
 
               <label className="detail-label">
                 Adresse du siège
-                <input value={requestForm.address} onChange={updateField("address")} required />
+                <input
+                  value={requestForm.address}
+                  onChange={updateField("address")}
+                  required
+                />
               </label>
 
               <div className="detail-row">
@@ -199,7 +218,11 @@ export default function CompanyDetail() {
                 support client à l'adresse contact@docsflow.fr.
               </p>
 
-              <button className="detail-submit" type="submit" disabled={loading}>
+              <button
+                className="detail-submit"
+                type="submit"
+                disabled={loading}
+              >
                 {loading ? "Validation..." : "Continuer"}
               </button>
               {status ? <p className="status-text">{status}</p> : null}
@@ -228,14 +251,14 @@ export default function CompanyDetail() {
             <div className="detail-offer-card">
               <h3>Notre formule INFO-DOCSFLOW</h3>
               <p className="detail-offer-price">
-                Pour 1,49 €/72h puis 49,99 €/mois
+                1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).
               </p>
               <p className="detail-offer-text">
-                Inscrivez vous pour profiter de nombreux avantages chez
-                INFO-DOCSFLOW qui vous permettront de voir :
+                Inscrivez-vous et profitez immédiatement des fonctionnalités
+                suivantes : 7 kbi , 7 avis ect…
               </p>
               <button className="detail-offer-button" type="button">
-                S'inscrire
+                Commencer l’essai 72h
               </button>
             </div>
             <ul className="detail-offer-list">
@@ -261,25 +284,29 @@ export default function CompanyDetail() {
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Accès aux informations clés des entreprises : Chiffre d'affaires, identité des dirigeants et liste des établissements.
+                Accès aux informations clés des entreprises : Chiffre
+                d'affaires, identité des dirigeants et liste des établissements.
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Jusqu'à 30 diagnostics financiers NOTA-PME et/ou AFDCC par mois pour surveiller vos partenaires et clients.
+                Jusqu'à 30 diagnostics financiers NOTA-PME et/ou AFDCC par mois
+                pour surveiller vos partenaires et clients.
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Assistance personnalisée disponible par mail pour toutes vos questions métier.
+                Assistance personnalisée disponible par mail pour toutes vos
+                questions métier.
               </li>
               <li>
                 <span className="detail-check" aria-hidden="true">
                   ✓
                 </span>
-                Disponibilité étendue : Support client joignable du lundi au samedi, de 8 h à 20 h.
+                Disponibilité étendue : Support client joignable du lundi au
+                samedi, de 8 h à 20 h.
               </li>
             </ul>
           </div>

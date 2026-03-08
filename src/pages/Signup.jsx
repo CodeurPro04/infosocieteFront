@@ -193,7 +193,7 @@ export default function Signup() {
             </form>
           </div>
           <div className="signup-info">
-            <div className="signup-info-title">Accès illimité pour 1,49 €</div>
+            <div className="signup-info-title">Accès à 1,49€/72h</div>
             <div className="signup-info-list">
               <div>
                 <span className="signup-info-icon" aria-hidden="true">
@@ -266,8 +266,8 @@ export default function Signup() {
         <div className="signup-formula-panel">
           <div className="signup-formula-card">
             <div className="signup-formula-title">Notre formule INFO-DOCSFLOW</div>
-            <p className="signup-formula-price">Pour 1,49 €/72h puis 49,99 €/mois</p>
-            <p>Inscrivez vous pour profiter de nombreux avantages chez INFO-DOCSFLOW qui vous permettront de voir :</p>
+            <p className="signup-formula-price">1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).</p>
+            <p className="signup-formula-intro">Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 kbi , 7 avis ect…</p>
           </div>
           <ul className="signup-formula-list">
             <li>
