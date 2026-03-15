@@ -8,7 +8,6 @@ export default function ConditionsFormula() {
     ? privilegeSection.body.split(',').map((item) => item.trim()).filter(Boolean)
     : []
   const priceSection = page?.sections?.[1]
-  const cancelSection = page?.sections?.[2]
   const modalitySection = page?.sections?.[3]
   const commSection = page?.sections?.[4]
   const delaySection = page?.sections?.[5]

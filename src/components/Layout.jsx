@@ -7,25 +7,22 @@ import cards from '../assets/illustrations/cards.png'
 export default function Layout({ children }) {
   const { content } = useContent()
   const location = useLocation()
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+  const [mobileNavState, setMobileNavState] = useState({ isOpen: false, path: location.pathname })
   const hiddenNavLabels = new Set(['accueil', 'connexion', 'back office'])
   const visibleNavigation =
     content.navigation?.filter((item) => !hiddenNavLabels.has((item.label || '').toLowerCase().trim())) || []
-
-  useEffect(() => {
-    setIsMobileNavOpen(false)
-  }, [location.pathname])
+  const isMobileNavOpen = mobileNavState.isOpen && mobileNavState.path === location.pathname
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 960) {
-        setIsMobileNavOpen(false)
+        setMobileNavState((prev) => (prev.isOpen ? { isOpen: false, path: location.pathname } : prev))
       }
     }
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [location.pathname])
 
   return (
     <div className="app-shell">
@@ -40,7 +37,12 @@ export default function Layout({ children }) {
             aria-label="Ouvrir le menu"
             aria-expanded={isMobileNavOpen}
             aria-controls="site-mobile-navigation"
-            onClick={() => setIsMobileNavOpen((prev) => !prev)}
+            onClick={() =>
+              setMobileNavState((prev) => ({
+                isOpen: !(prev.isOpen && prev.path === location.pathname),
+                path: location.pathname,
+              }))
+            }
           >
             <span />
             <span />
@@ -49,7 +51,12 @@ export default function Layout({ children }) {
           <div className={`header-panel${isMobileNavOpen ? ' is-open' : ''}`} id="site-mobile-navigation">
             <nav className="nav">
               {visibleNavigation.map((item) => (
-                <NavLink key={item.path} to={item.path} className="nav-link" onClick={() => setIsMobileNavOpen(false)}>
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className="nav-link"
+                  onClick={() => setMobileNavState({ isOpen: false, path: item.path })}
+                >
                   {item.label}
                 </NavLink>
               ))}
@@ -58,7 +65,7 @@ export default function Layout({ children }) {
               <a
                 className="phone-link"
                 href={`tel:${content.site?.phone?.replace(/\s/g, '')}`}
-                onClick={() => setIsMobileNavOpen(false)}
+                onClick={() => setMobileNavState({ isOpen: false, path: location.pathname })}
               >
                 <span className="phone-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">

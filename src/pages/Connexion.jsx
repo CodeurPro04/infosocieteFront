@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
-import kbisCard from '../assets/illustrations/document-kbis.webp'
-import kbisList from '../assets/illustrations/document.png'
 
 export default function Connexion() {
   const { content } = useContent()
   const page = content.pages?.connexion
-  const kbis = page?.kbis
 
   return (
     <section className="connexion-page section">

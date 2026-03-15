@@ -10,7 +10,7 @@ async function request(path, options = {}) {
       },
       ...options,
     })
-  } catch (error) {
+  } catch {
     throw new Error(`Impossible de joindre le serveur API (${API_BASE}). Vérifiez que le backend est démarré.`)
   }
 

@@ -1,5 +1,4 @@
 import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
-import mapsite from "../assets/illustrations/mapsite.png";
 import kbisSample from "../assets/illustrations/kbisflou.png";
 import { useState } from "react";
 import { submitKbisRequest } from "../api.js";

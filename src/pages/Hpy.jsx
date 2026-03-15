@@ -1,14 +1,10 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { submitContact } from '../api.js'
 import { useContent } from '../context/ContentContext.jsx'
-import kbisCard from '../assets/illustrations/document-kbis.webp'
-import kbisList from '../assets/illustrations/document.png'
 
 export default function Hpy() {
   const { content } = useContent()
   const page = content.pages?.['hpy-infoscte']
-  const kbis = page?.kbis
   const [status, setStatus] = useState('')
   const [loading, setLoading] = useState(false)
 

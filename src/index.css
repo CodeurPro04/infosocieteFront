@@ -2940,11 +2940,6 @@ button {
 }
 
 .signup-grid {
-  position: relative;
-  z-index: 1;
-}
-
-.signup-grid {
   width: min(1080px, 92vw);
   margin: 0 auto;
   display: grid;
@@ -3860,24 +3855,6 @@ button {
 
 .table-title {
   font-weight: 600;
-}
-
-.faq-list {
-  display: grid;
-  gap: 1rem;
-}
-
-.faq-item {
-  background: #fff;
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
 }
 
 .contact-card,

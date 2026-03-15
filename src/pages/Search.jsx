@@ -21,21 +21,6 @@ export default function Search() {
   })
   const navigate = useNavigate()
 
-  const handleExtract = (value, item = null) => {
-    if (!value) {
-      return
-    }
-    const identifier = String(value)
-    setQuery(identifier)
-    setPrefill({
-      identifier,
-      denomination: item?.name || '',
-      address: item?.address || '',
-    })
-    setShowModal(true)
-    setStep(0)
-  }
-
   const handleSearch = async (event) => {
     event.preventDefault()
     if (!query.trim()) {

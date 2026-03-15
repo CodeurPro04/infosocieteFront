@@ -336,7 +336,7 @@ export default function Admin() {
               const parsed = JSON.parse(event.target.value)
               setDraft(parsed)
               setStatus('')
-            } catch (error) {
+            } catch {
               setStatus('JSON invalide')
             }
           }}

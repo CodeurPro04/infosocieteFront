@@ -1,12 +1,8 @@
-import { Link } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
-import kbisCard from '../assets/illustrations/document-kbis.webp'
-import kbisList from '../assets/illustrations/document.png'
 
 export default function BankInfo() {
   const { content } = useContent()
   const page = content.pages?.['votre-releve-bancaire']
-  const kbis = page?.kbis
 
   return (
     <section className="bankinfo-page section">

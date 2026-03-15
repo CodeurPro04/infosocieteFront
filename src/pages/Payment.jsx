@@ -158,9 +158,15 @@ export default function Payment() {
 
   const customerName = `${payload.firstName || ""} ${payload.lastName || ""}`.trim();
   const identifier = payload.identifier || "";
+  const email = payload.email || "";
+  const denomination = payload.denomination || "";
+  const firstName = payload.firstName || "";
+  const lastName = payload.lastName || "";
+  const profile = payload.profile || "";
+  const type = payload.type || "";
 
   useEffect(() => {
-    const intentKey = `${identifier || "UNKNOWN"}::${payload.email || ""}`;
+    const intentKey = `${identifier || "UNKNOWN"}::${email}::${denomination}::${firstName}::${lastName}::${profile}::${type}`;
     if (lastIntentKeyRef.current === intentKey) {
       return;
     }
@@ -179,14 +185,14 @@ export default function Payment() {
         const data = await createPaymentIntent({
           amount: 1.49,
           siret_or_siren: identifier || "UNKNOWN",
-          email: payload.email || null,
+          email: email || null,
           description: "Paiement accès Kbis 72h",
           metadata: {
             source: "frontend",
-            profile: payload.type || payload.profile || "",
-            company_name: payload.denomination || "",
-            first_name: payload.firstName || "",
-            last_name: payload.lastName || "",
+            profile: type || profile,
+            company_name: denomination,
+            first_name: firstName,
+            last_name: lastName,
           },
         });
         setClientSecret(data.client_secret || "");
@@ -199,7 +205,7 @@ export default function Payment() {
     };
 
     initIntent();
-  }, [identifier, payload.email]);
+  }, [denomination, email, firstName, identifier, lastName, profile, type]);
 
   return (
     <section className="payment-page section">
