@@ -64,7 +64,7 @@ export default function Signup() {
     <section className="signup-section">
       <section className="signup-hero-section">
         <div className="signup-grid">
-          <div className="signup-card">
+          <div className="signup-card" id="signup-form">
             <div className="signup-header">Inscription accès personnel</div>
             <form className="signup-body" onSubmit={handleSubmit}>
               <div className="signup-radio">
@@ -265,9 +265,12 @@ export default function Signup() {
       <section className="signup-rest">
         <div className="signup-formula-panel">
           <div className="signup-formula-card">
-            <div className="signup-formula-title">Notre formule INFO-DOCSFLOW</div>
+            <div className="signup-formula-title">Commencez votre essai 72h</div>
             <p className="signup-formula-price">1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).</p>
-            <p className="signup-formula-intro">Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 kbi , 7 avis ect…</p>
+            <p className="signup-formula-intro">Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 kbi , 7 avis etc.</p>
+            <a className="button primary signup-formula-button" href="#signup-form">
+              Commencer l’essai 72h
+            </a>
           </div>
           <ul className="signup-formula-list">
             <li>
@@ -413,11 +416,14 @@ export default function Signup() {
             </div>
           </div>
           <div className="signup-info-cards">
-            <div className="signup-info-card">
-              <div className="signup-info-eyebrow">Notre formule</div>
-              <p>Profitez des données de l'entreprise pour 1,49 € pendant 72h*</p>
+            <div className="signup-info-card signup-offer-card">
+              <div className="signup-info-eyebrow">Commencez votre essai 72h</div>
+              <p>1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).</p>
               <a className="signup-info-link" href="/conditions-de-la-formule">
                 *voir condition formule premium
+              </a>
+              <a className="button primary signup-info-button" href="#signup-form">
+                Commencer l’essai 72h
               </a>
             </div>
             <div className="signup-info-card">
@@ -494,5 +500,3 @@ export default function Signup() {
     </section>
   )
 }
-
-

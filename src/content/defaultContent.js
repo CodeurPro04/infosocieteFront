@@ -37,9 +37,11 @@ const defaultContent = {
     learnMore:
       "INFO-DOCSFLOW est un portail d’information sur les entreprises françaises. Selon les données disponibles, vous pouvez accéder à : fiche entreprise, dirigeants, statuts, extrait Kbis, bilans, actes, APE, SIREN/SIRET, RCS, publications et informations financières. L’accès à la plateforme est proposé via l’offre INFO-DOCSFLOW.",
     usefulNote: "*Voir conditions de l’offre premium",
+    formulaTitle: "Commencez votre essai 72h",
     formulaPrice: "1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).",
     formulaIntro:
-      "Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 kbi , 7 avis ect…",
+      "Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 Kbis, 7 avis, etc.",
+    formulaButton: "Commencer l’essai 72h",
     formulaBullets: [
       "Jusqu'à 7 extraits Kbis par mois.",
       "Jusqu'à 7 avis de situation SIRENE (Insee).",
@@ -173,9 +175,10 @@ const defaultContent = {
       toolTitle: "Notre outil de recherche d'entreprise",
       toolBody:
         "Nous avons voulu actualiser et rendre plus accessible l'information juridique, légale et financière aux entreprises, ainsi qu'accompagner les entrepreneurs de manière régulière. Sur INFO-DOCSFLOW.pro nous vous proposons un outil permettant de retrouver n'importe quelle entreprise et d'obtenir des informations de celle ci.",
-      formulaTitle: "Notre formule INFO-DOCSFLOW",
+      formulaTitle: "Commencez votre essai 72h",
       price: "1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).",
-      formulaIntro: "Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 kbi , 7 avis ect…",
+      formulaIntro: "Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 Kbis, 7 avis, etc.",
+      formulaButton: "Commencer l’essai 72h",
       bullets: [
         "Jusqu'à 7 extraits Kbis par mois.",
         "Jusqu'à 7 avis de situation SIRENE (Insee).",

@@ -190,8 +190,9 @@ button {
 }
 
 .brand-logo {
-  height: clamp(46px, 5vw, 60px);
-  width: clamp(46px, 5vw, 60px);
+  height: clamp(60px, 6vw, 78px);
+  width: auto;
+  max-width: min(260px, 32vw);
   display: block;
   object-fit: contain;
   object-position: center;
@@ -748,22 +749,32 @@ button {
 }
 
 .formula-card-title {
-  font-size: 1.1rem;
+  font-size: 1.55rem;
   font-weight: 600;
   color: #1e6fae;
   margin-bottom: 0.8rem;
+  line-height: 1.2;
 }
 
 .formula-price {
   color: #1e6fae;
   font-weight: 600;
   margin: 0 0 0.6rem;
+  font-size: 0.96rem;
+}
+
+.formula-intro {
+  margin: 0 0 1rem;
 }
 
 .formula-button {
-  margin-top: 1rem;
-  width: 100%;
+  margin-top: 0;
+  width: fit-content;
   justify-content: center;
+  border-radius: 6px;
+  padding: 0.7rem 1.6rem;
+  background: #1e6fae;
+  box-shadow: none;
 }
 
 .formula-list {
@@ -822,6 +833,39 @@ button {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #1f2937;
+}
+
+.learn-steps {
+  margin-top: 1.4rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #d7e3f3;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5fc 100%);
+}
+
+.learn-steps-title {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e6fae;
+}
+
+.learn-steps-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #1f2937;
+}
+
+.learn-steps-list li {
+  margin-bottom: 0.55rem;
+  line-height: 1.6;
+}
+
+.learn-steps-note {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #516173;
 }
 
 .learn-media {
@@ -3070,6 +3114,18 @@ button {
   font-weight: 600;
 }
 
+.signup-formula-intro {
+  margin-bottom: 1rem;
+}
+
+.signup-formula-button {
+  width: fit-content;
+  border-radius: 6px;
+  padding: 0.7rem 1.6rem;
+  background: #1e6fae;
+  box-shadow: none;
+}
+
 .signup-formula-list {
   list-style: none;
   padding: 0;
@@ -3145,6 +3201,29 @@ button {
   font-size: 0.85rem;
   display: inline-block;
   margin-top: 0.6rem;
+}
+
+.signup-offer-card .signup-info-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.signup-offer-card p {
+  margin: 0 0 0.7rem;
+  color: #111827;
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.signup-info-button {
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 6px;
+  padding: 0.7rem 1.6rem;
+  background: #1e6fae;
+  box-shadow: none;
 }
 
 .signup-info-row {
@@ -3870,7 +3949,7 @@ button {
 }
 
 .footer-logo {
-  height: 36px;
+  height: 54px;
   width: auto;
 }
 
@@ -4063,8 +4142,9 @@ button {
 
 @media (max-width: 960px) {
   .brand-logo {
-    height: 46px;
-    width: 46px;
+    height: 58px;
+    width: auto;
+    max-width: 220px;
   }
 
   .header-inner {
@@ -4341,6 +4421,10 @@ button {
 }
 
 @media (max-width: 720px) {
+  .footer-logo {
+    height: 46px;
+  }
+
   .container {
     width: min(1180px, calc(100vw - 1.25rem));
   }

@@ -170,9 +170,9 @@ export default function Home() {
           </div>
           <div className="formula-panel">
             <div className="formula-card">
-              <div className="formula-card-title">Notre formule INFO-DOCSFLOW</div>
-              <p className="formula-price">{home.formulaPrice}</p>
-              <p>{home.formulaIntro}</p>
+              <div className="formula-card-title">Commencez votre essai 72h</div>
+              <p className="formula-price">1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).</p>
+              <p className="formula-intro">Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 Kbis, 7 avis, etc.</p>
               <NavLink className="button primary formula-button" to="/inscription">
                 Commencer l’essai 72h
               </NavLink>
@@ -211,6 +211,18 @@ export default function Home() {
               </div> */}
               <h3>{home.serviceTitle}</h3>
               <p>{home.serviceBody}</p>
+              <div className="learn-steps">
+                <div className="learn-steps-title">Étapes</div>
+                <ul className="learn-steps-list">
+                  <li>1. Vous saisissez les informations disponibles (SIREN/SIRET ou nom).</li>
+                  <li>2. Vous validez votre commande pour activer l’assistance.</li>
+                  <li>3. Nous vérifions et traitons la demande, puis vous accédez aux résultats via la plateforme.</li>
+                </ul>
+                <p className="learn-steps-note">
+                  Certaines informations et documents dépendent des sources disponibles et de la situation de
+                  l’entreprise.
+                </p>
+              </div>
             </div> 
             <div className="learn-card">
               <div className="learn-card-eyebrow">Plus d'informations</div>
@@ -259,13 +271,13 @@ export default function Home() {
           </div>
           <div className="services-cards-grid">
             <div className="services-info-card">
-              <div className="services-card-eyebrow">Notre formule INFO-DOCSFLOW</div>
-              <p>Profitez d'un accès aux extraits de Kbis pour 1,49 € pendant 72h*</p>
+              <div className="services-card-eyebrow">{home.formulaTitle || "Commencez votre essai 72h"}</div>
+              <p>{home.formulaPrice}</p>
               <NavLink className="services-link" to="/conditions-de-la-formule">
                 *voir condition formule premium
               </NavLink>
               <NavLink className="button primary service-button" to="/inscription">
-                S'inscrire
+                {home.formulaButton || "Commencer l’essai 72h"}
               </NavLink>
             </div>
             <div className="services-info-card">

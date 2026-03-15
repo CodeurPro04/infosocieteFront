@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { useContent } from '../context/ContentContext.jsx'
-import logo from '../assets/illustrations/logo5.png'
+import logo from '../assets/illustrations/logovf1.svg'
 import cards from '../assets/illustrations/cards.png'
 
 export default function Layout({ children }) {

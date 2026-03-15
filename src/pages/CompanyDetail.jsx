@@ -249,13 +249,12 @@ export default function CompanyDetail() {
         <div className="detail-offer">
           <div className="detail-offer-panel">
             <div className="detail-offer-card">
-              <h3>Notre formule INFO-DOCSFLOW</h3>
+              <h3>Commencez votre essai 72h</h3>
               <p className="detail-offer-price">
                 1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).
               </p>
               <p className="detail-offer-text">
-                Inscrivez-vous et profitez immédiatement des fonctionnalités
-                suivantes : 7 kbi , 7 avis ect…
+                Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 Kbis, 7 avis, etc.
               </p>
               <button className="detail-offer-button" type="button">
                 Commencer l’essai 72h

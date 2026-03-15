@@ -54,13 +54,13 @@ export default function Faq() {
         </div>
         <div className="faq-cards">
           <div className="faq-card">
-            <div className="faq-card-eyebrow">Notre formule INFO-DOCSFLOW</div>
-            <h3>Profitez d'un accès aux extraits de Kbis pour 1,49 € pendant 72h*</h3>
+            <div className="faq-card-eyebrow">Commencez votre essai 72h</div>
+            <h3>1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).</h3>
             <NavLink className="faq-card-link" to="/conditions-de-la-formule">
               *voir condition formule premium
             </NavLink>
             <NavLink className="button primary faq-card-button" to="/inscription">
-              S'inscrire
+              Commencer l’essai 72h
             </NavLink>
           </div>
           <div className="faq-card">

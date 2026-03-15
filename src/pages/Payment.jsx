@@ -348,13 +348,13 @@ export default function Payment() {
 
         <div className="detail-offer-panel payment-offer-panel">
           <div className="detail-offer-card">
-            <h3>Notre formule INFO-DOCSFLOW</h3>
-            <p className="detail-offer-price">Pour 1,49 €/72h puis 49,99 €/mois</p>
+            <h3>Commencez votre essai 72h</h3>
+            <p className="detail-offer-price">1,49 € aujourd’hui, puis 49,99 € / mois (renouvellement automatique — résiliable à tout moment).</p>
             <p className="detail-offer-text">
-              Inscrivez vous pour profiter de nombreux avantages chez INFO-DOCSFLOW qui vous permettront de voir :
+              Inscrivez-vous et profitez immédiatement des fonctionnalités suivantes : 7 Kbis, 7 avis, etc.
             </p>
             <button className="detail-offer-button" type="button">
-              S'inscrire
+              Commencer l’essai 72h
             </button>
           </div>
           <ul className="detail-offer-list">
