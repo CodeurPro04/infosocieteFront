@@ -115,10 +115,11 @@ export default function CompanyDetail() {
               </div>
 
               <label className="detail-label">
-                * Nom de votre entreprise, SIRET ou SIREN
+                * SIREN/SIRET ou raison sociale
                 <input
                   value={requestForm.identifier}
                   onChange={updateField("identifier")}
+                  placeholder="Ex. 552100554 ou “AXA”"
                   required
                 />
               </label>

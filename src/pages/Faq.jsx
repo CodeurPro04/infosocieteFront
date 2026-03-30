@@ -11,12 +11,12 @@ export default function Faq() {
     <section className="faq-page">
       <div className="container">
         <div className="faq-title-row">
-          <div className="faq-title">FAQ</div>
+          <div className="faq-title">{page?.title ?? 'FAQ'}</div>
           <div className="faq-rule" />
         </div>
         <div className="faq-intro">
           <span className="faq-quote">“</span>
-          <h2>Retrouver toutes les questions les plus fréquemment posées dans notre FAQ dédiée à notre service</h2>
+          <h2>{page?.intro}</h2>
         </div>
         <div className="faq-list">
           {page?.items?.map((item, index) => {

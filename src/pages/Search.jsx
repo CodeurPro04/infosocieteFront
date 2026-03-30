@@ -99,7 +99,8 @@ export default function Search() {
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder={'Nom de la soci\u00e9t\u00e9, SIRET ou SIREN'}
+            placeholder={'Ex. 552100554 ou “AXA”'}
+            aria-label="SIREN/SIRET ou raison sociale"
             required
           />
           <button className="button primary" type="submit" disabled={loading}>

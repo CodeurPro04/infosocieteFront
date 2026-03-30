@@ -87,7 +87,7 @@ export default function Claim() {
                 <span>Du Lundi au Samedi, 8h - 20h</span>
               </div>
               <div className="contact-item contact-address">
-                13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland
+                Casalpusterlengo (LO), Italie
               </div>
             </div>
           </div>

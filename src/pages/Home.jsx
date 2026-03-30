@@ -12,8 +12,6 @@ export default function Home() {
   const home = content.home || {}
   const [searchForm, setSearchForm] = useState({
     identifier: '',
-    denomination: '',
-    address: '',
   })
   const [showModal, setShowModal] = useState(false)
   const [step, setStep] = useState(0)
@@ -21,7 +19,7 @@ export default function Home() {
 
   const handleSearch = (event) => {
     event.preventDefault()
-    if (!searchForm.identifier.trim() || !searchForm.denomination.trim() || !searchForm.address.trim()) {
+    if (!searchForm.identifier.trim()) {
       return
     }
     setShowModal(true)
@@ -48,16 +46,15 @@ export default function Home() {
 
   useEffect(() => {
     if (step >= 4 && showModal) {
-      const target =
-        searchForm.identifier.trim() || searchForm.denomination.trim() || searchForm.address.trim()
+      const target = searchForm.identifier.trim()
       const delay = window.setTimeout(() => {
         setShowModal(false)
         navigate(`/recherche-entreprise/${encodeURIComponent(target)}`, {
           state: {
             prefill: {
               identifier: searchForm.identifier.trim(),
-              denomination: searchForm.denomination.trim(),
-              address: searchForm.address.trim(),
+              denomination: '',
+              address: '',
             },
           },
         })
@@ -73,49 +70,25 @@ export default function Home() {
         <div className="container hero-grid hero-grid-INFO-DOCSFLOW">
           <div className="hero-text">
             <h1 className="hero-title">
-              <span className="hero-title-accent">Consultez et Téléchargez</span>
-              <span className="hero-title-rest">les données de votre entreprise</span>
+              <span className="hero-title-accent">Obtenez votre extrait Kbis en quelques clics</span>
             </h1>
             <p className="hero-subtitle">{home.heroSubtitle}</p>
+            {home.heroTrust && <p className="hero-trust">{home.heroTrust}</p>}
             <form className="hero-search" onSubmit={handleSearch}>
               <label className="hero-search-field">
-                <span>Numéro de SIRET ou SIREN</span>
+                <span>SIREN/SIRET ou raison sociale</span>
                 <input
                   value={searchForm.identifier}
                   onChange={(event) =>
                     setSearchForm((prev) => ({ ...prev, identifier: event.target.value }))
                   }
-                  placeholder="Numéro de SIRET ou SIREN"
-                  aria-label="Numéro de SIRET ou SIREN"
-                  required
-                />
-              </label>
-              <label className="hero-search-field">
-                <span>Dénomination</span>
-                <input
-                  value={searchForm.denomination}
-                  onChange={(event) =>
-                    setSearchForm((prev) => ({ ...prev, denomination: event.target.value }))
-                  }
-                  placeholder="Dénomination"
-                  aria-label="Dénomination"
-                  required
-                />
-              </label>
-              <label className="hero-search-field">
-                <span>Adresse du siège</span>
-                <input
-                  value={searchForm.address}
-                  onChange={(event) =>
-                    setSearchForm((prev) => ({ ...prev, address: event.target.value }))
-                  }
-                  placeholder="Adresse du siège"
-                  aria-label="Adresse du siège"
+                  placeholder="Ex. 552100554 ou “AXA”"
+                  aria-label="SIREN/SIRET ou raison sociale"
                   required
                 />
               </label>
               <button className="button primary search-button" type="submit">
-                RECHERCHE
+                Rechercher une entreprise
               </button>
             </form>
             <div className="hero-tags">

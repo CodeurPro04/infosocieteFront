@@ -6,14 +6,15 @@ const defaultContent = {
     hours: "Du lundi au samedi, de 8h a 20h",
   },
   navigation: [
-    { label: "Formule INFO-DOCSFLOW", path: "/offre" },
-    { label: "Résiliation", path: "/resiliation" },
+    { label: "Offre & tarifs", path: "/offre" },
+    // { label: "Résiliation", path: "/resiliation" },
     { label: "Contact", path: "/contact" },
   ],
   home: {
-    heroTitle: "Consultez et Téléchargez les données de votre entreprise",
+    heroTitle: "Obtenez votre extrait Kbis en quelques clics",
     heroSubtitle:
-      "Recherchez l'entreprise dont vous souhaitez obtenir les données.",
+      "Recherchez une entreprise par SIREN/SIRET ou raison sociale.",
+    heroTrust: "Service privé indépendant — non affilié à l’administration.",
     //cta: "Connexion",
     tags: [
       "#Marques",
@@ -133,7 +134,7 @@ const defaultContent = {
       },
     ],
     formulaCta: {
-      title: "Notre formule INFO-DOCSFLOW",
+      title: "Offre & tarifs",
       body: "Profitez d'un accès aux extraits de Kbis pour 1,49 € pendant 72h*",
       note: "*voir condition formule premium",
     },
@@ -171,7 +172,7 @@ const defaultContent = {
       ],
     },
     offre: {
-      title: "Formule INFO-DOCSFLOW",
+      title: "Offre & tarifs",
       toolTitle: "Notre outil de recherche d'entreprise",
       toolBody:
         "Nous avons voulu actualiser et rendre plus accessible l'information juridique, légale et financière aux entreprises, ainsi qu'accompagner les entrepreneurs de manière régulière. Sur INFO-DOCSFLOW.pro nous vous proposons un outil permettant de retrouver n'importe quelle entreprise et d'obtenir des informations de celle ci.",
@@ -262,69 +263,150 @@ const defaultContent = {
     },
     faq: {
       title: "FAQ",
-      intro:
-        "Retrouver toutes les questions les plus fréquemment posées dans notre FAQ dédiée à notre service",
+      intro: "Retrouvez ici les réponses aux questions les plus fréquentes concernant le service DOCSFLOW.",
       items: [
         {
-          q: "Qu'est-ce quʼINFO-DOCSFLOW ",
+          q: "1. Qu’est-ce que DOCSFLOW ?",
           blocks: [
             {
               type: "p",
-              text: "Le Kbis est un document officiel regroupant certaines informations concernant l’entreprise, il a donc une durée de validité illimitée. Cependant, la plupart des démarches qui vous demanderont un extrait de Kbis, préciseront que ce dernier doit dater de moins de 3 mois. Les entreprises étant régulièrement amenées à changer, un extrait de Kbis de moins de 90 jours est une garantie que les informations communiquées sont encore fiables.",
+              text: "DOCSFLOW est un service privé d’assistance administrative en ligne.",
+            },
+            {
+              type: "p",
+              text: "Nous accompagnons nos clients dans leurs demandes liées aux informations et documents d’entreprise, selon les éléments fournis et les données disponibles.",
             },
           ],
         },
         {
-          q: "Est-il possible de renouveler un extrait de Kbis ",
+          q: "2. DOCSFLOW est-il un site officiel de l’administration ?",
           blocks: [
             {
               type: "p",
-              text: "Oui il est possible de renouveler un extrait de Kbis car les entreprises ont l’obligation de mettre à jours leurs informations majeures notamment dans les situations suivantes :",
+              text: "Non.",
+            },
+            {
+              type: "p",
+              text: "DOCSFLOW est un service privé indépendant et ne constitue pas un site officiel d’administration publique.",
+            },
+          ],
+        },
+        {
+          q: "3. Qu’est-ce qu’un extrait Kbis ?",
+          blocks: [
+            {
+              type: "p",
+              text: "L’extrait Kbis est un document qui reprend les principales informations légales d’une entreprise immatriculée au registre du commerce et des sociétés.",
+            },
+            {
+              type: "p",
+              text: "Il est souvent utilisé comme document d’identification de l’entreprise dans certaines démarches.",
+            },
+          ],
+        },
+        {
+          q: "4. Comment fonctionne le service ?",
+          blocks: [
+            {
+              type: "p",
+              text: "Vous renseignez les informations dont vous disposez concernant l’entreprise recherchée, puis vous validez votre demande.",
+            },
+            {
+              type: "p",
+              text: "Notre service traite ensuite la demande, effectue les vérifications nécessaires et vous accompagne selon les éléments fournis et les données disponibles.",
+            },
+          ],
+        },
+        {
+          q: "5. Dois-je obligatoirement connaître le bon SIREN ou SIRET ?",
+          blocks: [
+            {
+              type: "p",
+              text: "Non.",
+            },
+            {
+              type: "p",
+              text: "Vous pouvez renseigner le nom de l’entreprise, une ville, une adresse ou tout autre élément utile.",
+            },
+            {
+              type: "p",
+              text: "Si vous connaissez le SIREN ou le SIRET, vous pouvez aussi le renseigner, mais ce n’est pas obligatoire.",
+            },
+          ],
+        },
+        {
+          q: "6. Puis-je utiliser le service si je suis un particulier ?",
+          blocks: [
+            {
+              type: "p",
+              text: "Oui.",
+            },
+            {
+              type: "p",
+              text: "DOCSFLOW peut être utilisé par des professionnels, des indépendants et aussi par des particuliers.",
+            },
+          ],
+        },
+        {
+          q: "7. Le document est-il obtenu automatiquement ?",
+          blocks: [
+            {
+              type: "p",
+              text: "Non, pas nécessairement.",
+            },
+            {
+              type: "p",
+              text: "DOCSFLOW fonctionne comme un service d’assistance et de traitement, et non comme un simple accès autonome à une base de données.",
+            },
+            {
+              type: "p",
+              text: "Certaines demandes peuvent nécessiter une vérification ou un traitement manuel.",
+            },
+          ],
+        },
+        {
+          q: "8. Combien coûte le service ?",
+          blocks: [
+            {
+              type: "p",
+              text: "L’offre actuellement affichée sur le site comprend :",
             },
             {
               type: "ul",
               items: [
-                "Changement de directeur ou gérant",
-                "Modification du nom de l’entreprise",
-                "Mise à jour des statuts juridiques",
-                "Modification du montant du capital de l’offre",
-              ],
-            },
-            {
-              type: "p",
-              text: "Il est possible pour tous les représentants d’entreprise d’obtenir le renouvellement de son extrait de Kbis auprès de tous les organismes et sites web proposant ce service. Il est par exemple possible sur INFO-DOCSFLOW d’obtenir un extrait de Kbis actualisé car nous disposons des dernières informations à jour. L’ancien extrait de Kbis peut quand même être conservé car il peut permettre de retracer l’historique de la société en question.",
-            },
-          ],
-        },
-        {
-          q: "Quelle est la différence entre un extrait de Kbis et un extrait K ",
-          blocks: [
-            {
-              type: "p",
-              text: "Ces deux documents sont des documents officiels délivrés par les greffiers du tribunal de commerce. Cependant, les extrait de Kbis sont destinés aux personnes morales comme :",
-            },
-            { type: "ul", items: ["SAS", "SARL", "SASU", "EURL", "SCI"] },
-            {
-              type: "p",
-              text: "Quant aux extraits K ils sont destinés aux personnes physiques :",
-            },
-            {
-              type: "ul",
-              items: [
-                "Micro-entrepreneur",
-                "EIRL",
-                "Entreprises individuelles",
-                "Etc...",
+                "un essai de 72 heures au prix de 1,49 € ;",
+                "puis, sauf résiliation avant l’échéance, un abonnement mensuel de 49,99 € reconduit automatiquement.",
               ],
             },
           ],
         },
         {
-          q: "Comment obtenir un extrait Kbis d’une entreprise autre que la mienne ",
+          q: "9. Puis-je résilier à tout moment ?",
           blocks: [
             {
               type: "p",
-              text: "Toutes les informations présentes dans l’extrait de Kbis sont publiques, ainsi toutes les personnes physiques ou morales sont en droit de demander un extrait de Kbis d’une société tierce enregistré au RCS. Vous pouvez effectuer ce service directement sur le site INFO-DOCSFLOW.",
+              text: "Oui.",
+            },
+            {
+              type: "p",
+              text: "Vous pouvez demander la résiliation à tout moment via la page Résiliation ou en contactant le support.",
+            },
+            {
+              type: "p",
+              text: "Si vous résiliez pendant la période d’essai, aucun abonnement mensuel ne sera facturé après cette période.",
+            },
+          ],
+        },
+        {
+          q: "10. Comment contacter DOCSFLOW ?",
+          blocks: [
+            {
+              type: "p",
+              text: "Vous pouvez contacter DOCSFLOW à l’adresse suivante :",
+            },
+            {
+              type: "p",
+              text: "Contact@docsflow.fr",
             },
           ],
         },
@@ -415,7 +497,7 @@ const defaultContent = {
       },
       kbisCards: [
         {
-          eyebrow: "Notre formule INFO-DOCSFLOW",
+          eyebrow: "Offre & tarifs",
           title:
             "Profitez d'un accès aux extraits de Kbis pour 1,49 à pendant 72h*",
           link: "*voir condition formule premium",
@@ -436,466 +518,924 @@ const defaultContent = {
       ],
     },
     "conditions-generales-de-vente": {
-      title: "CONDITIONS GENERALES DE VENTE (CGV)",
-      version: "Version 1.1",
-      intro:
-        "Ce site est détenu et opéré par la société ODYSSEUS MEDIA LIMITED, Société Limited de droit irlandais au capital social de dix (10) euros, immatriculée auprès du Registre du commerce et des sociétés en Irlande sous le numéro 714131 , ayant son siège social à 13 Baggot Street Upper, Dublin 4, D04 W7K5, Republic of Ireland ( INFO-DOCSFLOW , ou « nous »).",
+      title: "Conditions Générales de Vente (CGV)",
+      version: "Version en vigueur à compter du : 04/02/2022",
+      intro: "DOCSFLOW",
       blocks: [
-        { type: "heading", text: "1. Objet" },
+        { type: "heading", text: "1. Identification du Prestataire" },
         {
           type: "paragraph",
-          text: "INFO-DOCSFLOW propose, dans le cadre de la souscription d’un abonnement mensuel, la fourniture des Services depuis la site Internet accessible à l’adresse URL suivante: INFO-DOCSFLOW.pro ( Site ), uniquement à destination des professionnels (par opposition aux consommateurs)",
-        },
-        {
-          type: "paragraph",
-          text: "Les CGV régissent votre accès au Site et aux Services, et leur utilisation.",
+          text: "Les présentes Conditions Générales de Vente sont proposées par :",
         },
         {
           type: "paragraph",
-          text: "Lors de l’ouverture d’un compte sur le Site, vous serez invite(e) à cocher une case confirmant que vous avez lu et que vous acceptez les CGV, qui formeront alors un contrat valable entre vous et INFO-DOCSFLOW.",
+          text: "DOCSFLOW - Service privé d’assistance administrative en ligne",
         },
         {
           type: "paragraph",
-          text: "Nous vous remercions de lire attentivement ce qui suit. N’utilisez pas le Site si vous n’acceptez par les CGV. Nous pourrons mettre à jour les CGV de temps à autre, les CGV applicables sont celles en vigueur le jour de la souscription aux Services par le Client.",
+          text: "Titulaire : Bai S.",
         },
         {
           type: "paragraph",
-          text: "Nous pourrons ?galement être amenés à faire ?voluer sans préavis la structure et le design du Site, des certains Services ou contenus, afin d’améliorer votre expérience client.",
-        },
-        { type: "heading", text: "Définitions" },
-        { type: "paragraph", text: "Dans ce document," },
-        {
-          type: "definition",
-          term: "?CGV?",
-          text: "désigne le présent document.",
-        },
-        {
-          type: "definition",
-          term: "?Compte?",
-          text: "désigne le compte que vous devez créer pour devenir Membre, et avoir accès aux Services disponibles sur le Site.",
-        },
-        {
-          type: "definition",
-          term: "?Contenus?",
-          text: "désignent les informations et/ou documents suivants, relatifs à des entreprises inscrites au registre du commerce et des sociétés sur le territoire français, en ce compris les informations juridiques et financières, accessibles dans le cadre de la souscription aux Services: extraits Kbis d’une société, chiffre d’affaire d’une société, nom des dirigeants et différents établissements d'une société, bilans, actes et brevets d’une société, annonces Bodacc et diagnostics financiers.",
-        },
-        {
-          type: "definition",
-          term: "?Espace Client?",
-          text: "correspond à votre espace personnel et dédi?, où vous pourrez accéder aux Services.",
-        },
-        {
-          type: "definition",
-          term: "?Formule?",
-          text: "désigne la formule de souscription aux Services telle que définie à l’article 5 des CGV.",
-        },
-        {
-          type: "definition",
-          term: "?Lois Applicables?",
-          text: "a le sens qui lui est donn? à l’Article 14.",
-        },
-        {
-          type: "definition",
-          term: "?Membre? ou ?vous?",
-          text: "désigne toute personne physique ou morale souscrivant pour son compte aux Services proposés par INFO-DOCSFLOW pour son activit? professionnelle et disposant d’un Compte sur le Site.",
-        },
-        {
-          type: "definition",
-          term: "?Services?",
-          text: "désignent les services payants fournis par la Société dans le cadre de la souscription à la formule INFO-DOCSFLOW et décrits à l’article 3 des CGV et qui vous sont proposées au travers du Site.",
-        },
-        { type: "heading", text: "2. Ouvrir un Compte" },
-        { type: "subheading", text: "A. Conditions" },
-        {
-          type: "paragraph",
-          text: "Vous devez être ?g?(e) d’au moins 18 ans. Vous devez être ?g?(e) d’au moins 18 ans pour pouvoir accéder à nos Services, ce que vous devrez certifier, le cas ?chéant, lors de l’ouverture du Compte.",
+          text: "Entreprise individuelle",
         },
         {
           type: "paragraph",
-          text: "Vous devez, le cas ?chéant, disposer du pouvoir d’engager la société que vous représentez. Vous certifiez que vous disposez du pouvoir d’engager la société ou l’entit? pour le compte de laquelle vous accédez à nos Services, et que cette derniére accepte sans réserve les T&G.",
-        },
-        { type: "subheading", text: "B. Créer un compte" },
-        {
-          type: "paragraph",
-          text: "Le Site permet aux Membres de s’inscrire par la création d’un Compte, puis de bénéficier des Contenus.",
+          text: "Siège : 26841 Casalpusterlengo (LO), Italie",
         },
         {
           type: "paragraph",
-          text: "Pour créer un Compte, vous devez remplir les champs obligatoires dans le formulaire d’enregistrement (en indiquant notamment le nom de votre entreprise, son SIRET ou SIREN, vos noms, prénom, email et numéro de téléphone), et nous vous enverrons un mot de passe par email. Vous devrez également lire et accepter les présentes CGV et notre Politique de données personnelles.",
-        },
-        {
-          type: "subheading",
-          text: "C. Exactitude des informations du Compte",
+          text: "N° TVA (Italie) : IT 14615470961",
         },
         {
           type: "paragraph",
-          text: "Vous certifiez que votre Compte contient des informations exactes et réelles, et vous engagez à les mettre à jour, le cas ?chéant.",
-        },
-        { type: "subheading", text: "D. Mot de passe" },
-        {
-          type: "paragraph",
-          text: "Vous êtes responsable de votre mot de passe d’accès à votre Compte, dont vous devez préserver la confidentialit?. Vous vous engagez à nous informer de tout accès non autoris? à votre Compte ou de toute atteinte à la sécurit? de votre Compte, telle que la perte ou le vol de vos informations de connexion.",
-        },
-        { type: "heading", text: "3. Services" },
-        { type: "subheading", text: "A. Accés aux Contenus" },
-        {
-          type: "paragraph",
-          text: "Notre service s’adresse uniquement aux professionnels, il inclut un espace personnalisé sur lequel vous pourrez télécharger :",
-        },
-        { type: "paragraph", text: "i. Contenus en accès limit? :" },
-        {
-          type: "list",
-          items: [
-            "Extrait de Kbis: 7 par mois",
-            "Diagnostics Financier NOTA-PME et AFDCC: 30 par mois",
-          ],
-        },
-        { type: "paragraph", text: "ii. Contenus en accès illimit?:" },
-        {
-          type: "list",
-          items: [
-            "Derniers comptes annuels",
-            "Derniers actes",
-            "Derniers brevets",
-            "fiche de l'entreprise en PDF",
-            "Recherche de numéro de TVA valide",
-          ],
-        },
-        { type: "subheading", text: "B. Assistance" },
-        {
-          type: "paragraph",
-          text: "Vous pourrez bénéficier d’une ligne téléphonique spécialisée du lundi au samedi, de 8 heures à 20 heures, au 0 805 086 583",
+          text: "N° REA : LO 2795477",
         },
         {
           type: "paragraph",
-          text: "Vous pourrez ?galement communiquer et ?changer avec INFO-DOCSFLOW, par courrier ?lectronique à l’adresse suivante contact@INFO-DOCSFLOW.pro et par chat depuis l’Espace Client.",
-        },
-        {
-          type: "heading",
-          text: "4. Régles de conduite des Membres sur le Site",
+          text: "E-mail : Contact@docsflow.fr",
         },
         {
           type: "paragraph",
-          text: "L’utilisation du Site par les Membres est soumise à des règles. En utilisant le Site, vous acceptez:",
+          text: "Ci-après dénommé le « Prestataire » ou « DOCSFLOW ».",
+        },
+        {
+          type: "paragraph",
+          text: "Les présentes CGV régissent l’accès au site docsflow.fr ainsi que les services proposés par le Prestataire.",
+        },
+        { type: "heading", text: "2. Objet" },
+        {
+          type: "paragraph",
+          text: "Les présentes CGV ont pour objet de définir les conditions dans lesquelles DOCSFLOW fournit, à distance, des prestations privées d’assistance administrative en ligne.",
+        },
+        {
+          type: "paragraph",
+          text: "Les services proposés par DOCSFLOW peuvent être souscrits par :",
         },
         {
           type: "list",
           items: [
-            "de ne pas enfreindre les droits et image de INFO-DOCSFLOW, tels que notamment ses droits de propriété intellectuelle ;",
-            "de ne pas ouvrir de Compte au nom d’une autre personne que vous même ;",
-            "de ne pas utiliser d’appareil, de logiciel ou d’autre ?lément susceptible d’interférer avec le bon fonctionnement du Site, ou dont l’objet est de détruire, interférer avec, intercepter ou détourner tout systéme, donnée ou information personnelle; et",
-            "plus généralement, de ne rien faire qui puisse être contraire aux Lois Applicables, et aux CGV.",
-          ],
-        },
-        {
-          type: "heading",
-          text: "5. Paiement – facturation – modalités de paiement – intérêts de retard",
-        },
-        {
-          type: "paragraph",
-          text: "Pour accéder aux Services, vous devez régler le montant de la formule mensuelle de Services (? Formule ?), tels que décrite sur le Site. Notre service ?tant destin? aux professionnels, les prix des Formules sont indiqués sur le Site, en euros (?) HT (Hors Taxes), ils prennent en compte le montant de la TVA applicable au jour de leur achat.",
-        },
-        {
-          type: "paragraph",
-          text: "Tout accès membre au Service est conclu pour une durée indéterminée à compter de son engagement. Cet accès membre est sans engagement et résiliable à tout moment.",
-        },
-        { type: "paragraph", text: "La Formule comprend:" },
-        {
-          type: "list",
-          items: [
-            "Une offre d’essai d’une durée déterminée de soixante-douze (72) heures au prix de 1,49 à euros TTC;",
-            "Un abonnement mensuel renouvelable par tacite reconduction au prix de 49,99 à euros TTC.",
+            "des professionnels ;",
+            "des consommateurs, selon le cas.",
           ],
         },
         {
           type: "paragraph",
-          text: "La Formule est sans engagement et résiliable à tout moment, dont le prise en compte s’effectuera à la date anniversaire de la souscription de la Formule.",
+          text: "DOCSFLOW est un service privé indépendant.",
         },
         {
           type: "paragraph",
-          text: "Afin de procéder au paiement de la Formule, vous autorisez INFO-DOCSFLOW à effectuer des prélèvements sur votre compte bancaire et à aviser l’établissement domiciliataire. A cet effet, vous vous engagez à signer une autorisation de prélèvement et à maintenir en vigueur ladite autorisation pendant toute la durée d’exécution de la Formule.",
+          text: "Le site n’est pas un site officiel d’administration publique et n’agit pas en qualité d’autorité administrative.",
+        },
+        { type: "heading", text: "3. Acceptation des CGV" },
+        {
+          type: "paragraph",
+          text: "Toute utilisation du site et toute souscription à une offre proposée par DOCSFLOW impliquent l’acceptation pleine et entière des présentes CGV.",
         },
         {
           type: "paragraph",
-          text: "Tout retard ou défaut de paiement, même partiel, entraîne, de plein droit et sans qu’une mise en demeure ne soit nécessaire, la perception par INFO-DOCSFLOW, pour chaque facture impayée en tout ou en partie, de l’indemnité forfaitaire pour frais de recouvrement visée aux articles L. 441-9, I, alinéa 5 et D. 441-5 du Code de commerce (ou tous textes législatifs et/ou règlementaires qui leur serait substitué) en vigueur à la date de facturation assortie d’intérêts de retard auxquels s’ajouteront les taxes, ainsi que les frais et honoraires de recouvrement mêmes non répétibles.",
+          text: "Le Client reconnaît avoir pris connaissance des présentes CGV avant toute commande ou souscription.",
+        },
+        { type: "heading", text: "4. Définitions" },
+        { type: "paragraph", text: "Au sens des présentes CGV :" },
+        {
+          type: "definition",
+          term: "Client :",
+          text: "toute personne physique ou morale utilisant le site ou souscrivant à un service DOCSFLOW.",
+        },
+        {
+          type: "definition",
+          term: "Client professionnel :",
+          text: "toute personne agissant à des fins entrant dans le cadre de son activité professionnelle, commerciale, artisanale, libérale ou assimilée.",
+        },
+        {
+          type: "definition",
+          term: "Consommateur :",
+          text: "toute personne physique agissant à des fins n’entrant pas dans le cadre de son activité professionnelle.",
+        },
+        {
+          type: "definition",
+          term: "Compte :",
+          text: "espace personnel éventuellement créé par le Client sur le site.",
+        },
+        {
+          type: "definition",
+          term: "Services :",
+          text: "prestations d’assistance administrative proposées par DOCSFLOW.",
+        },
+        {
+          type: "definition",
+          term: "Formule :",
+          text: "offre commerciale souscrite par le Client.",
+        },
+        {
+          type: "definition",
+          term: "Contenus :",
+          text: "informations, résultats, documents, éléments administratifs ou juridiques accessibles ou fournis dans le cadre des Services, selon disponibilité.",
+        },
+        { type: "heading", text: "5. Nature du service" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW propose un service privé d’assistance administrative en ligne.",
         },
         {
           type: "paragraph",
-          text: "INFO-DOCSFLOW se réserve le droit de modifier le montant de la Formule.",
-        },
-        {
-          type: "paragraph",
-          text: "Vous en serez inform? au préalable par courrier ?lectronique deux (2) mois avant la fin de votre Formule en cours, et aurez alors la libert? de ne pas renouveler votre Formule.",
-        },
-        {
-          type: "paragraph",
-          text: "La Formule est payable d’avance, par prélèvement sur le moyen de paiement renseigné sur le Site. En cas de défaut de paiement, INFO-DOCSFLOW représentera le paiement et, en cas de nouveau défaut de paiement, pourra librement mettre fin aux Services, sans indemnité à sa charge, mais sans préjudice de la faculté qui lui est laissée de vous réclamer le paiement des sommes dues, et toutes réparations dont elle s’estime victime",
-        },
-        { type: "heading", text: "6. Propriét? Intellectuelle" },
-        { type: "paragraph", text: "Ce Site est opéré par INFO-DOCSFLOW." },
-        {
-          type: "paragraph",
-          text: "Notre logiciel propriétaire, et les contenus sur le Site, y compris notamment les logos, marques, noms commerciaux, images, textes, illustrations, fichiers audio, fichiers vidéo, ainsi que la sélection, la coordination et la combinaison de tels éléments, sont protégés par des droits d’auteur, les copyrights et le droit des marques, et d’autres droits de propriété intellectuelle ou industrielle qui sont soit détenus par nous, soit détenus par d’autres et pour lesquels nous avons obtenu une autorisation de leur part.",
-        },
-        {
-          type: "paragraph",
-          text: "En devenant Membre, vous bénéficiez d’une licence non-exclusive, révocable, personnelle et non transférable d’utilisation du Site, pour votre usage personnel, ou celui de l’entreprise que vous représentez, et conformément à l’objet du Site.",
-        },
-        {
-          type: "paragraph",
-          text: "Toute utilisation ou exploitation du Site, et de son contenu, différente de ce qui est permis par les présentes, vous est strictement interdite.",
-        },
-        {
-          type: "paragraph",
-          text: "La licence qui vous est consentie prendra fin en cas d’utilisation non conforme du Site.",
-        },
-        {
-          type: "paragraph",
-          text: "Toutes nouvelles versions, mises à jour ou modifications du Site, des Services ou contenu séy rapportant seront régis par les CGV. INFO-DOCSFLOW se réserve la faculté de se prévaloir de tout droit non expressément vis? par les présentes CGV.",
-        },
-        {
-          type: "heading",
-          text: "7. Réle de INFO-DOCSFLOW / Limitation de Responsabilit?",
-        },
-        {
-          type: "paragraph",
-          text: "Les Membres agissent sous leur pleine et entiére responsabilit?.",
-        },
-        {
-          type: "paragraph",
-          text: "En particulier, INFO-DOCSFLOW ne pourra pas être tenue pour responsable si un Contenu ne produit pas l’effet désir? par le Membre, notamment à cause de :",
+          text: "Le service consiste notamment, selon la demande du Client et selon les éléments disponibles, à :",
         },
         {
           type: "list",
           items: [
-            "D’informations erronées communiquées par le Membre lors de l’achat de son Contenu.",
-            "D’un changement des lois applicables, rendant en tout ou en partie inexact, trompeur ou illégal, le Contenu;",
-            "Une erreur quelconque de l??metteur à l’origine des Contenus qui sont fournis en l??tat, tel quéINFO-DOCSFLOW les obtient, en particulier des greffes des Tribunaux de commerce",
+            "recevoir et enregistrer une demande ;",
+            "analyser les informations transmises ;",
+            "effectuer des recherches et vérifications ;",
+            "identifier l’entreprise concernée lorsque cela est possible ;",
+            "assister le Client dans l’obtention, la consultation ou la transmission de certaines informations ou documents ;",
+            "contacter le Client lorsque des précisions complémentaires sont nécessaires ;",
+            "restituer un résultat, une réponse, un document ou une orientation adaptée.",
           ],
         },
         {
           type: "paragraph",
-          text: "Nous ne sommes pas responsables des Contenus ou de l’utilisation des Contenus, de l’absence de résultat obtenu par rapport aux attentes dans l’utilisation des Contenus, de tout préjudice caus? par un Contenu, de tout dommage indirect tel que préjudice financier, perte d’exploitation ou préjudice moral dont pourrait se prévaloir un Membre du fait de sa navigation sur le Site ou de son recours aux Services.",
-        },
-        {
-          type: "emphasis",
-          text: "A TITRE DE CONDITION ESSENTIELLE ET DETERMINANTE DES PRESENTES CGV, SI LA RESPONSABILITE D’INFO-DOCSFLOW ETAIT RETENUE, LE CLIENT NE POURRAIT PRETENDRE, A D’AUTRES INDEMNITES ET DOMMAGES ET INTERETS OU REGLEMET QUELCONQUE, TOUTES CAUSES CONFONDUES, QUéAU MONTANT DE 5.000 EUROS TOUT PREJUDICE CONFONDU.",
+          text: "Le service proposé par DOCSFLOW constitue une prestation d’assistance, de vérification et de traitement, pouvant comporter une intervention humaine.",
         },
         {
           type: "paragraph",
-          text: "Vous acceptez de ne poursuivre INFO-DOCSFLOW que pour les préjudices fondés sur des informations fournies par eux. Si vous intentez une action à l’encontre d’une autre personne morale ou physique que INFO-DOCSFLOW vous renoncez expressément par les présentes à vous prévaloir de toute prêtention à l’encontre de INFO-DOCSFLOW au titre de cette action.",
-        },
-        {
-          type: "heading",
-          text: "8. Suspension du Compte, limitations d’accès et résiliation",
+          text: "Le Client reconnaît que le service n’est pas présenté comme un accès autonome, direct, immédiat et illimité à l’ensemble des données ou documents existants.",
         },
         {
           type: "paragraph",
-          text: "Vous pouvez à tout moment mettre fin à votre relation contractuelle avec INFO-DOCSFLOW en fermant votre Compte dans votre Espace Client. La suppression prendra fin immédiatement et votre Formule sera automatiquement résiliée pour une date d’effet à la date anniversaire de la souscription de la Formule.",
+          text: "Certaines demandes peuvent nécessiter :",
+        },
+        {
+          type: "list",
+          items: [
+            "un contrôle manuel,",
+            "des informations complémentaires,",
+            "un délai de traitement,",
+            "ou dépendre de la disponibilité des données, registres, partenaires, bases consultées ou documents concernés.",
+          ],
         },
         {
           type: "paragraph",
-          text: "Si vous ne respectez pas vos engagements prévus aux CGV, ou si nous avons de bonnes raisons de croire que la sécurit? et l’intégrit? de {0}, des Membres, ou de tiers sont à risque, nous nous réservons le droit de mettre fin immédiatement aux CGV vous liant à {0} et de fermer votre Compte",
+          text: "DOCSFLOW ne garantit pas que toute demande aboutira systématiquement à l’obtention du document ou de l’information recherchés.",
+        },
+        { type: "heading", text: "6. Création de compte et informations fournies" },
+        {
+          type: "paragraph",
+          text: "L’accès à certains services peut nécessiter la création d’un Compte.",
         },
         {
           type: "paragraph",
-          text: "En cas de besoin, vous serez notifi?(e) d’une telle mesure afin de vous permettre déy répondre. INFO-DOCSFLOW pourra décider à sa seule discrétion de mettre fin aux mesures mises en place.",
-        },
-        { type: "heading", text: "9. Données Personnelles" },
-        {
-          type: "paragraph",
-          text: "Nous collectons et traitons certaines de vos données personnelles. En utilisant le Site et en vous enregistrant comme Membre, vous reconnaissez et consentez au traitement de vos données personnelles conformément à notre Politique de données personnelles.",
-        },
-        { type: "heading", text: "10. Accessibilit? et fonctionnalités" },
-        {
-          type: "paragraph",
-          text: "Nous ferons nos meilleurs efforts pour maintenir une accessibilit? continue au Site. Mais l’accès au Site et l’utilisation de certaines fonctionnalités pourront être suspendus ou interrompus sans préavis, en raison d’opérations de maintenance, de migration, de mises à jour, de coupures ou de contraintes liées au réseau ou pour d’autres motifs techniques.",
+          text: "Le Client s’engage à fournir des informations exactes, complètes et à jour concernant :",
         },
         {
-          type: "paragraph",
-          text: "Nous nous réservons la faculté discrétionnaire de modifier ou de suspendre tout ou partie de votre accès au Site ou à ses fonctionnalités, de faéon temporaire ou permanente.",
-        },
-        { type: "heading", text: "11. Hyperliens" },
-        {
-          type: "paragraph",
-          text: "Notre Site peut contenir des liens vers d’autres sites. Nous n’avons aucun contréle sur ces sites, et ne sommes pas responsables de leur contenu. En cliquant sur ces liens, vous reconnaissez que nous refusons toute responsabilit? pour le contenu de ces sites, et que nous n’avons aucun lien spécifique avec les personnes ou entités responsables de ces sites.",
-        },
-        { type: "heading", text: "12. Modification des CGV" },
-        {
-          type: "paragraph",
-          text: "Ces CGV et les documents qui y sont expressément intégrés expriment l’intégralit? des accords entre vous et INFO-DOCSFLOW concernant votre utilisation du Site et des Services.",
+          type: "list",
+          items: [
+            "son identité ;",
+            "ses coordonnées ;",
+            "et, le cas échéant, la société ou l’organisation qu’il représente.",
+          ],
         },
         {
           type: "paragraph",
-          text: "INFO-DOCSFLOW pourra modifier ces CGV afin de les adapter à l’environnement technologique et commercial, et de les rendre conforme à l’environnement légal et règlementaire. Toute version modifiée des CGV sera mise en ligne sur le Site avec la mention de sa date d’effet, et INFO-DOCSFLOW vous informera de ces changements avant quéils ne prennent effect.",
-        },
-        {
-          type: "heading",
-          text: "13. Droit de rétractation et politique de remboursement",
-        },
-        {
-          type: "emphasis",
-          text: "CONFORMEMENT A L’ARTICLE L.221-3 DU CODE DE LA CONSOMMATION, DANS LE CADRE DE LA FORMULE, LE MEMBRE NE DISPOSE PAS DE DROIT DE RETRACTATION DONT SEUL LE CONSOMMATEUR AU SENS DU CODE PRECITE DISPOSE",
-        },
-        {
-          type: "heading",
-          text: "14. Lois Applicable, Résolution des litiges",
+          text: "Lorsque le Client agit pour le compte d’une entreprise, il déclare disposer de l’autorité nécessaire pour engager celle-ci.",
         },
         {
           type: "paragraph",
-          text: "Les CGV sont régies par la loi française, sans préjudice de l’application de règles spécifiques liées aux règles générales de conflits de lois (les à Lois Applicables »).",
+          text: "Le Client est responsable de la confidentialité de ses identifiants de connexion et de l’utilisation de son Compte.",
         },
         {
           type: "paragraph",
-          text: "Pour toute contestation qui se léverait entre le Membre et INFO-DOCSFLOW, relativement à la validite, l’interprêtation, l’exécution, la résiliation, les conséquences et/ou les suites des CGV, le Membre et INFO-DOCSFLOW s’efforceront en premier lieu, et dans la mesure du possible, de régler leur différend par voie amiable dans un délai d’un (1) mois à compter de la date de la premiére présentation du courrier recommand? avec avis de réception notifiant la contestation en cause.",
+          text: "Toute utilisation du Compte au moyen des identifiants du Client est réputée effectuée par le Client lui-même.",
+        },
+        { type: "heading", text: "7. Informations communiquées dans le cadre d’une demande" },
+        {
+          type: "paragraph",
+          text: "Le Client peut transmettre à DOCSFLOW les informations dont il dispose concernant l’entreprise ou la demande concernée.",
         },
         {
           type: "paragraph",
-          text: "Dans le cas où le litige ne peut être résolu de faéon amiable, vous acceptez de soumettre tous litiges aux tribunaux compétents du ressort de la Cour d’Appel de Paris, y compris en cas de pluralit? de défendeurs, procédure sur requéte, procédure d’urgence et appel en garantie.",
+          text: "Ces informations peuvent être incomplètes, approximatives ou nécessiter une vérification complémentaire.",
         },
         {
           type: "paragraph",
-          text: "INFO-DOCSFLOW se réservera ?galement le droit d’initier, en fonction de la nature du litige, des procédures dans votre principal pays de d’exploitation de votre activit? professionnelle et/ou commerciale.",
-        },
-        { type: "heading", text: "15. Délais de livraison d'un Contenu" },
-        { type: "paragraph", text: "Délai de réception d'un Contenu" },
-        {
-          type: "paragraph",
-          text: "Pour l’ensemble des commandes de Contenus, une fois la commande reéue par notre service, votre Contenu sera disponible dans les meilleurs délais et sous quarante-huit (48) heures ouvrées maximum.",
+          text: "DOCSFLOW traite la demande sur la base des éléments communiqués, mais peut solliciter à tout moment des précisions, justificatifs ou compléments d’information.",
         },
         {
           type: "paragraph",
-          text: "Si un probléme survient ou si le Contenu est indisponible, notre service se réserve le droit de décliner votre demande de Contenu ainsi votre demande sera automatiquement déclinée et celle-ci ne seras pas comptée comme validée. Il vous sera alors possible de faire une autre demande d'un Contenu.",
+          text: "Le Client demeure responsable des données qu’il transmet et s’interdit de communiquer des informations manifestement fausses, frauduleuses, illicites ou portant atteinte aux droits de tiers.",
+        },
+        { type: "heading", text: "8. Commande" },
+        {
+          type: "paragraph",
+          text: "La commande d’un service s’effectue selon le parcours proposé sur le site.",
         },
         {
           type: "paragraph",
-          text: "Ni INFO-DOCSFLOW, ni notre service ne pourront être tenus pour responsable en cas de retard dans la réception d'un Contenu.",
+          text: "Avant validation finale, le Client prend connaissance des caractéristiques essentielles de l’offre, du prix, de la durée éventuelle de l’essai, des conditions de renouvellement et des modalités de résiliation.",
         },
-        { type: "heading", text: "16. Date de mise à jour" },
-        { type: "paragraph", text: "22/01/2026" },
+        {
+          type: "paragraph",
+          text: "La commande n’est définitive qu’après validation du paiement ou, le cas échéant, après confirmation par DOCSFLOW.",
+        },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW se réserve le droit de refuser ou de suspendre une commande en cas d’anomalie, de fraude, d’informations incohérentes ou d’impossibilité manifeste de traitement.",
+        },
+        { type: "heading", text: "9. Prix et paiement" },
+        {
+          type: "paragraph",
+          text: "Les prix applicables sont ceux affichés sur le site au moment de la commande.",
+        },
+        {
+          type: "paragraph",
+          text: "Sauf indication contraire, les prix sont exprimés en euros.",
+        },
+        {
+          type: "paragraph",
+          text: "Le paiement est exigible immédiatement lors de la souscription.",
+        },
+        {
+          type: "paragraph",
+          text: "Le Client autorise le débit du moyen de paiement utilisé pour la commande.",
+        },
+        {
+          type: "paragraph",
+          text: "Le Prestataire peut recourir à un prestataire de paiement sécurisé pour le traitement des transactions.",
+        },
+        {
+          type: "paragraph",
+          text: "En cas d’échec, d’impayé, de rejet bancaire ou d’incident de paiement, DOCSFLOW peut :",
+        },
+        {
+          type: "list",
+          items: [
+            "suspendre l’accès aux services ;",
+            "représenter le paiement ;",
+            "refuser une nouvelle commande ;",
+            "ou résilier l’abonnement en cours.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Pour les Clients professionnels, des intérêts de retard et, le cas échéant, l’indemnité forfaitaire légale de recouvrement peuvent être appliqués lorsque la loi applicable le permet. En droit français, l’indemnité forfaitaire de 40 € est prévue par l’article D.441-5 du Code de commerce, au titre du II de l’article L.441-10.",
+        },
+        { type: "heading", text: "10. Essai, abonnement et renouvellement" },
+        {
+          type: "paragraph",
+          text: "Lorsque l’offre souscrite prévoit une période d’essai, celle-ci est indiquée sur le site au moment de la commande.",
+        },
+        {
+          type: "paragraph",
+          text: "À la date des présentes, l’offre mise en avant sur le site comprend :",
+        },
+        {
+          type: "list",
+          items: [
+            "un essai de 72 heures au prix de 1,49 € ;",
+            "puis, sauf résiliation dans les délais, un abonnement mensuel au prix de 49,99 € par mois, avec renouvellement automatique.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Le renouvellement intervient automatiquement à chaque échéance mensuelle, sauf résiliation par le Client avant la date de reconduction.",
+        },
+        {
+          type: "paragraph",
+          text: "Le Client reconnaît que la souscription à l’offre entraîne, sauf résiliation préalable, la poursuite de l’abonnement selon les conditions tarifaires indiquées lors de la commande.",
+        },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW peut modifier ses tarifs pour l’avenir. Toute modification applicable à un abonnement en cours fera l’objet d’une information préalable.",
+        },
+        { type: "heading", text: "11. Résiliation par le Client" },
+        {
+          type: "paragraph",
+          text: "Le Client peut résilier son abonnement à tout moment :",
+        },
+        {
+          type: "list",
+          items: [
+            "depuis la page de résiliation du site ;",
+            "par email ;",
+            "ou par tout autre moyen mis à disposition par DOCSFLOW.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Sauf indication contraire affichée sur le site, la résiliation prend effet à la prochaine échéance de renouvellement.",
+        },
+        {
+          type: "paragraph",
+          text: "La résiliation n’ouvre pas droit au remboursement de la période déjà payée, sauf disposition impérative contraire ou geste commercial expressément accordé par DOCSFLOW.",
+        },
+        { type: "heading", text: "12. Traitement des demandes et délais" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW traite les demandes dans un délai raisonnable, en fonction :",
+        },
+        {
+          type: "list",
+          items: [
+            "de la nature de la demande ;",
+            "des informations fournies ;",
+            "des vérifications nécessaires ;",
+            "et de la disponibilité des sources ou documents utiles.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Les délais éventuellement indiqués sur le site sont donnés à titre indicatif, sauf engagement contraire expressément formulé.",
+        },
+        {
+          type: "paragraph",
+          text: "Lorsque des informations complémentaires sont nécessaires, le délai de traitement est suspendu jusqu’à réception des éléments demandés.",
+        },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW se réserve le droit de refuser ou de clôturer une demande lorsqu’elle ne peut pas être traitée dans des conditions normales ou licites.",
+        },
+        { type: "heading", text: "13. Remboursement" },
+        {
+          type: "paragraph",
+          text: "Aucun remboursement n’est dû en cas :",
+        },
+        {
+          type: "list",
+          items: [
+            "de service déjà exécuté, même partiellement ;",
+            "d’informations insuffisantes, erronées ou inexploitable fournies par le Client ;",
+            "d’impossibilité de traitement indépendante de DOCSFLOW ;",
+            "d’usage contraire aux présentes CGV.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW conserve toutefois la possibilité d’accorder, à titre commercial, un remboursement total ou partiel selon les circonstances.",
+        },
+        {
+          type: "paragraph",
+          text: "Tout remboursement éventuellement accepté est effectué selon le moyen jugé approprié par le Prestataire.",
+        },
+        { type: "heading", text: "14. Droit de rétractation des consommateurs" },
+        {
+          type: "paragraph",
+          text: "Lorsque le Client a la qualité de consommateur, il bénéficie, le cas échéant, du droit de rétractation prévu par les dispositions impératives applicables.",
+        },
+        {
+          type: "paragraph",
+          text: "En matière de contrats à distance, le cadre européen prévoit en principe un délai de 14 jours pour les consommateurs, avec des règles particulières pour les services et pour les contenus numériques ; lorsqu’un service a commencé à être exécuté à la demande expresse du consommateur pendant ce délai, le professionnel peut conserver le montant correspondant à ce qui a déjà été fourni, et certains contenus numériques peuvent entraîner la perte du droit de rétractation après consentement exprès et reconnaissance par le consommateur.",
+        },
+        {
+          type: "paragraph",
+          text: "En conséquence :",
+        },
+        {
+          type: "list",
+          items: [
+            "le consommateur peut exercer son droit de rétractation dans la mesure où il existe au regard des règles impératives applicables ;",
+            "si le consommateur demande expressément l’exécution du service avant l’expiration du délai de rétractation, DOCSFLOW peut commencer le traitement de la demande ;",
+            "si le service a déjà commencé, DOCSFLOW peut retenir ou facturer le montant correspondant à la partie du service déjà exécutée, selon la loi applicable ;",
+            "si le service a été intégralement exécuté dans les conditions prévues par la loi applicable, le droit de rétractation peut être exclu ou éteint.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Le Client consommateur qui souhaite exercer un droit de rétractation peut contacter DOCSFLOW à l’adresse : Contact@docsflow.fr.",
+        },
+        { type: "heading", text: "15. Obligations du Client" },
+        {
+          type: "paragraph",
+          text: "Le Client s’engage à :",
+        },
+        {
+          type: "list",
+          items: [
+            "utiliser le site et les services de manière loyale ;",
+            "ne pas détourner le service de sa finalité ;",
+            "ne pas porter atteinte aux droits du Prestataire ou de tiers ;",
+            "ne pas fournir d’informations frauduleuses, illicites ou trompeuses ;",
+            "ne pas perturber le fonctionnement du site ;",
+            "ne pas tenter d’accéder sans autorisation aux systèmes, données ou comptes.",
+          ],
+        },
+        { type: "heading", text: "16. Suspension ou résiliation par DOCSFLOW" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW peut suspendre ou résilier, de plein droit et sans préavis, tout ou partie de l’accès au site ou aux services en cas notamment :",
+        },
+        {
+          type: "list",
+          items: [
+            "de non-paiement ;",
+            "de fraude ou suspicion légitime de fraude ;",
+            "d’utilisation abusive ;",
+            "de violation des présentes CGV ;",
+            "de comportement portant atteinte à la sécurité ou au fonctionnement du service ;",
+            "ou de demande manifestement illicite.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Cette suspension ou résiliation n’ouvre droit à aucune indemnité ni remboursement, sauf disposition impérative contraire.",
+        },
+        { type: "heading", text: "17. Responsabilité" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW est tenu à une obligation de moyens.",
+        },
+        {
+          type: "paragraph",
+          text: "Le Prestataire ne saurait être tenu responsable notamment :",
+        },
+        {
+          type: "list",
+          items: [
+            "des erreurs ou insuffisances provenant des informations communiquées par le Client ;",
+            "de l’indisponibilité, de l’inexactitude ou de l’évolution de données issues de sources externes ;",
+            "de l’impossibilité d’obtenir un document ou une information ;",
+            "des retards imputables à des tiers, partenaires, registres ou services externes ;",
+            "ou d’un événement échappant à son contrôle raisonnable.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Sauf disposition impérative contraire, DOCSFLOW n’est pas responsable des dommages indirects, tels que perte de chance, perte de clientèle, perte d’exploitation, perte de revenus ou atteinte à l’image.",
+        },
+        {
+          type: "paragraph",
+          text: "Pour les Clients professionnels, et sauf dol, faute lourde ou violation d’une obligation essentielle, la responsabilité totale de DOCSFLOW est limitée au montant effectivement payé par le Client au cours des douze (12) mois précédant le fait générateur.",
+        },
+        { type: "heading", text: "18. Propriété intellectuelle" },
+        {
+          type: "paragraph",
+          text: "Le site, ses textes, visuels, logos, éléments graphiques, bases de données, logiciels, interfaces, contenus et signes distinctifs sont protégés par les règles applicables en matière de propriété intellectuelle.",
+        },
+        {
+          type: "paragraph",
+          text: "Toute reproduction, représentation, extraction, réutilisation, diffusion ou exploitation, totale ou partielle, sans autorisation préalable écrite, est interdite.",
+        },
+        {
+          type: "paragraph",
+          text: "Le Client dispose d’un simple droit d’usage personnel, non exclusif, non cessible et révocable, limité à l’utilisation normale du site et des services.",
+        },
+        { type: "heading", text: "19. Données personnelles" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW traite des données personnelles dans le cadre :",
+        },
+        {
+          type: "list",
+          items: [
+            "de la gestion des comptes ;",
+            "du traitement des demandes ;",
+            "de la relation client ;",
+            "de la facturation ;",
+            "et du respect de ses obligations légales.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Les informations relatives aux traitements de données, aux finalités, aux bases juridiques, aux destinataires, à la durée de conservation et aux droits des personnes concernées figurent dans la Politique de confidentialité du site. Les informations minimales à fournir au moment de la collecte sont notamment encadrées, au niveau européen, par l’article 13 du RGPD.",
+        },
+        {
+          type: "paragraph",
+          text: "Le Client reconnaît avoir pris connaissance de cette politique avant d’utiliser les services.",
+        },
+        { type: "heading", text: "20. Disponibilité du site" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW s’efforce d’assurer la disponibilité du site et de ses fonctionnalités.",
+        },
+        {
+          type: "paragraph",
+          text: "Le Prestataire peut toutefois interrompre, suspendre ou limiter l’accès au site pour des raisons de maintenance, de sécurité, d’évolution technique, de mise à jour ou de contrainte réseau.",
+        },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW ne peut être tenu responsable d’une indisponibilité temporaire du site ou d’un service.",
+        },
+        { type: "heading", text: "21. Liens externes" },
+        {
+          type: "paragraph",
+          text: "Le site peut contenir des liens vers des sites ou services tiers.",
+        },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW n’exerce aucun contrôle sur ces sites tiers et ne saurait être tenu responsable de leur contenu, de leur disponibilité, de leur politique ou de leur fonctionnement.",
+        },
+        { type: "heading", text: "22. Force majeure" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW ne pourra être tenu responsable de l’inexécution ou du retard dans l’exécution de ses obligations lorsqu’un tel manquement résulte d’un cas de force majeure ou de tout événement échappant raisonnablement à son contrôle.",
+        },
+        { type: "heading", text: "23. Nullité partielle" },
+        {
+          type: "paragraph",
+          text: "Si une clause des présentes CGV est déclarée nulle, invalide ou inapplicable, les autres stipulations demeureront en vigueur.",
+        },
+        {
+          type: "paragraph",
+          text: "La clause concernée sera, dans la mesure du possible, remplacée par une stipulation valable se rapprochant de l’intention initiale.",
+        },
+        { type: "heading", text: "24. Non-renonciation" },
+        {
+          type: "paragraph",
+          text: "Le fait pour DOCSFLOW de ne pas se prévaloir, à un moment donné, d’une stipulation des présentes CGV ne saurait être interprété comme une renonciation à s’en prévaloir ultérieurement.",
+        },
+        { type: "heading", text: "25. Loi applicable" },
+        {
+          type: "paragraph",
+          text: "Les présentes CGV sont soumises au droit italien.",
+        },
+        {
+          type: "paragraph",
+          text: "Toutefois, lorsque le Client a la qualité de consommateur, cette clause ne prive pas le consommateur des protections impératives éventuellement applicables en vertu de la loi de son pays de résidence habituelle.",
+        },
+        { type: "heading", text: "26. Règlement des litiges" },
+        { type: "subheading", text: "26.1. Clients professionnels" },
+        {
+          type: "paragraph",
+          text: "Tout litige relatif à la validité, l’interprétation, l’exécution ou la résiliation des présentes CGV relève de la compétence exclusive des tribunaux du ressort du siège du Prestataire en Italie.",
+        },
+        { type: "subheading", text: "26.2. Clients consommateurs" },
+        {
+          type: "paragraph",
+          text: "Lorsque le Client a la qualité de consommateur, les règles de compétence juridictionnelle protectrices applicables aux consommateurs demeurent réservées. Au niveau européen, le consommateur bénéficie d’un régime protecteur spécifique en matière de juridiction.",
+        },
+        {
+          type: "paragraph",
+          text: "En cas de difficulté, le Client est invité à contacter DOCSFLOW en priorité afin de rechercher une solution amiable.",
+        },
+        {
+          type: "paragraph",
+          text: "Le consommateur peut également recourir à tout mécanisme extrajudiciaire de règlement des litiges prévu par les dispositions impératives applicables.",
+        },
+        { type: "heading", text: "27. Contact" },
+        {
+          type: "paragraph",
+          text: "Pour toute question, réclamation ou demande relative aux services ou aux présentes CGV, le Client peut contacter DOCSFLOW à l’adresse suivante :",
+        },
+        {
+          type: "paragraph",
+          text: "Contact@docsflow.fr",
+        },
+        { type: "heading", text: "28. Version" },
+        {
+          type: "paragraph",
+          text: "Version en vigueur à compter du : 04/02/2022",
+        },
       ],
     },
     "mentions-legales": {
       title: "Mentions L\u00e9gales",
       lines: [
-        "DOCSFLOW – Service privé d’assistance administrative en ligne (entreprise individuelle)",
+        "Le présent site internet, accessible à l’adresse https://docsflow.fr, est édité par :",
+        "",
+        "Éditeur du site",
+        "DOCSFLOW – Service privé d’assistance administrative en ligne",
         "Titulaire : Bai S.",
+        "Entreprise individuelle",
         "Siège : 26841 Casalpusterlengo (LO), Italie",
-        "N° TVA (Italie) : IT 14615470961",
+        "N° TVA (Italie) : IT14615470961",
         "N° REA : LO 2795477",
         "PEC : saul.bai@timpec.it",
-        "E-mail: Contact@docsflow.fr",
+        "E-mail : Contact@docsflow.fr",
+        "Téléphone : 0 810 456 675",
+        "",
+        "Directeur de la publication",
+        "Bai S.",
+        "",
+        "Hébergement",
+        "Le site est hébergé par :",
+        "LWS (Ligne Web Services)",
+        "SAS au capital de 500 000 euros",
+        "10 rue de Penthièvre, 75008 Paris, France",
+        "Téléphone : 01 77 62 30 03",
+        "",
+        "Activité du site",
+        "DOCSFLOW est un service privé d’assistance administrative en ligne.",
+        "Le site propose des prestations d’assistance, de recherche, de vérification et de traitement de demandes relatives à des informations et documents d’entreprise, selon les éléments fournis par le client et les données disponibles.",
+        "Le site n’est pas un site officiel d’administration publique et n’agit pas en qualité d’autorité administrative.",
+        "",
+        "Propriété intellectuelle",
+        "L’ensemble des éléments présents sur le site, notamment les textes, graphismes, logos, images, illustrations, icônes, bases de données, logiciels, interfaces et contenus, sont protégés par les règles applicables en matière de propriété intellectuelle.",
+        "Sauf autorisation écrite préalable, toute reproduction, représentation, adaptation, diffusion, extraction, réutilisation ou exploitation, totale ou partielle, du site ou de l’un quelconque de ses éléments est interdite.",
+        "",
+        "Données personnelles",
+        "DOCSFLOW peut être amené à collecter et traiter des données à caractère personnel dans le cadre de l’utilisation du site, de la gestion des demandes, des commandes et de la relation client.",
+        "Pour en savoir plus sur la collecte, l’utilisation, la conservation et les droits des personnes concernées, l’utilisateur est invité à consulter la Politique de confidentialité accessible sur le site.",
+        "",
+        "Cookies",
+        "Le site peut utiliser des cookies ou autres traceurs nécessaires à son fonctionnement, à la mesure d’audience ou à l’amélioration de l’expérience utilisateur.",
+        "Pour plus d’informations, l’utilisateur est invité à consulter la Politique de cookies accessible sur le site.",
+        "",
+        "Responsabilité",
+        "DOCSFLOW s’efforce d’assurer l’exactitude et la mise à jour des informations diffusées sur le site. Toutefois, DOCSFLOW ne saurait garantir l’exhaustivité, l’exactitude ou l’actualité permanente de l’ensemble des contenus présents sur le site.",
+        "DOCSFLOW ne pourra être tenu responsable des dommages directs ou indirects résultant de l’accès au site, de son utilisation, de son indisponibilité ou de l’utilisation de services ou contenus de tiers accessibles par lien externe.",
+        "",
+        "Liens hypertextes",
+        "Le site peut contenir des liens vers des sites tiers. DOCSFLOW n’exerce aucun contrôle sur ces sites externes et décline toute responsabilité quant à leur contenu, leur politique, leur fonctionnement ou leur disponibilité.",
+        "",
+        "Droit applicable",
+        "Les présentes mentions légales sont régies par le droit italien, sous réserve des dispositions impératives éventuellement applicables aux utilisateurs ayant la qualité de consommateur.",
+        "",
+        "Contact",
+        "Pour toute question concernant le site ou son contenu, vous pouvez contacter DOCSFLOW à l’adresse suivante :",
+        "Contact@docsflow.fr",
       ],
     },
     "politique-de-confidentialite": {
       title: "Politique de confidentialité",
-      effective: "En vigueur à partir du 18 Avril 2022",
+      intro: "DOCSFLOW",
+      effective: "Version en vigueur à compter du : 04/02/2022",
       sections: [
         {
-          title: "Disposition générale",
-          body: "Cette politique régit la collecte, l'utilisation et le stockage des informations obtenues lors de l'utilisation de la plateforme.",
+          title: "1. Responsable du traitement",
+          paragraphs: [
+            "Le site docsflow.fr est exploité par :",
+            "DOCSFLOW – Service privé d’assistance administrative en ligne",
+            "Titulaire : Bai S.",
+            "Entreprise individuelle",
+            "Siège : 26841 Casalpusterlengo (LO), Italie",
+            "N° TVA (Italie) : IT14615470961",
+            "N° REA : LO 2795477",
+            "PEC : saul.bai@timpec.it",
+            "E-mail : Contact@docsflow.fr",
+          ],
         },
         {
-          title: "Collecte d'informations personnelles",
-          body: "Les informations collectées peuvent inclure nom, email, téléphone, adresse IP, journaux serveur, informations de paiement et autres informations fournies volontairement.",
+          title: "2. Données collectées",
+          paragraphs: ["DOCSFLOW peut collecter les données suivantes :"],
+          list: [
+            "nom, prénom, raison sociale ;",
+            "adresse email, numéro de téléphone ;",
+            "informations communiquées dans le cadre d’une demande ;",
+            "données liées au compte client ;",
+            "données techniques de navigation ;",
+            "données liées au paiement, à l’abonnement, au renouvellement ou à la résiliation.",
+          ],
         },
         {
-          title: "Données non personnelles",
-          body: "Les plateformes d'analyse collectent des données générales (types et versions de logiciels, système d'exploitation, date/heure d'accès, FAI) pour la sécurité et l'optimisation.",
+          title: "3. Finalités du traitement",
+          paragraphs: ["Les données sont utilisées pour :"],
+          list: [
+            "gérer les demandes et les commandes ;",
+            "fournir les services d’assistance administrative ;",
+            "contacter le client si des informations complémentaires sont nécessaires ;",
+            "gérer les paiements, abonnements, renouvellements et résiliations ;",
+            "assurer le support client ;",
+            "prévenir la fraude et sécuriser le site ;",
+            "respecter les obligations légales et comptables.",
+          ],
         },
         {
-          title: "Stockage et durée",
-          body: "Les informations sont stockées le temps nécessaire à la fourniture des services et au maintien de l'intégrité des bases, avec registres de traitement RGPD.",
+          title: "4. Bases juridiques",
+          paragraphs: ["Les traitements reposent, selon les cas, sur :"],
+          list: [
+            "l’exécution du contrat ou de mesures précontractuelles ;",
+            "le respect d’une obligation légale ;",
+            "l’intérêt légitime de DOCSFLOW ;",
+            "le consentement, lorsque celui-ci est requis, notamment pour certains cookies.",
+          ],
         },
         {
-          title: "Droits",
-          body: "Vous pouvez demander confirmation, accès, copie, correction, suppression, ou opposition au traitement de vos informations personnelles.",
+          title: "5. Paiement via Stripe",
+          paragraphs: [
+            "Les paiements effectués sur le site sont traités via Stripe.",
+            "À ce titre, certaines données nécessaires à la transaction peuvent être traitées, notamment :",
+          ],
+          list: [
+            "les informations liées au paiement ;",
+            "le montant et la date ;",
+            "le statut du paiement ;",
+            "les informations relatives à l’abonnement, au renouvellement, au remboursement ou à une contestation éventuelle.",
+          ],
+          afterList: [
+            "DOCSFLOW ne stocke pas nécessairement l’intégralité des données bancaires lorsque celles-ci sont traitées directement par Stripe.",
+            "Pour plus d’informations, l’utilisateur peut consulter la politique de confidentialité de Stripe sur son site officiel.",
+          ],
+        },
+        {
+          title: "6. Destinataires des données",
+          paragraphs: ["Les données peuvent être accessibles :"],
+          list: [
+            "à DOCSFLOW ;",
+            "aux prestataires techniques nécessaires au fonctionnement du site ;",
+            "à Stripe pour le traitement des paiements ;",
+            "aux prestataires intervenant dans le traitement administratif des demandes ;",
+            "aux autorités compétentes lorsque la loi l’exige.",
+          ],
+          afterList: ["Les données ne sont pas vendues à des tiers."],
+        },
+        {
+          title: "7. Durée de conservation",
+          paragraphs: [
+            "Les données sont conservées pendant la durée nécessaire au traitement de la demande, à la gestion de la relation client, au respect des obligations légales et à la défense des droits de DOCSFLOW.",
+          ],
+        },
+        {
+          title: "8. Droits des personnes concernées",
+          paragraphs: [
+            "Conformément à la réglementation applicable, toute personne concernée peut demander :",
+          ],
+          list: [
+            "l’accès à ses données ;",
+            "leur rectification ;",
+            "leur effacement ;",
+            "la limitation du traitement ;",
+            "l’opposition au traitement ;",
+            "la portabilité de ses données, lorsque cela est applicable ;",
+            "le retrait de son consentement lorsque le traitement repose sur celui-ci.",
+          ],
+          afterList: [
+            "Toute demande peut être adressée à :",
+            "Contact@docsflow.fr",
+            "ou",
+            "saul.bai@timpec.it",
+          ],
+        },
+        {
+          title: "9. Cookies",
+          paragraphs: ["Le site peut utiliser des cookies et autres traceurs :"],
+          list: [
+            "nécessaires au fonctionnement du site ;",
+            "utiles à la mesure d’audience ;",
+            "ou liés à certains services techniques, notamment le paiement.",
+          ],
+          afterList: [
+            "Les cookies strictement nécessaires peuvent être utilisés sans consentement lorsque la réglementation le permet.",
+            "Les autres cookies ou traceurs sont soumis au consentement de l’utilisateur lorsque celui-ci est requis.",
+          ],
+        },
+        {
+          title: "10. Sécurité",
+          paragraphs: [
+            "DOCSFLOW met en œuvre des mesures raisonnables pour protéger les données personnelles contre l’accès non autorisé, la perte, l’altération ou la divulgation.",
+          ],
+        },
+        {
+          title: "11. Contact",
+          paragraphs: [
+            "Pour toute question relative à la présente politique de confidentialité, vous pouvez écrire à :",
+            "DOCSFLOW",
+            "E-mail : Contact@docsflow.fr",
+          ],
+        },
+        {
+          title: "12. Version",
+          paragraphs: ["Version en vigueur à compter du : 04/02/2022"],
         },
       ],
     },
     cookies: {
       title: "Politique de cookies",
+      intro: "DOCSFLOW",
+      version: "Version en vigueur à compter du : 04/02/2022",
       blocks: [
-        { type: "heading", text: "1. Informations générales" },
+        { type: "heading", text: "1. Qu’est-ce qu’un cookie ?" },
         {
           type: "paragraph",
-          text: "1.1 Le présent document utilise la même terminologie et les mêmes abréviations que le document sur les Conditions Générales de Vente. Un cookie est un petit fichier texte servant à stocker des informations sur les navigateurs Web. Il mémorise des informations liées à votre visite sur notre site Web, comme, par exemple, votre devise préférée et d’autres paramètres ; il nous aide à optimiser la navigation des utilisateurs sur le site Web.",
+          text: "Un cookie est un petit fichier déposé sur votre terminal lors de la consultation d’un site internet. Il permet notamment d’assurer le bon fonctionnement du site, de mémoriser certaines préférences, de sécuriser l’utilisation du service ou, selon les cas, de mesurer l’audience et d’analyser la navigation. Le Garante italien rappelle que les cookies peuvent être techniques ou utilisés à des fins de profilage, et que d’autres outils de traçage peuvent produire des effets similaires.",
+        },
+        { type: "heading", text: "2. Quels cookies utilisons-nous ?" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW peut utiliser les catégories suivantes :",
         },
         {
           type: "paragraph",
-          text: "Les cookies nous permettent de vous fournir un service plus convivial et plus satisfaisant grâce à l’activation de fonctionnalités essentielles.",
+          text: "a) Cookies strictement nécessaires",
         },
         {
           type: "paragraph",
-          text: "1.2 Nos cookies (et d’autres types de technologies que nous utilisons dans un but similaire à celui des cookies, également dénommées dans les présentes « cookies ») peuvent varier dans le temps car nous mettons à jour continuellement nos services afin de les améliorer. Nous utilisons les cookies nécessaires dès votre accès à notre Site. Toutefois, nous avons besoin de votre consentement pour utiliser des cookies analytiques.",
+          text: "Ces cookies sont indispensables au fonctionnement du site et à la fourniture du service demandé par l’utilisateur. Ils permettent par exemple :",
         },
         {
-          type: "paragraph",
-          text: "Vous trouverez de plus amples informations sur nos cookies dans notre liste des cookies les plus utilisés ci-dessous.",
-        },
-        {
-          type: "table",
-          headers: ["Catégorie d’utilisation", "Exemple"],
-          rows: [
-            {
-              label: "Préférences",
-              value:
-                "Les cookies liés aux préférences activent les fonctionnalités de nos services, nous aidant ainsi à offrir à l’utilisateur une navigation personnalisée sur notre site. Ils mémorisent des informations comme, par exemple, la langue et la devise préférées, puis permettent au site de s’y adapter.",
-            },
-            {
-              label: "Authentification",
-              value:
-                "Si vous possédez un compte sur le Site, nous utilisons des cookies pour le vérifier et, selon vos préférences, afin de vous garder connecté pour vous donner un accès plus facile à nos services. Les cookies nous permettent également de stocker des informations de sécurité pour pouvoir récupérer votre compte en cas de piratage ou d’oubli de mot de passe.",
-            },
-            {
-              label: "Sécurité",
-              value:
-                "Si vous possédez un compte sur le Site, les cookies liés à la sécurité nous aident à protéger votre compte et les données des utilisateurs contre les parties non autorisées. Ces cookies préviennent l’utilisation frauduleuse d’identifiants de connexion grâce, par exemple, à des mesures de sécurité supplémentaires qui sont mises en œuvre lorsque quelqu’un tente d’accéder à votre compte sans autorisation appropriée.",
-            },
-            {
-              label: "Performances",
-              value:
-                "Les cookies liés aux performances permettent à toutes les fonctions de notre site Web de fonctionner correctement. Par exemple, vous ne pourrez pas vous servir de notre fonction de recherche ou avoir accès à notre page de connexion (si vous possédez un compte) sans ces cookies.",
-            },
-            {
-              label: "Analyse",
-              value:
-                "Ces cookies fournissent des informations sur la manière dont les visiteurs utilisent nos services et nous permettent de collecter des données sur les aspects à développer afin d’améliorer la navigation des utilisateurs.",
-            },
+          type: "list",
+          items: [
+            "la navigation sur le site ;",
+            "la gestion de session ;",
+            "la sécurité du parcours utilisateur ;",
+            "l’accès à certaines fonctionnalités essentielles ;",
+            "le bon fonctionnement du parcours de commande et de paiement.",
           ],
         },
         {
           type: "paragraph",
-          text: "1.3 Nous sommes susceptibles de recourir à des services tiers comme Google Analytics. Les cookies provenant de ces services servent à collecter des données en vue de compiler des rapports statistiques.",
+          text: "Ces cookies peuvent être utilisés sans consentement préalable lorsque la réglementation applicable le permet. Le Garante précise que les cookies techniques servent à effectuer la navigation ou à fournir un service demandé par l’utilisateur.",
         },
         {
           type: "paragraph",
-          text: "1.4 Le Site utilise Google Analytics à des fins statistiques. L’application Google Analytics est configurée de sorte à ne pas collecter votre adresse IP ni aucune autre information personnelle permettant de vous identifier. Nous nous intéressons uniquement à la façon dont le Site est utilisé afin de pouvoir améliorer, modifier et adapter le Site et les Services pour répondre au mieux aux besoins des utilisateurs.",
+          text: "b) Cookies de mesure d’audience",
         },
         {
           type: "paragraph",
-          text: "Vous trouverez de plus amples informations sur le fonctionnement de Google Analytics et sur la manière dont vous pouvez vous opposer à son utilisation sur le site : https://policies.google.com/technologies/partner-sites.",
-        },
-        { type: "heading", text: "2. Gestion des cookies" },
-        {
-          type: "paragraph",
-          text: "2.1 Vous avez la possibilité de gérer vos préférences en matière de cookies à tout moment. Pour ce faire, ouvrez les paramètres de votre navigateur ou de votre appareil. Selon votre navigateur et votre appareil, vous pourrez décider quels cookies autoriser, quels cookies bloquer à l’avenir et quels cookies supprimer. Pour obtenir plus d’informations sur ces paramètres, consultez la page d’aide de votre navigateur ou de votre appareil.",
+          text: "Le site peut utiliser des cookies de mesure d’audience afin d’évaluer la fréquentation du site, comprendre l’usage des pages et améliorer les performances du service.",
         },
         {
           type: "paragraph",
-          text: "Notez que certains des Services de INFO-DOCSFLOW peuvent ne pas fonctionner comme prévu si vous choisissez de désactiver des cookies.",
+          text: "Selon leur paramétrage et la réglementation applicable, certains cookies d’audience peuvent être utilisés sans consentement, tandis que d’autres nécessitent un consentement préalable.",
         },
-        { type: "heading", text: "3. Coordonnées" },
         {
           type: "paragraph",
-          text: "3.1 En cas de questions ou d’inquiétude à l’égard de notre politique sur les cookies et la manière dont les informations sont traitées, ou encore si vous souhaitez accéder à vos Informations, les récupérer, les modifier ou les mettre à jour, n’hésitez pas à nous contacter à l’adresse contact@INFO-DOCSFLOW.pro.",
+          text: "c) Cookies liés au paiement",
         },
         {
-          type: "heading",
-          text: "Vous pouvez nous contacter à l’adresse suivante",
+          type: "paragraph",
+          text: "Lorsque vous effectuez un paiement, des cookies ou traceurs techniques peuvent être utilisés par le prestataire de paiement Stripe afin d’assurer la sécurité de la transaction, prévenir la fraude et permettre le bon fonctionnement du service de paiement. Stripe indique utiliser des cookies pour assurer le fonctionnement de ses services, détecter et prévenir la fraude, analyser l’usage et, selon les juridictions, proposer des choix pour les cookies non strictement nécessaires.",
         },
-        { type: "paragraph", text: "E-mail : contact@INFO-DOCSFLOW.pro" },
-        { type: "paragraph", text: "Téléphone : 0 805 086 583" },
+        {
+          type: "paragraph",
+          text: "d) Cookies de personnalisation ou de fonctionnalités",
+        },
+        {
+          type: "paragraph",
+          text: "Certains cookies peuvent permettre de mémoriser vos préférences ou d’améliorer votre expérience utilisateur.",
+        },
+        {
+          type: "paragraph",
+          text: "e) Cookies publicitaires ou de profilage",
+        },
+        {
+          type: "paragraph",
+          text: "Si de tels cookies sont utilisés, ils permettent de suivre la navigation de l’utilisateur afin de proposer des contenus ou publicités adaptés à ses centres d’intérêt.",
+        },
+        {
+          type: "paragraph",
+          text: "Ces cookies ne peuvent être déposés qu’après recueil du consentement de l’utilisateur. Le Garante italien précise que les cookies de profilage et autres outils de traçage comparables ne peuvent être utilisés qu’après consentement éclairé.",
+        },
+        { type: "heading", text: "3. Consentement" },
+        {
+          type: "paragraph",
+          text: "Lors de votre première visite sur le site, un bandeau cookies vous permet de :",
+        },
+        {
+          type: "list",
+          items: [
+            "accepter tous les cookies ;",
+            "refuser tous les cookies non nécessaires ;",
+            "paramétrer vos choix.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Les cookies non strictement nécessaires ne sont pas déposés avant votre consentement. La CNIL rappelle que le refus doit être aussi simple que l’acceptation.",
+        },
+        { type: "heading", text: "4. Gestion des préférences" },
+        {
+          type: "paragraph",
+          text: "Vous pouvez à tout moment modifier vos préférences cookies :",
+        },
+        {
+          type: "list",
+          items: [
+            "via le module de gestion des cookies disponible sur le site ;",
+            "ou via les paramètres de votre navigateur.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Le refus de certains cookies peut toutefois affecter le fonctionnement de certaines fonctionnalités du site.",
+        },
+        { type: "heading", text: "5. Durée de conservation" },
+        {
+          type: "paragraph",
+          text: "Les cookies sont conservés pour une durée limitée, proportionnée à leur finalité, conformément à la réglementation applicable et aux paramétrages retenus sur le site.",
+        },
+        { type: "heading", text: "6. Cookies tiers" },
+        {
+          type: "paragraph",
+          text: "Le site peut intégrer des services fournis par des tiers, notamment pour :",
+        },
+        {
+          type: "list",
+          items: [
+            "le paiement sécurisé ;",
+            "l’analyse d’audience ;",
+            "certaines fonctionnalités techniques.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Dans ce cadre, des cookies tiers peuvent être déposés par ces prestataires, selon leurs propres politiques.",
+        },
+        {
+          type: "paragraph",
+          text: "Concernant Stripe, l’utilisateur peut consulter la politique de cookies et la politique de confidentialité de Stripe sur son site officiel.",
+        },
+        { type: "heading", text: "7. Mise à jour" },
+        {
+          type: "paragraph",
+          text: "DOCSFLOW peut modifier la présente Politique de cookies à tout moment afin de tenir compte de l’évolution du site, des outils utilisés ou de la réglementation applicable.",
+        },
+        { type: "heading", text: "8. Contact" },
+        {
+          type: "paragraph",
+          text: "Pour toute question relative à la présente Politique de cookies, vous pouvez contacter :",
+        },
+        { type: "paragraph", text: "DOCSFLOW" },
+        { type: "paragraph", text: "E-mail : Contact@docsflow.fr" },
       ],
     },
     "conditions-de-la-formule": {
@@ -1111,7 +1651,7 @@ const defaultContent = {
       "INFO-DOCSFLOW vous propose des Informations sur les entreprises françaises inscrites au registre du commerce et des sociétés, y compris les informations juridiques et financières. Consultez de manière simple les fiches financières, les données de gestion et les données publiques des organisations.",
     links: [
       { label: "A propos", path: "/a-propos" },
-      { label: "Formule INFO-DOCSFLOW", path: "/offre" },
+      { label: "Offre & tarifs", path: "/offre" },
       { label: "FAQ", path: "/faq" },
       { label: "Rechercher une entreprise", path: "/entreprises" },
       { label: "Résiliation", path: "/resiliation" },

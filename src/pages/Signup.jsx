@@ -90,9 +90,9 @@ export default function Signup() {
                 </label>
               </div>
               <label className="signup-label">
-                * SIRET ou SIREN
+                * SIREN/SIRET ou raison sociale
                 <input
-                  placeholder="SIRET ou SIREN"
+                  placeholder="Ex. 552100554 ou “AXA”"
                   value={form.identifier}
                   onChange={handleChange('identifier')}
                   required
