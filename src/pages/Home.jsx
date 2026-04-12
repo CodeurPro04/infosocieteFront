@@ -73,7 +73,6 @@ export default function Home() {
               <span className="hero-title-accent">Obtenez votre extrait Kbis en quelques clics</span>
             </h1>
             <p className="hero-subtitle">{home.heroSubtitle}</p>
-            {home.heroTrust && <p className="hero-trust">{home.heroTrust}</p>}
             <form className="hero-search" onSubmit={handleSearch}>
               <label className="hero-search-field">
                 <span>SIREN/SIRET ou raison sociale</span>

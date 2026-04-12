@@ -3927,6 +3927,14 @@ button {
   color: #d1d5db;
 }
 
+.footer-trust {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #f3f4f6;
+  font-weight: 600;
+}
+
 .footer-brand {
   display: flex;
   justify-content: flex-start;

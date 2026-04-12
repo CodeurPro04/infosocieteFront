@@ -1,8 +1,8 @@
 const defaultContent = {
   site: {
     name: "INFO-DOCSFLOW",
-    phone: "0 805 086 583",
-    email: "contact@INFO-DOCSFLOW.pro",
+    phone: "0 836 622 973",
+    email: "contact@docsflow.fr",
     hours: "Du lundi au samedi, de 8h a 20h",
   },
   navigation: [
@@ -141,8 +141,8 @@ const defaultContent = {
     contactBlock: {
       title: "Nous contacter",
       body: "Prenez contact avec nous maintenant.",
-      email: "contact@INFO-DOCSFLOW.pro",
-      phone: "0 805 086 583",
+      email: "contact@docsflow.fr",
+      phone: "0 836 622 973",
       hours: "Du lundi au samedi, de 8h à 20h",
     },
     kbisHighlights: [
@@ -250,8 +250,8 @@ const defaultContent = {
         disclaimerPrefix:
           "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: "ce lien",
-        disclaimerEmail: "contact@INFO-DOCSFLOW.pro",
-        disclaimerPhone: "0 805 086 583",
+        disclaimerEmail: "contact@docsflow.fr",
+        disclaimerPhone: "0 836 622 973",
         disclaimerSuffix: "à tout moment.",
       },
     },
@@ -506,13 +506,13 @@ const defaultContent = {
         {
           eyebrow: "Nous contacter",
           title: "Prenez contact avec nous maintenant",
-          email: "contact@INFO-DOCSFLOW.pro",
+          email: "contact@docsflow.fr",
           contactLink: "Via la page de contact",
         },
         {
           eyebrow: "Service client",
           title: "Du lundi au samedi, par téléphone au",
-          phone: "0 805 086 583",
+          phone: "0 836 622 973",
           hours: "De 8h à 20h",
         },
       ],
@@ -1459,7 +1459,7 @@ const defaultContent = {
         },
         {
           title: "Communications",
-          body: "Les communications se font via l'espace personnel ou par email. Contact par téléphone au 0 805 086 583 ou par email à contact@INFO-DOCSFLOW.pro.",
+          body: "Les communications se font via l'espace personnel ou par email. Contact par téléphone au 0 836 622 973 ou par email à contact@docsflow.fr.",
         },
         {
           title: "Délai de réception d'un extrait de Kbis",
@@ -1509,8 +1509,8 @@ const defaultContent = {
         disclaimerPrefix:
           "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: "ce lien",
-        disclaimerEmail: "contact@INFO-DOCSFLOW.pro",
-        disclaimerPhone: "0 805 086 583",
+        disclaimerEmail: "contact@docsflow.fr",
+        disclaimerPhone: "0 836 622 973",
         disclaimerSuffix: "à tout moment.",
       },
     },
@@ -1596,8 +1596,8 @@ const defaultContent = {
         disclaimerPrefix:
           "Formule basique de 1,49 € pour 72h, puis 49,99 € sur la même carte bancaire à la date anniversaire par prélèvement automatique mensuel sauf en cas de résiliation anticipée (ou anticipée en cas d'impossibilité). La résiliation de la formule premium est possible via ",
         disclaimerLinkLabel: "ce lien",
-        disclaimerEmail: "contact@INFO-DOCSFLOW.pro",
-        disclaimerPhone: "0 805 086 583",
+        disclaimerEmail: "contact@docsflow.fr",
+        disclaimerPhone: "0 836 622 973",
         disclaimerSuffix: "à tout moment.",
       },
     },

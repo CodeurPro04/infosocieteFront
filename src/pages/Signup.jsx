@@ -442,7 +442,7 @@ export default function Signup() {
                     />
                   </svg>
                 </span>
-                <span>contact@INFO-DOCSFLOW.pro</span>
+                <span>contact@docsflow.fr</span>
               </div>
               <div className="signup-info-row">
                 <span className="signup-info-mini-icon" aria-hidden="true">
@@ -476,7 +476,7 @@ export default function Signup() {
                     />
                   </svg>
                 </span>
-                <span>0 805 086 583</span>
+                <span>0 836 622 973</span>
               </div>
               <div className="signup-info-row">
                 <span className="signup-info-mini-icon" aria-hidden="true">

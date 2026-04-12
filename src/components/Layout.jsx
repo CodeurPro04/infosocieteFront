@@ -89,6 +89,7 @@ export default function Layout({ children }) {
       <footer className="site-footer">
         <div className="container footer-top">
           <p className="footer-disclaimer">{content.home?.disclaimer}</p>
+          {content.home?.heroTrust && <p className="footer-trust">{content.home.heroTrust}</p>}
         </div>
         <div className="container footer-brand">
           <img className="footer-logo" src={logo} alt={content.site?.name || 'INFO-DOCSFLOW'} />
